@@ -44,6 +44,6 @@ trainer = Trainer(model=model,
                   patience=10,
                   num_epochs=1000)
 trainer.train()
-logits = model.forward()
+logits = model.decode()
 ids = np.argmax(logits, axis=-1)
 print([model.vocab.get_token_from_index(i, 'tokens') for i in ids])
