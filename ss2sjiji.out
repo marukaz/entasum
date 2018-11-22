@@ -1,0 +1,61 @@
+2018-11-22 14:39:59,431 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 14:39:59,432 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 14:39:59,433 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 14:39:59,434 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 14:40:00,019 - INFO - allennlp.common.params - random_seed = 13370
+2018-11-22 14:40:00,019 - INFO - allennlp.common.params - numpy_seed = 1337
+2018-11-22 14:40:00,019 - INFO - allennlp.common.params - pytorch_seed = 133
+2018-11-22 14:40:00,020 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+2018-11-22 14:40:00,043 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}, 'type': 'seq2seq'} and extras {}
+2018-11-22 14:40:00,044 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-11-22 14:40:00,044 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}} and extras {}
+2018-11-22 14:40:00,045 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'source_tokens', 'type': 'single_id'} and extras {}
+2018-11-22 14:40:00,045 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = single_id
+2018-11-22 14:40:00,045 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'source_tokens'} and extras {}
+2018-11-22 14:40:00,045 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = source_tokens
+2018-11-22 14:40:00,045 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.lowercase_tokens = False
+2018-11-22 14:40:00,045 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.start_tokens = None
+2018-11-22 14:40:00,045 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.end_tokens = None
+2018-11-22 14:40:00,046 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-22 14:40:00,046 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.type = single_id
+2018-11-22 14:40:00,046 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-22 14:40:00,046 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.namespace = target_tokens
+2018-11-22 14:40:00,046 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.lowercase_tokens = False
+2018-11-22 14:40:00,046 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.start_tokens = None
+2018-11-22 14:40:00,046 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.end_tokens = None
+2018-11-22 14:40:00,047 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-11-22 14:40:00,047 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-11-22 14:40:00,440 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-11-22 14:40:00,440 - INFO - allennlp.common.params - train_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jiji/train_3snt.tsv
+2018-11-22 14:40:00,440 - INFO - allennlp.commands.train - Reading training data from /home/6/18M31289/groupdisk/matsumaru/data/jiji/train_3snt.tsv
+0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in <module>
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 72, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 111, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 282, in train_model
+    all_datasets = datasets_from_params(params)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 159, in datasets_from_params
+    train_data = dataset_reader.read(train_data_path)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/dataset_reader.py", line 73, in read
+    instances = [instance for instance in Tqdm.tqdm(instances)]
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/dataset_reader.py", line 73, in <listcomp>
+    instances = [instance for instance in Tqdm.tqdm(instances)]
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/tqdm/_tqdm.py", line 979, in __iter__
+    for obj in iterable:
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/seq2seq.py", line 65, in _read
+    with open(cached_path(file_path), "r") as data_file:
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/file_utils.py", line 92, in cached_path
+    raise FileNotFoundError("file {} not found".format(url_or_filename))
+FileNotFoundError: file /home/6/18M31289/groupdisk/matsumaru/data/jiji/train_3snt.tsv not found
+[INFO/MainProcess] process shutting down
+
