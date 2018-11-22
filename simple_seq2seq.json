@@ -32,7 +32,7 @@
       "num_layers": 1,
       "bidirectional": true
     },
-    "max_decoding_steps": 20,
+    "max_decoding_steps": 50,
     "target_embedding_dim": 300,
     "target_namespace": "target_tokens",
     "attention": {
