@@ -13,7 +13,7 @@
       }
     }
   },
-  "train_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/wmt14_ende_sp/20k_train50.ende",
+  "train_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/wmt14_ende_sp/train50.ende",
   "validation_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/wmt14_ende_sp/valid50.ende",
   "model": {
     "type": "simple_seq2seq",
