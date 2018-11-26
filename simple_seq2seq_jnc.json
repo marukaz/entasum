@@ -2,10 +2,10 @@
   "dataset_reader": {
     "type": "seq2seq",
     "source_tokenizer": {
-      "type": "word"
+      "type": "word",
       "word_splitter": {
         "type": "just_spaces"
-    }
+    },
     "source_token_indexers": {
       "tokens": {
         "type": "single_id",
@@ -47,7 +47,7 @@
   },
   "iterator": {
     "type": "bucket",
-    "batch_size" : 32,
+    "batch_size" : 64,
     "sorting_keys": [["source_tokens", "num_tokens"]]
   },
   "trainer": {
