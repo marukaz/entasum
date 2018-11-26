@@ -1,11 +1,6 @@
 {
   "dataset_reader": {
     "type": "seq2seq",
-    "source_tokenizer": {
-      "type": "word"
-      "word_splitter": {
-        "type": "just_spaces"
-    }
     "source_token_indexers": {
       "tokens": {
         "type": "single_id",
@@ -18,8 +13,8 @@
       }
     }
   },
-  "train_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv",
-  "validation_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv",
+  "train_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/wmt14_ende_sp/train_notab50.ende",
+  "validation_data_path": "/home/6/18M31289/groupdisk/matsumaru/data/wmt14_ende_sp/valid50.ende",
   "model": {
     "type": "simple_seq2seq",
     "source_embedder": {
@@ -34,7 +29,7 @@
       "type": "lstm",
       "input_size": 300,
       "hidden_size": 300,
-      "num_layers": 1,
+      "num_layers": 2,
       "bidirectional": true
     },
     "max_decoding_steps": 60,
@@ -47,7 +42,7 @@
   },
   "iterator": {
     "type": "bucket",
-    "batch_size" : 32,
+    "batch_size" : 64,
     "sorting_keys": [["source_tokens", "num_tokens"]]
   },
   "trainer": {

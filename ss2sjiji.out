@@ -59,3 +59,1447 @@ Traceback (most recent call last):
 FileNotFoundError: file /home/6/18M31289/groupdisk/matsumaru/data/jiji/train_3snt.tsv not found
 [INFO/MainProcess] process shutting down
 
+2018-11-22 17:29:26,659 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:29:26,661 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:29:26,663 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:29:26,664 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:29:27,725 - INFO - allennlp.common.params - random_seed = 13370
+2018-11-22 17:29:27,726 - INFO - allennlp.common.params - numpy_seed = 1337
+2018-11-22 17:29:27,726 - INFO - allennlp.common.params - pytorch_seed = 133
+2018-11-22 17:29:27,744 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+2018-11-22 17:29:27,751 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}, 'type': 'seq2seq'} and extras {}
+2018-11-22 17:29:27,752 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-11-22 17:29:27,752 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}} and extras {}
+2018-11-22 17:29:27,752 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'source_tokens', 'type': 'single_id'} and extras {}
+2018-11-22 17:29:27,752 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = single_id
+2018-11-22 17:29:27,752 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'source_tokens'} and extras {}
+2018-11-22 17:29:27,752 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = source_tokens
+2018-11-22 17:29:27,753 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.lowercase_tokens = False
+2018-11-22 17:29:27,753 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.start_tokens = None
+2018-11-22 17:29:27,753 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.end_tokens = None
+2018-11-22 17:29:27,753 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-22 17:29:27,753 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.type = single_id
+2018-11-22 17:29:27,753 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.namespace = target_tokens
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.lowercase_tokens = False
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.start_tokens = None
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.end_tokens = None
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-11-22 17:29:27,754 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-11-22 17:29:28,224 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-11-22 17:29:28,224 - INFO - allennlp.common.params - train_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+2018-11-22 17:29:28,224 - INFO - allennlp.commands.train - Reading training data from /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+0it [00:00, ?it/s]
+2018-11-22 17:29:28,226 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+6252it [00:10, 625.10it/s]
+12989it [00:20, 638.92it/s]
+20148it [00:30, 660.22it/s]
+27307it [00:40, 657.59it/s]
+33994it [00:50, 660.88it/s]
+40952it [01:01, 665.85it/s]
+48270it [01:11, 684.32it/s]
+55587it [01:22, 678.10it/s]
+62717it [01:32, 688.18it/s]
+69847it [01:43, 680.04it/s]
+77291it [01:53, 698.14it/s]
+84735it [02:04, 685.22it/s]
+92119it [02:14, 700.34it/s]
+99562it [02:24, 712.96it/s]
+107005it [02:35, 695.39it/s]
+114511it [02:45, 711.06it/s]
+122130it [02:55, 725.57it/s]
+129910it [03:05, 740.53it/s]
+137690it [03:18, 690.91it/s]
+145390it [03:28, 712.85it/s]
+153148it [03:38, 730.63it/s]
+160906it [03:49, 735.00it/s]
+168361it [04:01, 691.70it/s]
+176238it [04:11, 717.94it/s]
+184115it [04:21, 730.01it/s]
+189978it [04:29, 705.58it/s]
+
+2018-11-22 17:33:57,474 - INFO - allennlp.common.params - validation_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+2018-11-22 17:33:57,475 - INFO - allennlp.commands.train - Reading validation data from /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+0it [00:00, ?it/s]
+2018-11-22 17:33:57,476 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+3000it [00:04, 736.60it/s]
+
+2018-11-22 17:34:01,548 - INFO - allennlp.common.params - test_data_path = None
+2018-11-22 17:34:01,548 - INFO - allennlp.commands.train - From dataset instances, validation, train will be considered for vocabulary creation.
+2018-11-22 17:34:01,548 - INFO - allennlp.common.params - vocabulary.type = None
+2018-11-22 17:34:01,548 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-11-22 17:34:01,548 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-11-22 17:34:01,548 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-11-22 17:34:01,549 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-11-22 17:34:01,549 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-11-22 17:34:01,549 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-11-22 17:34:01,549 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-11-22 17:34:01,549 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-11-22 17:34:01,549 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+0it [00:00, ?it/s]
+45142it [00:10, 4514.14it/s]
+90821it [00:20, 4530.14it/s]
+136816it [00:30, 4550.71it/s]
+185062it [00:40, 4629.52it/s]
+192978it [00:41, 4638.08it/s]
+
+2018-11-22 17:34:43,232 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'type': 'dot_product'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 300, 'target_namespace': 'target_tokens', 'type': 'simple_seq2seq'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,232 - INFO - allennlp.common.params - model.type = simple_seq2seq
+2018-11-22 17:34:43,232 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.encoder_decoders.simple_seq2seq.SimpleSeq2Seq'> from params {'attention': {'type': 'dot_product'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 300, 'target_namespace': 'target_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,232 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.token_embedders = None
+2018-11-22 17:34:43,233 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.tokens.type = embedding
+2018-11-22 17:34:43,233 - INFO - allennlp.common.params - model.source_embedder.tokens.num_embeddings = None
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.vocab_namespace = source_tokens
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.embedding_dim = 300
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.pretrained_file = None
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.projection_dim = None
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.trainable = True
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.padding_index = None
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.max_norm = None
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.norm_type = 2.0
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.scale_grad_by_freq = False
+2018-11-22 17:34:43,234 - INFO - allennlp.common.params - model.source_embedder.tokens.sparse = False
+2018-11-22 17:34:43,294 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,294 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-11-22 17:34:43,294 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-22 17:34:43,294 - INFO - allennlp.common.params - model.encoder.stateful = False
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - model.encoder.bidirectional = True
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - model.encoder.hidden_size = 300
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - model.encoder.input_size = 300
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - model.encoder.num_layers = 1
+2018-11-22 17:34:43,295 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-22 17:34:43,310 - INFO - allennlp.common.params - model.max_decoding_steps = 60
+2018-11-22 17:34:43,310 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'type': 'dot_product'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,310 - INFO - allennlp.common.params - model.attention.type = dot_product
+2018-11-22 17:34:43,310 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.dot_product_attention.DotProductAttention'> from params {} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed9608d0>}
+2018-11-22 17:34:43,311 - INFO - allennlp.common.params - model.attention.normalize = True
+2018-11-22 17:34:43,311 - INFO - allennlp.common.params - model.beam_size = 5
+2018-11-22 17:34:43,311 - INFO - allennlp.common.params - model.target_namespace = target_tokens
+2018-11-22 17:34:43,311 - INFO - allennlp.common.params - model.target_embedding_dim = 300
+2018-11-22 17:34:43,311 - INFO - allennlp.common.params - model.scheduled_sampling_ratio = 0.0
+2018-11-22 17:34:43,638 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 32, 'type': 'bucket'} and extras {}
+2018-11-22 17:34:43,639 - INFO - allennlp.common.params - iterator.type = bucket
+2018-11-22 17:34:43,639 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 32} and extras {}
+Traceback (most recent call last):
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 170, in pop
+    value = self.params.pop(key)
+KeyError: 'sorting_keys'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in <module>
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 72, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 111, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 303, in train_model
+    iterator = DataIterator.from_params(params.pop("iterator"))
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 274, in from_params
+    return subclass.from_params(params=params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 285, in from_params
+    kwargs = create_kwargs(cls, params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 219, in create_kwargs
+    kwargs[name] = params.pop(name)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 172, in pop
+    raise ConfigurationError("key \"{}\" is required at location \"{}\"".format(key, self.history))
+allennlp.common.checks.ConfigurationError: 'key "sorting_keys" is required at location "iterator."'
+[INFO/MainProcess] process shutting down
+2018-11-22 17:54:00,215 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:54:00,216 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:54:00,217 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:54:00,218 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-22 17:54:00,634 - INFO - allennlp.common.params - random_seed = 13370
+2018-11-22 17:54:00,635 - INFO - allennlp.common.params - numpy_seed = 1337
+2018-11-22 17:54:00,635 - INFO - allennlp.common.params - pytorch_seed = 133
+2018-11-22 17:54:00,637 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in <module>
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 72, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 111, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 275, in train_model
+    create_serialization_dir(params, serialization_dir, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 204, in create_serialization_dir
+    raise ConfigurationError(f"Serialization directory ({serialization_dir}) already exists and is "
+allennlp.common.checks.ConfigurationError: 'Serialization directory (/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji) already exists and is not empty. Specify --recover to recover training from existing output.'
+[INFO/MainProcess] process shutting down
+2018-11-23 10:19:15,827 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-23 10:19:15,829 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-23 10:19:15,831 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-23 10:19:15,833 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-23 10:19:16,870 - INFO - allennlp.common.params - random_seed = 13370
+2018-11-23 10:19:16,870 - INFO - allennlp.common.params - numpy_seed = 1337
+2018-11-23 10:19:16,870 - INFO - allennlp.common.params - pytorch_seed = 133
+2018-11-23 10:19:16,874 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+2018-11-23 10:19:16,891 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}, 'type': 'seq2seq'} and extras {}
+2018-11-23 10:19:16,892 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-11-23 10:19:16,892 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}} and extras {}
+2018-11-23 10:19:16,892 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'source_tokens', 'type': 'single_id'} and extras {}
+2018-11-23 10:19:16,892 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = single_id
+2018-11-23 10:19:16,892 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'source_tokens'} and extras {}
+2018-11-23 10:19:16,893 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = source_tokens
+2018-11-23 10:19:16,893 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.lowercase_tokens = False
+2018-11-23 10:19:16,893 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.start_tokens = None
+2018-11-23 10:19:16,893 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.end_tokens = None
+2018-11-23 10:19:16,893 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-23 10:19:16,893 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.type = single_id
+2018-11-23 10:19:16,893 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.namespace = target_tokens
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.lowercase_tokens = False
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.start_tokens = None
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.end_tokens = None
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-11-23 10:19:16,894 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-11-23 10:19:17,334 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-11-23 10:19:17,334 - INFO - allennlp.common.params - train_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+2018-11-23 10:19:17,334 - INFO - allennlp.commands.train - Reading training data from /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+0it [00:00, ?it/s]
+2018-11-23 10:19:17,366 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_train_3snt.tsv
+6063it [00:10, 606.19it/s]
+12620it [00:20, 620.23it/s]
+19609it [00:30, 641.88it/s]
+26597it [00:40, 640.09it/s]
+33088it [00:50, 642.75it/s]
+40127it [01:00, 659.95it/s]
+47166it [01:11, 661.04it/s]
+53803it [01:21, 656.61it/s]
+60724it [01:31, 666.85it/s]
+67645it [01:42, 655.47it/s]
+74859it [01:52, 673.94it/s]
+82073it [02:04, 665.18it/s]
+89193it [02:14, 678.55it/s]
+96361it [02:24, 689.56it/s]
+103528it [02:35, 672.66it/s]
+110843it [02:45, 689.29it/s]
+118158it [02:55, 699.74it/s]
+125740it [03:05, 716.29it/s]
+133322it [03:17, 684.44it/s]
+140632it [03:27, 697.75it/s]
+148183it [03:37, 714.00it/s]
+155734it [03:47, 722.40it/s]
+163162it [03:58, 720.77it/s]
+170332it [04:09, 683.63it/s]
+177899it [04:19, 704.02it/s]
+185466it [04:30, 715.43it/s]
+189978it [04:35, 688.34it/s]
+
+2018-11-23 10:23:53,329 - INFO - allennlp.common.params - validation_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+2018-11-23 10:23:53,330 - INFO - allennlp.commands.train - Reading validation data from /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+0it [00:00, ?it/s]
+2018-11-23 10:23:53,379 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jiji/jiji_valid_3snt.tsv
+3000it [00:04, 704.55it/s]
+
+2018-11-23 10:23:57,588 - INFO - allennlp.common.params - test_data_path = None
+2018-11-23 10:23:57,588 - INFO - allennlp.commands.train - From dataset instances, train, validation will be considered for vocabulary creation.
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.type = None
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-11-23 10:23:57,589 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-11-23 10:23:57,589 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+0it [00:00, ?it/s]
+40595it [00:10, 4059.49it/s]
+83724it [00:20, 4132.32it/s]
+126853it [00:30, 4157.57it/s]
+169565it [00:40, 4191.01it/s]
+192978it [00:45, 4248.60it/s]
+
+2018-11-23 10:24:43,087 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'type': 'dot_product'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 300, 'target_namespace': 'target_tokens', 'type': 'simple_seq2seq'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,087 - INFO - allennlp.common.params - model.type = simple_seq2seq
+2018-11-23 10:24:43,087 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.encoder_decoders.simple_seq2seq.SimpleSeq2Seq'> from params {'attention': {'type': 'dot_product'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 300, 'target_namespace': 'target_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,088 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'tokens': {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.token_embedders = None
+2018-11-23 10:24:43,088 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 300, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.tokens.type = embedding
+2018-11-23 10:24:43,088 - INFO - allennlp.common.params - model.source_embedder.tokens.num_embeddings = None
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.vocab_namespace = source_tokens
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.embedding_dim = 300
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.pretrained_file = None
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.projection_dim = None
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.trainable = True
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.padding_index = None
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.max_norm = None
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.norm_type = 2.0
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.scale_grad_by_freq = False
+2018-11-23 10:24:43,089 - INFO - allennlp.common.params - model.source_embedder.tokens.sparse = False
+2018-11-23 10:24:43,147 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'hidden_size': 300, 'input_size': 300, 'num_layers': 1, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.stateful = False
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.bidirectional = True
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.hidden_size = 300
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.input_size = 300
+2018-11-23 10:24:43,148 - INFO - allennlp.common.params - model.encoder.num_layers = 1
+2018-11-23 10:24:43,149 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-23 10:24:43,163 - INFO - allennlp.common.params - model.max_decoding_steps = 60
+2018-11-23 10:24:43,163 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'type': 'dot_product'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.attention.type = dot_product
+2018-11-23 10:24:43,164 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.dot_product_attention.DotProductAttention'> from params {} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677ef0>}
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.attention.normalize = True
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.beam_size = 5
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.target_namespace = target_tokens
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.target_embedding_dim = 300
+2018-11-23 10:24:43,164 - INFO - allennlp.common.params - model.scheduled_sampling_ratio = 0.0
+2018-11-23 10:24:43,482 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 32, 'sorting_keys': [['source_tokens', 'num_tokens']], 'type': 'bucket'} and extras {}
+2018-11-23 10:24:43,482 - INFO - allennlp.common.params - iterator.type = bucket
+2018-11-23 10:24:43,482 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 32, 'sorting_keys': [['source_tokens', 'num_tokens']]} and extras {}
+2018-11-23 10:24:43,482 - INFO - allennlp.common.params - iterator.sorting_keys = [['source_tokens', 'num_tokens']]
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.padding_noise = 0.1
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.biggest_batch_first = False
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.batch_size = 32
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.cache_instances = False
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.track_epoch = False
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - iterator.maximum_samples_per_batch = None
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - validation_iterator = None
+2018-11-23 10:24:43,483 - INFO - allennlp.common.params - trainer.no_grad = ()
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - Following parameters are Frozen  (without gradient):
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - Following parameters are Tunable (with gradient):
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _source_embedder.token_embedder_tokens.weight
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l0
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l0
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l0
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l0
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l0_reverse
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l0_reverse
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l0_reverse
+2018-11-23 10:24:43,484 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l0_reverse
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _target_embedder.weight
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _decoder_cell.weight_ih
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _decoder_cell.weight_hh
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _decoder_cell.bias_ih
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _decoder_cell.bias_hh
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _output_projection_layer.weight
+2018-11-23 10:24:43,485 - INFO - allennlp.commands.train - _output_projection_layer.bias
+2018-11-23 10:24:43,485 - INFO - allennlp.common.params - trainer.type = default
+2018-11-23 10:24:43,485 - INFO - allennlp.common.registrable - instantiating registered subclass default of <class 'allennlp.training.trainer.Trainer'>
+2018-11-23 10:24:43,485 - INFO - allennlp.common.params - trainer.patience = 10
+2018-11-23 10:24:43,485 - INFO - allennlp.common.params - trainer.validation_metric = -loss
+2018-11-23 10:24:43,485 - INFO - allennlp.common.params - trainer.shuffle = True
+2018-11-23 10:24:43,486 - INFO - allennlp.common.params - trainer.num_epochs = 15
+2018-11-23 10:24:43,486 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2018-11-23 10:24:43,486 - INFO - allennlp.common.params - trainer.grad_norm = None
+2018-11-23 10:24:43,486 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2018-11-23 10:24:43,486 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2018-11-23 10:24:47,708 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2018-11-23 10:24:47,708 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2018-11-23 10:24:47,708 - INFO - allennlp.training.optimizers - Number of trainable parameters: 25302314
+2018-11-23 10:24:47,709 - INFO - allennlp.common.registrable - instantiating registered subclass adam of <class 'allennlp.training.optimizers.Optimizer'>
+2018-11-23 10:24:47,709 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-11-23 10:24:47,709 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-11-23 10:24:47,709 - INFO - allennlp.common.params - trainer.optimizer.lr = 0.01
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = 20
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.should_log_parameter_statistics = True
+2018-11-23 10:24:47,710 - INFO - allennlp.common.params - trainer.should_log_learning_rate = False
+2018-11-23 10:24:47,730 - INFO - allennlp.common.params - evaluate_on_test = False
+2018-11-23 10:24:47,731 - INFO - allennlp.training.trainer - Beginning training.
+2018-11-23 10:24:47,731 - INFO - allennlp.training.trainer - Epoch 0/14
+2018-11-23 10:24:47,731 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9116.516
+2018-11-23 10:24:48,046 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 789
+2018-11-23 10:24:48,046 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 10:24:48,047 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 10:24:48,047 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 10:24:48,047 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 9.7306 ||:   0%|          | 1/5937 [01:09<115:06:58, 69.81s/it]
+loss: 7.2060 ||:   2%|1         | 116/5937 [01:19<79:03:45, 48.90s/it]
+loss: 6.9261 ||:   4%|3         | 232/5937 [01:29<54:16:56, 34.25s/it]
+loss: 6.7150 ||:   6%|5         | 348/5937 [01:40<37:15:56, 24.00s/it]
+loss: 6.5809 ||:   8%|7         | 463/5937 [01:50<25:35:30, 16.83s/it]
+loss: 6.5141 ||:  10%|9         | 573/5937 [02:00<17:35:42, 11.81s/it]
+loss: 6.4589 ||:  12%|#1        | 683/5937 [02:10<12:06:14,  8.29s/it]
+loss: 6.3984 ||:  13%|#3        | 793/5937 [02:21<8:20:06,  5.83s/it] 
+loss: 6.3309 ||:  15%|#5        | 908/5937 [02:31<5:44:26,  4.11s/it]
+loss: 6.2844 ||:  17%|#7        | 1023/5937 [02:41<3:57:47,  2.90s/it]
+loss: 6.2411 ||:  19%|#9        | 1135/5937 [02:51<2:44:53,  2.06s/it]
+loss: 6.2083 ||:  21%|##1       | 1247/5937 [03:01<1:54:50,  1.47s/it]
+loss: 6.1679 ||:  23%|##2       | 1360/5937 [03:11<1:20:29,  1.06s/it]
+loss: 6.1264 ||:  25%|##4       | 1473/5937 [03:22<56:57,  1.31it/s]  
+loss: 6.0988 ||:  27%|##6       | 1585/5937 [03:32<40:50,  1.78it/s]
+loss: 6.0531 ||:  29%|##8       | 1698/5937 [03:42<29:43,  2.38it/s]
+loss: 6.0267 ||:  31%|###       | 1811/5937 [03:52<22:11,  3.10it/s]
+loss: 5.9907 ||:  32%|###2      | 1925/5937 [04:02<16:52,  3.96it/s]
+loss: 5.9692 ||:  34%|###4      | 2039/5937 [04:12<13:11,  4.93it/s]
+loss: 5.9644 ||:  36%|###6      | 2153/5937 [04:23<10:43,  5.88it/s]
+loss: 5.9508 ||:  38%|###8      | 2266/5937 [04:33<08:55,  6.86it/s]
+loss: 5.9421 ||:  40%|####      | 2379/5937 [04:44<07:41,  7.72it/s]
+loss: 5.9321 ||:  42%|####1     | 2489/5937 [04:54<06:46,  8.48it/s]
+loss: 5.9193 ||:  44%|####3     | 2599/5937 [05:04<06:09,  9.04it/s]
+loss: 5.9082 ||:  46%|####5     | 2708/5937 [05:14<05:39,  9.51it/s]
+loss: 5.8988 ||:  47%|####7     | 2817/5937 [05:24<05:16,  9.86it/s]
+loss: 5.8847 ||:  49%|####9     | 2931/5937 [05:34<04:52, 10.27it/s]
+loss: 5.8693 ||:  51%|#####1    | 3045/5937 [05:44<04:36, 10.48it/s]
+loss: 5.8546 ||:  53%|#####3    | 3159/5937 [05:54<04:18, 10.73it/s]
+loss: 5.8466 ||:  55%|#####5    | 3273/5937 [06:04<04:04, 10.90it/s]
+loss: 5.8282 ||:  57%|#####7    | 3390/5937 [06:15<03:49, 11.10it/s]
+loss: 5.8181 ||:  59%|#####9    | 3506/5937 [06:25<03:38, 11.12it/s]
+loss: 5.8075 ||:  61%|######    | 3621/5937 [06:35<03:26, 11.23it/s]
+loss: 5.7985 ||:  63%|######2   | 3736/5937 [06:45<03:15, 11.26it/s]
+loss: 5.7871 ||:  65%|######4   | 3850/5937 [06:55<03:04, 11.29it/s]
+loss: 5.7772 ||:  67%|######6   | 3964/5937 [07:05<02:54, 11.30it/s]
+loss: 5.7679 ||:  69%|######8   | 4078/5937 [07:16<02:45, 11.23it/s]
+loss: 5.7558 ||:  71%|#######   | 4194/5937 [07:26<02:33, 11.32it/s]
+loss: 5.7425 ||:  73%|#######2  | 4310/5937 [07:36<02:23, 11.31it/s]
+loss: 5.7308 ||:  75%|#######4  | 4424/5937 [07:46<02:13, 11.31it/s]
+loss: 5.7244 ||:  76%|#######6  | 4538/5937 [07:56<02:03, 11.29it/s]
+loss: 5.7150 ||:  78%|#######8  | 4653/5937 [08:06<01:53, 11.35it/s]
+loss: 5.7117 ||:  80%|########  | 4768/5937 [08:17<01:44, 11.23it/s]
+loss: 5.7030 ||:  82%|########2 | 4881/5937 [08:27<01:34, 11.22it/s]
+loss: 5.6966 ||:  84%|########4 | 4994/5937 [08:37<01:23, 11.23it/s]
+loss: 5.6886 ||:  86%|########6 | 5108/5937 [08:47<01:13, 11.26it/s]
+loss: 5.6791 ||:  88%|########8 | 5225/5937 [08:57<01:02, 11.37it/s]
+loss: 5.6697 ||:  90%|########9 | 5342/5937 [09:07<00:52, 11.39it/s]
+loss: 5.6638 ||:  92%|#########1| 5457/5937 [09:17<00:42, 11.34it/s]
+loss: 5.6581 ||:  94%|#########3| 5570/5937 [09:27<00:32, 11.29it/s]
+loss: 5.6494 ||:  96%|#########5| 5685/5937 [09:37<00:22, 11.33it/s]
+loss: 5.6423 ||:  98%|#########7| 5800/5937 [09:48<00:12, 11.27it/s]
+loss: 5.6375 ||: 100%|#########9| 5913/5937 [09:58<00:02, 11.26it/s]
+loss: 5.6372 ||: 100%|##########| 5937/5937 [10:00<00:00,  9.89it/s]
+
+2018-11-23 10:34:48,570 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.3163 ||: 100%|##########| 94/94 [00:03<00:00, 24.96it/s]
+
+2018-11-23 10:34:52,337 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 10:34:52,338 - INFO - allennlp.training.trainer - loss |     5.637  |     5.316
+2018-11-23 10:34:52,849 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 10:34:52,974 - INFO - allennlp.training.trainer - Epoch duration: 00:10:05
+2018-11-23 10:34:52,974 - INFO - allennlp.training.trainer - Estimated training time remaining: 2:21:13
+2018-11-23 10:34:52,974 - INFO - allennlp.training.trainer - Epoch 1/14
+2018-11-23 10:34:52,974 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9617.252
+2018-11-23 10:34:53,299 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 10:34:53,299 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 10:34:53,299 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 10:34:53,299 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 10:34:53,299 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 5.4078 ||:   0%|          | 5/5937 [00:10<3:18:25,  2.01s/it]
+loss: 5.3095 ||:   2%|1         | 117/5937 [00:20<2:18:53,  1.43s/it]
+loss: 5.3098 ||:   4%|3         | 230/5937 [00:30<1:37:52,  1.03s/it]
+loss: 5.2286 ||:   6%|5         | 346/5937 [00:40<1:09:32,  1.34it/s]
+loss: 5.2310 ||:   8%|7         | 462/5937 [00:50<50:04,  1.82it/s]  
+loss: 5.2344 ||:  10%|9         | 576/5937 [01:00<36:42,  2.43it/s]
+loss: 5.2499 ||:  12%|#1        | 689/5937 [01:10<27:30,  3.18it/s]
+loss: 5.2591 ||:  14%|#3        | 802/5937 [01:20<21:07,  4.05it/s]
+loss: 5.2579 ||:  15%|#5        | 916/5937 [01:30<16:39,  5.02it/s]
+loss: 5.2520 ||:  17%|#7        | 1031/5937 [01:40<13:32,  6.04it/s]
+loss: 5.2507 ||:  19%|#9        | 1146/5937 [01:50<11:22,  7.02it/s]
+loss: 5.2342 ||:  21%|##1       | 1260/5937 [02:01<09:50,  7.92it/s]
+loss: 5.2330 ||:  23%|##3       | 1374/5937 [02:11<08:45,  8.68it/s]
+loss: 5.2441 ||:  25%|##5       | 1486/5937 [02:21<07:59,  9.29it/s]
+loss: 5.2403 ||:  27%|##6       | 1598/5937 [02:31<07:23,  9.79it/s]
+loss: 5.2306 ||:  29%|##8       | 1712/5937 [02:41<06:53, 10.22it/s]
+loss: 5.2302 ||:  31%|###       | 1826/5937 [02:51<06:31, 10.50it/s]
+loss: 5.2253 ||:  33%|###2      | 1941/5937 [03:01<06:10, 10.78it/s]
+loss: 5.2161 ||:  35%|###4      | 2056/5937 [03:11<05:53, 10.97it/s]
+loss: 5.2225 ||:  37%|###6      | 2171/5937 [03:21<05:41, 11.02it/s]
+loss: 5.2205 ||:  38%|###8      | 2285/5937 [03:31<05:28, 11.11it/s]
+loss: 5.2205 ||:  40%|####      | 2399/5937 [03:42<05:18, 11.10it/s]
+loss: 5.2172 ||:  42%|####2     | 2514/5937 [03:52<05:05, 11.21it/s]
+loss: 5.2147 ||:  44%|####4     | 2629/5937 [04:02<04:55, 11.18it/s]
+loss: 5.2061 ||:  46%|####6     | 2740/5937 [04:12<04:46, 11.15it/s]
+loss: 5.2086 ||:  48%|####8     | 2854/5937 [04:22<04:34, 11.21it/s]
+loss: 5.2045 ||:  50%|####9     | 2968/5937 [04:32<04:23, 11.26it/s]
+loss: 5.2005 ||:  52%|#####1    | 3082/5937 [04:42<04:12, 11.29it/s]
+loss: 5.1994 ||:  54%|#####3    | 3196/5937 [04:52<04:02, 11.28it/s]
+loss: 5.1950 ||:  56%|#####5    | 3312/5937 [05:02<03:50, 11.37it/s]
+loss: 5.1885 ||:  58%|#####7    | 3428/5937 [05:13<03:41, 11.33it/s]
+loss: 5.1886 ||:  60%|#####9    | 3541/5937 [05:23<03:34, 11.17it/s]
+loss: 5.1853 ||:  62%|######1   | 3652/5937 [05:33<03:25, 11.14it/s]
+loss: 5.1846 ||:  63%|######3   | 3763/5937 [05:43<03:16, 11.06it/s]
+loss: 5.1824 ||:  65%|######5   | 3876/5937 [05:53<03:05, 11.10it/s]
+loss: 5.1798 ||:  67%|######7   | 3992/5937 [06:04<02:53, 11.22it/s]
+loss: 5.1737 ||:  69%|######9   | 4108/5937 [06:14<02:41, 11.30it/s]
+loss: 5.1756 ||:  71%|#######1  | 4223/5937 [06:24<02:32, 11.23it/s]
+loss: 5.1750 ||:  73%|#######3  | 4338/5937 [06:34<02:21, 11.30it/s]
+loss: 5.1772 ||:  75%|#######5  | 4453/5937 [06:44<02:11, 11.31it/s]
+loss: 5.1796 ||:  77%|#######6  | 4567/5937 [06:55<02:02, 11.20it/s]
+loss: 5.1811 ||:  79%|#######8  | 4680/5937 [07:05<01:52, 11.21it/s]
+loss: 5.1798 ||:  81%|########  | 4794/5937 [07:15<01:41, 11.25it/s]
+loss: 5.1830 ||:  83%|########2 | 4908/5937 [07:25<01:31, 11.21it/s]
+loss: 5.1815 ||:  85%|########4 | 5021/5937 [07:35<01:21, 11.21it/s]
+loss: 5.1803 ||:  86%|########6 | 5134/5937 [07:45<01:11, 11.21it/s]
+loss: 5.1821 ||:  88%|########8 | 5247/5937 [07:55<01:01, 11.21it/s]
+loss: 5.1812 ||:  90%|######### | 5363/5937 [08:05<00:50, 11.30it/s]
+loss: 5.1807 ||:  92%|#########2| 5478/5937 [08:15<00:40, 11.30it/s]
+loss: 5.1819 ||:  94%|#########4| 5592/5937 [08:26<00:30, 11.31it/s]
+loss: 5.1841 ||:  96%|#########6| 5706/5937 [08:36<00:20, 11.24it/s]
+loss: 5.1806 ||:  98%|#########8| 5822/5937 [08:46<00:10, 11.32it/s]
+loss: 5.1824 ||: 100%|##########| 5937/5937 [08:56<00:00, 11.07it/s]
+
+2018-11-23 10:43:49,822 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1738 ||: 100%|##########| 94/94 [00:02<00:00, 32.47it/s]
+
+2018-11-23 10:43:52,718 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 10:43:52,719 - INFO - allennlp.training.trainer - loss |     5.182  |     5.174
+2018-11-23 10:43:53,086 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 10:43:53,234 - INFO - allennlp.training.trainer - Epoch duration: 00:09:00
+2018-11-23 10:43:53,234 - INFO - allennlp.training.trainer - Estimated training time remaining: 2:04:05
+2018-11-23 10:43:53,234 - INFO - allennlp.training.trainer - Epoch 2/14
+2018-11-23 10:43:53,234 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9638.412
+2018-11-23 10:43:53,554 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 10:43:53,554 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 10:43:53,554 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 10:43:53,554 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 10:43:53,555 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.9633 ||:   0%|          | 6/5937 [00:10<2:45:24,  1.67s/it]
+loss: 5.0305 ||:   2%|2         | 121/5937 [00:20<1:56:04,  1.20s/it]
+loss: 5.0634 ||:   4%|3         | 236/5937 [00:30<1:22:11,  1.16it/s]
+loss: 5.0578 ||:   6%|5         | 352/5937 [00:40<58:47,  1.58it/s]  
+loss: 5.0528 ||:   8%|7         | 468/5937 [00:50<42:43,  2.13it/s]
+loss: 5.0821 ||:  10%|9         | 581/5937 [01:00<31:42,  2.82it/s]
+loss: 5.0819 ||:  12%|#1        | 694/5937 [01:10<24:03,  3.63it/s]
+loss: 5.0849 ||:  14%|#3        | 807/5937 [01:21<18:45,  4.56it/s]
+loss: 5.0647 ||:  16%|#5        | 924/5937 [01:31<14:58,  5.58it/s]
+loss: 5.0690 ||:  18%|#7        | 1041/5937 [01:41<12:25,  6.57it/s]
+loss: 5.0798 ||:  19%|#9        | 1154/5937 [01:51<10:41,  7.46it/s]
+loss: 5.0850 ||:  21%|##1       | 1266/5937 [02:01<09:23,  8.28it/s]
+loss: 5.0874 ||:  23%|##3       | 1380/5937 [02:11<08:25,  9.01it/s]
+loss: 5.0859 ||:  25%|##5       | 1494/5937 [02:22<07:43,  9.59it/s]
+loss: 5.0877 ||:  27%|##7       | 1608/5937 [02:32<07:10, 10.06it/s]
+loss: 5.0925 ||:  29%|##9       | 1722/5937 [02:42<06:47, 10.35it/s]
+loss: 5.0771 ||:  31%|###       | 1838/5937 [02:52<06:23, 10.69it/s]
+loss: 5.0797 ||:  33%|###2      | 1954/5937 [03:02<06:06, 10.86it/s]
+loss: 5.0792 ||:  35%|###4      | 2068/5937 [03:12<05:52, 10.99it/s]
+loss: 5.0790 ||:  37%|###6      | 2182/5937 [03:22<05:40, 11.04it/s]
+loss: 5.0808 ||:  39%|###8      | 2294/5937 [03:33<05:29, 11.07it/s]
+loss: 5.0755 ||:  41%|####      | 2409/5937 [03:43<05:15, 11.17it/s]
+loss: 5.0741 ||:  43%|####2     | 2524/5937 [03:53<05:05, 11.16it/s]
+loss: 5.0729 ||:  44%|####4     | 2637/5937 [04:03<04:55, 11.17it/s]
+loss: 5.0732 ||:  46%|####6     | 2752/5937 [04:13<04:42, 11.26it/s]
+loss: 5.0725 ||:  48%|####8     | 2867/5937 [04:23<04:32, 11.26it/s]
+loss: 5.0746 ||:  50%|#####     | 2981/5937 [04:33<04:21, 11.29it/s]
+loss: 5.0752 ||:  52%|#####2    | 3095/5937 [04:44<04:13, 11.23it/s]
+loss: 5.0745 ||:  54%|#####4    | 3207/5937 [04:54<04:03, 11.21it/s]
+loss: 5.0726 ||:  56%|#####5    | 3319/5937 [05:04<03:53, 11.19it/s]
+loss: 5.0769 ||:  58%|#####7    | 3431/5937 [05:14<03:43, 11.19it/s]
+loss: 5.0695 ||:  60%|#####9    | 3548/5937 [05:24<03:30, 11.33it/s]
+loss: 5.0653 ||:  62%|######1   | 3665/5937 [05:34<03:20, 11.35it/s]
+loss: 5.0652 ||:  64%|######3   | 3780/5937 [05:44<03:10, 11.33it/s]
+loss: 5.0682 ||:  66%|######5   | 3893/5937 [05:55<03:02, 11.19it/s]
+loss: 5.0640 ||:  68%|######7   | 4010/5937 [06:05<02:50, 11.32it/s]
+loss: 5.0662 ||:  70%|######9   | 4127/5937 [06:15<02:41, 11.23it/s]
+loss: 5.0700 ||:  71%|#######1  | 4240/5937 [06:25<02:31, 11.23it/s]
+loss: 5.0696 ||:  73%|#######3  | 4353/5937 [06:35<02:21, 11.22it/s]
+loss: 5.0660 ||:  75%|#######5  | 4468/5937 [06:45<02:10, 11.30it/s]
+loss: 5.0686 ||:  77%|#######7  | 4583/5937 [06:56<02:00, 11.27it/s]
+loss: 5.0736 ||:  79%|#######9  | 4696/5937 [07:06<01:50, 11.24it/s]
+loss: 5.0781 ||:  81%|########  | 4808/5937 [07:16<01:40, 11.21it/s]
+loss: 5.0785 ||:  83%|########2 | 4922/5937 [07:26<01:30, 11.24it/s]
+loss: 5.0799 ||:  85%|########4 | 5036/5937 [07:36<01:20, 11.23it/s]
+loss: 5.0795 ||:  87%|########6 | 5151/5937 [07:46<01:09, 11.29it/s]
+loss: 5.0769 ||:  89%|########8 | 5266/5937 [07:56<00:59, 11.33it/s]
+loss: 5.0753 ||:  91%|######### | 5381/5937 [08:06<00:49, 11.34it/s]
+loss: 5.0763 ||:  93%|#########2| 5495/5937 [08:17<00:39, 11.24it/s]
+loss: 5.0756 ||:  94%|#########4| 5607/5937 [08:27<00:29, 11.19it/s]
+loss: 5.0734 ||:  96%|#########6| 5718/5937 [08:37<00:19, 11.15it/s]
+loss: 5.0721 ||:  98%|#########8| 5829/5937 [08:47<00:09, 11.08it/s]
+loss: 5.0689 ||: 100%|##########| 5937/5937 [08:57<00:00, 11.06it/s]
+
+2018-11-23 10:52:50,571 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1583 ||: 100%|##########| 94/94 [00:03<00:00, 31.17it/s]
+
+2018-11-23 10:52:53,588 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 10:52:53,589 - INFO - allennlp.training.trainer - loss |     5.069  |     5.158
+2018-11-23 10:52:53,917 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 10:52:54,054 - INFO - allennlp.training.trainer - Epoch duration: 00:09:00
+2018-11-23 10:52:54,054 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:52:25
+2018-11-23 10:52:54,054 - INFO - allennlp.training.trainer - Epoch 3/14
+2018-11-23 10:52:54,055 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9653.252
+2018-11-23 10:52:54,372 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 10:52:54,373 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 10:52:54,373 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 10:52:54,373 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 10:52:54,373 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.7103 ||:   0%|          | 6/5937 [00:10<2:45:11,  1.67s/it]
+loss: 4.8746 ||:   2%|2         | 123/5937 [00:20<1:55:50,  1.20s/it]
+loss: 4.8320 ||:   4%|4         | 240/5937 [00:30<1:21:54,  1.16it/s]
+loss: 4.9259 ||:   6%|6         | 357/5937 [00:40<58:37,  1.59it/s]  
+loss: 4.9696 ||:   8%|7         | 470/5937 [00:50<42:39,  2.14it/s]
+loss: 5.0053 ||:  10%|9         | 584/5937 [01:00<31:36,  2.82it/s]
+loss: 4.9941 ||:  12%|#1        | 697/5937 [01:10<23:59,  3.64it/s]
+loss: 4.9701 ||:  14%|#3        | 814/5937 [01:20<18:37,  4.58it/s]
+loss: 4.9865 ||:  16%|#5        | 930/5937 [01:31<14:57,  5.58it/s]
+loss: 5.0012 ||:  18%|#7        | 1044/5937 [01:41<12:24,  6.57it/s]
+loss: 5.0059 ||:  20%|#9        | 1159/5937 [01:51<10:34,  7.53it/s]
+loss: 4.9997 ||:  21%|##1       | 1274/5937 [02:01<09:15,  8.40it/s]
+loss: 5.0038 ||:  23%|##3       | 1389/5937 [02:11<08:20,  9.08it/s]
+loss: 5.0129 ||:  25%|##5       | 1502/5937 [02:21<07:40,  9.64it/s]
+loss: 5.0089 ||:  27%|##7       | 1617/5937 [02:31<07:06, 10.12it/s]
+loss: 5.0151 ||:  29%|##9       | 1732/5937 [02:41<06:41, 10.46it/s]
+loss: 5.0230 ||:  31%|###1      | 1847/5937 [02:51<06:20, 10.74it/s]
+loss: 5.0226 ||:  33%|###3      | 1962/5937 [03:01<06:03, 10.92it/s]
+loss: 5.0209 ||:  35%|###4      | 2076/5937 [03:12<05:49, 11.04it/s]
+loss: 5.0166 ||:  37%|###6      | 2190/5937 [03:22<05:37, 11.11it/s]
+loss: 5.0083 ||:  39%|###8      | 2304/5937 [03:32<05:24, 11.18it/s]
+loss: 5.0122 ||:  41%|####      | 2418/5937 [03:42<05:13, 11.24it/s]
+loss: 5.0123 ||:  43%|####2     | 2534/5937 [03:52<05:00, 11.32it/s]
+loss: 5.0131 ||:  45%|####4     | 2649/5937 [04:02<04:49, 11.36it/s]
+loss: 5.0135 ||:  47%|####6     | 2764/5937 [04:12<04:38, 11.38it/s]
+loss: 5.0083 ||:  49%|####8     | 2880/5937 [04:22<04:27, 11.44it/s]
+loss: 5.0092 ||:  50%|#####     | 2996/5937 [04:32<04:17, 11.41it/s]
+loss: 5.0153 ||:  52%|#####2    | 3110/5937 [04:42<04:10, 11.31it/s]
+loss: 5.0140 ||:  54%|#####4    | 3225/5937 [04:52<03:58, 11.36it/s]
+loss: 5.0131 ||:  56%|#####6    | 3340/5937 [05:03<03:48, 11.37it/s]
+loss: 5.0076 ||:  58%|#####8    | 3455/5937 [05:13<03:37, 11.39it/s]
+loss: 5.0088 ||:  60%|######    | 3570/5937 [05:23<03:28, 11.33it/s]
+loss: 5.0097 ||:  62%|######2   | 3682/5937 [05:33<03:19, 11.28it/s]
+loss: 5.0088 ||:  64%|######3   | 3796/5937 [05:43<03:09, 11.31it/s]
+loss: 5.0094 ||:  66%|######5   | 3912/5937 [05:53<02:58, 11.37it/s]
+loss: 5.0061 ||:  68%|######7   | 4028/5937 [06:03<02:47, 11.43it/s]
+loss: 5.0069 ||:  70%|######9   | 4144/5937 [06:13<02:36, 11.44it/s]
+loss: 5.0078 ||:  72%|#######1  | 4259/5937 [06:23<02:27, 11.35it/s]
+loss: 5.0064 ||:  74%|#######3  | 4373/5937 [06:34<02:17, 11.34it/s]
+loss: 5.0139 ||:  76%|#######5  | 4487/5937 [06:44<02:08, 11.32it/s]
+loss: 5.0148 ||:  77%|#######7  | 4600/5937 [06:54<01:58, 11.28it/s]
+loss: 5.0149 ||:  79%|#######9  | 4715/5937 [07:04<01:47, 11.34it/s]
+loss: 5.0174 ||:  81%|########1 | 4830/5937 [07:14<01:37, 11.35it/s]
+loss: 5.0204 ||:  83%|########3 | 4944/5937 [07:24<01:27, 11.31it/s]
+loss: 5.0202 ||:  85%|########5 | 5058/5937 [07:34<01:17, 11.32it/s]
+loss: 5.0165 ||:  87%|########7 | 5176/5937 [07:44<01:06, 11.43it/s]
+loss: 5.0176 ||:  89%|########9 | 5294/5937 [07:55<00:56, 11.35it/s]
+loss: 5.0153 ||:  91%|#########1| 5409/5937 [08:05<00:46, 11.37it/s]
+loss: 5.0140 ||:  93%|#########3| 5524/5937 [08:15<00:36, 11.33it/s]
+loss: 5.0153 ||:  95%|#########4| 5637/5937 [08:25<00:26, 11.31it/s]
+loss: 5.0154 ||:  97%|#########6| 5751/5937 [08:35<00:16, 11.33it/s]
+loss: 5.0157 ||:  99%|#########8| 5865/5937 [08:45<00:06, 11.35it/s]
+loss: 5.0179 ||: 100%|##########| 5937/5937 [08:51<00:00, 11.16it/s]
+
+2018-11-23 11:01:46,266 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1448 ||: 100%|##########| 94/94 [00:02<00:00, 32.42it/s]
+
+2018-11-23 11:01:49,166 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:01:49,167 - INFO - allennlp.training.trainer - loss |     5.018  |     5.145
+2018-11-23 11:01:49,505 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 11:01:49,719 - INFO - allennlp.training.trainer - Epoch duration: 00:08:55
+2018-11-23 11:01:49,719 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:41:50
+2018-11-23 11:01:49,719 - INFO - allennlp.training.trainer - Epoch 4/14
+2018-11-23 11:01:49,720 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9668.064
+2018-11-23 11:01:50,038 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:01:50,038 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:01:50,038 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:01:50,039 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:01:50,039 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.8309 ||:   0%|          | 6/5937 [00:10<2:44:53,  1.67s/it]
+loss: 4.9867 ||:   2%|2         | 120/5937 [00:20<1:55:46,  1.19s/it]
+loss: 4.9369 ||:   4%|3         | 235/5937 [00:30<1:21:55,  1.16it/s]
+loss: 5.0122 ||:   6%|5         | 350/5937 [00:40<58:41,  1.59it/s]  
+loss: 5.0271 ||:   8%|7         | 464/5937 [00:50<42:39,  2.14it/s]
+loss: 5.0284 ||:  10%|9         | 579/5937 [01:00<31:34,  2.83it/s]
+loss: 5.0155 ||:  12%|#1        | 695/5937 [01:10<23:53,  3.66it/s]
+loss: 5.0236 ||:  14%|#3        | 811/5937 [01:20<18:37,  4.59it/s]
+loss: 5.0244 ||:  16%|#5        | 924/5937 [01:30<14:59,  5.57it/s]
+loss: 5.0289 ||:  17%|#7        | 1037/5937 [01:40<12:26,  6.56it/s]
+loss: 5.0037 ||:  19%|#9        | 1154/5937 [01:51<10:33,  7.55it/s]
+loss: 5.0023 ||:  21%|##1       | 1271/5937 [02:01<09:16,  8.39it/s]
+loss: 5.0002 ||:  23%|##3       | 1386/5937 [02:11<08:19,  9.11it/s]
+loss: 5.0077 ||:  25%|##5       | 1501/5937 [02:21<07:38,  9.68it/s]
+loss: 5.0095 ||:  27%|##7       | 1615/5937 [02:31<07:08, 10.09it/s]
+loss: 5.0042 ||:  29%|##9       | 1729/5937 [02:41<06:42, 10.45it/s]
+loss: 5.0032 ||:  31%|###1      | 1844/5937 [02:51<06:21, 10.73it/s]
+loss: 5.0050 ||:  33%|###2      | 1959/5937 [03:01<06:04, 10.91it/s]
+loss: 5.0007 ||:  35%|###4      | 2074/5937 [03:12<05:49, 11.06it/s]
+loss: 4.9936 ||:  37%|###6      | 2191/5937 [03:22<05:33, 11.23it/s]
+loss: 4.9957 ||:  39%|###8      | 2308/5937 [03:32<05:21, 11.29it/s]
+loss: 4.9885 ||:  41%|####      | 2423/5937 [03:42<05:09, 11.34it/s]
+loss: 4.9907 ||:  43%|####2     | 2538/5937 [03:52<04:58, 11.38it/s]
+loss: 4.9888 ||:  45%|####4     | 2653/5937 [04:02<04:48, 11.37it/s]
+loss: 4.9869 ||:  47%|####6     | 2767/5937 [04:12<04:38, 11.38it/s]
+loss: 4.9842 ||:  49%|####8     | 2881/5937 [04:22<04:28, 11.38it/s]
+loss: 4.9850 ||:  50%|#####     | 2995/5937 [04:32<04:18, 11.38it/s]
+loss: 4.9843 ||:  52%|#####2    | 3109/5937 [04:42<04:09, 11.35it/s]
+loss: 4.9879 ||:  54%|#####4    | 3223/5937 [04:52<03:59, 11.35it/s]
+loss: 4.9921 ||:  56%|#####6    | 3337/5937 [05:02<03:49, 11.31it/s]
+loss: 4.9903 ||:  58%|#####8    | 3453/5937 [05:12<03:38, 11.38it/s]
+loss: 4.9885 ||:  60%|######    | 3569/5937 [05:23<03:27, 11.40it/s]
+loss: 4.9892 ||:  62%|######2   | 3684/5937 [05:33<03:17, 11.40it/s]
+loss: 4.9857 ||:  64%|######4   | 3801/5937 [05:43<03:06, 11.47it/s]
+loss: 4.9872 ||:  66%|######5   | 3918/5937 [05:53<02:56, 11.45it/s]
+loss: 4.9866 ||:  68%|######7   | 4033/5937 [06:03<02:46, 11.44it/s]
+loss: 4.9868 ||:  70%|######9   | 4148/5937 [06:13<02:36, 11.42it/s]
+loss: 4.9895 ||:  72%|#######1  | 4262/5937 [06:23<02:27, 11.37it/s]
+loss: 4.9917 ||:  74%|#######3  | 4376/5937 [06:33<02:17, 11.38it/s]
+loss: 4.9953 ||:  76%|#######5  | 4490/5937 [06:43<02:07, 11.31it/s]
+loss: 4.9901 ||:  78%|#######7  | 4609/5937 [06:54<01:55, 11.47it/s]
+loss: 4.9849 ||:  80%|#######9  | 4728/5937 [07:04<01:45, 11.42it/s]
+loss: 4.9796 ||:  82%|########1 | 4842/5937 [07:14<01:36, 11.39it/s]
+loss: 4.9787 ||:  83%|########3 | 4956/5937 [07:24<01:26, 11.35it/s]
+loss: 4.9799 ||:  85%|########5 | 5070/5937 [07:34<01:16, 11.36it/s]
+loss: 4.9826 ||:  87%|########7 | 5184/5937 [07:44<01:06, 11.33it/s]
+loss: 4.9868 ||:  89%|########9 | 5297/5937 [07:54<00:56, 11.30it/s]
+loss: 4.9896 ||:  91%|#########1| 5411/5937 [08:05<00:46, 11.30it/s]
+loss: 4.9894 ||:  93%|#########3| 5527/5937 [08:15<00:36, 11.36it/s]
+loss: 4.9905 ||:  95%|#########5| 5642/5937 [08:25<00:25, 11.35it/s]
+loss: 4.9895 ||:  97%|#########6| 5756/5937 [08:35<00:15, 11.36it/s]
+loss: 4.9873 ||:  99%|#########8| 5871/5937 [08:45<00:05, 11.39it/s]
+loss: 4.9865 ||: 100%|##########| 5937/5937 [08:51<00:00, 11.18it/s]
+
+2018-11-23 11:10:41,139 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1235 ||: 100%|##########| 94/94 [00:02<00:00, 32.62it/s]
+
+2018-11-23 11:10:44,022 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:10:44,023 - INFO - allennlp.training.trainer - loss |     4.987  |     5.124
+2018-11-23 11:10:44,350 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 11:10:44,503 - INFO - allennlp.training.trainer - Epoch duration: 00:08:54
+2018-11-23 11:10:44,503 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:31:53
+2018-11-23 11:10:44,503 - INFO - allennlp.training.trainer - Epoch 5/14
+2018-11-23 11:10:44,504 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9682.72
+2018-11-23 11:10:44,812 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:10:44,812 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:10:44,812 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:10:44,812 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:10:44,813 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.2565 ||:   0%|          | 7/5937 [00:10<2:21:26,  1.43s/it]
+loss: 4.7383 ||:   2%|2         | 123/5937 [00:20<1:39:34,  1.03s/it]
+loss: 4.7641 ||:   4%|4         | 239/5937 [00:30<1:10:47,  1.34it/s]
+loss: 4.8379 ||:   6%|5         | 355/5937 [00:40<51:00,  1.82it/s]  
+loss: 4.8592 ||:   8%|7         | 468/5937 [00:50<37:25,  2.44it/s]
+loss: 4.8379 ||:  10%|9         | 583/5937 [01:00<27:59,  3.19it/s]
+loss: 4.8500 ||:  12%|#1        | 698/5937 [01:10<21:28,  4.07it/s]
+loss: 4.8464 ||:  14%|#3        | 814/5937 [01:20<16:55,  5.04it/s]
+loss: 4.8618 ||:  16%|#5        | 930/5937 [01:31<13:51,  6.02it/s]
+loss: 4.8662 ||:  18%|#7        | 1044/5937 [01:41<11:38,  7.00it/s]
+loss: 4.8773 ||:  20%|#9        | 1158/5937 [01:51<10:05,  7.89it/s]
+loss: 4.8937 ||:  21%|##1       | 1272/5937 [02:01<08:57,  8.69it/s]
+loss: 4.8970 ||:  23%|##3       | 1387/5937 [02:11<08:06,  9.36it/s]
+loss: 4.8995 ||:  25%|##5       | 1502/5937 [02:21<07:28,  9.88it/s]
+loss: 4.9030 ||:  27%|##7       | 1616/5937 [02:31<07:01, 10.24it/s]
+loss: 4.8993 ||:  29%|##9       | 1731/5937 [02:42<06:38, 10.57it/s]
+loss: 4.9052 ||:  31%|###1      | 1846/5937 [02:52<06:18, 10.81it/s]
+loss: 4.9051 ||:  33%|###3      | 1962/5937 [03:02<06:01, 11.01it/s]
+loss: 4.9076 ||:  35%|###5      | 2078/5937 [03:12<05:46, 11.15it/s]
+loss: 4.9069 ||:  37%|###6      | 2194/5937 [03:22<05:32, 11.25it/s]
+loss: 4.9162 ||:  39%|###8      | 2309/5937 [03:32<05:22, 11.24it/s]
+loss: 4.9115 ||:  41%|####      | 2426/5937 [03:42<05:08, 11.37it/s]
+loss: 4.9130 ||:  43%|####2     | 2543/5937 [03:52<04:58, 11.38it/s]
+loss: 4.9152 ||:  45%|####4     | 2657/5937 [04:02<04:48, 11.37it/s]
+loss: 4.9195 ||:  47%|####6     | 2772/5937 [04:13<04:37, 11.39it/s]
+loss: 4.9218 ||:  49%|####8     | 2887/5937 [04:23<04:27, 11.39it/s]
+loss: 4.9250 ||:  51%|#####     | 3001/5937 [04:33<04:17, 11.38it/s]
+loss: 4.9256 ||:  52%|#####2    | 3115/5937 [04:43<04:08, 11.37it/s]
+loss: 4.9267 ||:  54%|#####4    | 3231/5937 [04:53<03:57, 11.41it/s]
+loss: 4.9358 ||:  56%|#####6    | 3347/5937 [05:03<03:48, 11.32it/s]
+loss: 4.9379 ||:  58%|#####8    | 3461/5937 [05:13<03:38, 11.31it/s]
+loss: 4.9347 ||:  60%|######    | 3579/5937 [05:23<03:26, 11.43it/s]
+loss: 4.9398 ||:  62%|######2   | 3697/5937 [05:34<03:17, 11.35it/s]
+loss: 4.9434 ||:  64%|######4   | 3809/5937 [05:44<03:08, 11.31it/s]
+loss: 4.9453 ||:  66%|######6   | 3921/5937 [05:54<03:00, 11.18it/s]
+loss: 4.9444 ||:  68%|######8   | 4038/5937 [06:04<02:47, 11.32it/s]
+loss: 4.9454 ||:  70%|######9   | 4155/5937 [06:15<02:37, 11.31it/s]
+loss: 4.9491 ||:  72%|#######1  | 4269/5937 [06:25<02:27, 11.30it/s]
+loss: 4.9478 ||:  74%|#######3  | 4385/5937 [06:35<02:16, 11.39it/s]
+loss: 4.9458 ||:  76%|#######5  | 4501/5937 [06:45<02:06, 11.36it/s]
+loss: 4.9498 ||:  78%|#######7  | 4615/5937 [06:55<01:56, 11.33it/s]
+loss: 4.9520 ||:  80%|#######9  | 4728/5937 [07:05<01:47, 11.27it/s]
+loss: 4.9532 ||:  82%|########1 | 4840/5937 [07:15<01:37, 11.25it/s]
+loss: 4.9521 ||:  83%|########3 | 4955/5937 [07:25<01:26, 11.31it/s]
+loss: 4.9514 ||:  85%|########5 | 5071/5937 [07:35<01:16, 11.39it/s]
+loss: 4.9531 ||:  87%|########7 | 5187/5937 [07:45<01:05, 11.39it/s]
+loss: 4.9541 ||:  89%|########9 | 5301/5937 [07:56<00:56, 11.35it/s]
+loss: 4.9547 ||:  91%|#########1| 5414/5937 [08:06<00:46, 11.33it/s]
+loss: 4.9531 ||:  93%|#########3| 5530/5937 [08:16<00:35, 11.41it/s]
+loss: 4.9543 ||:  95%|#########5| 5646/5937 [08:26<00:25, 11.40it/s]
+loss: 4.9563 ||:  97%|#########7| 5761/5937 [08:36<00:15, 11.33it/s]
+loss: 4.9569 ||:  99%|#########8| 5875/5937 [08:46<00:05, 11.35it/s]
+loss: 4.9570 ||: 100%|##########| 5937/5937 [08:51<00:00, 11.16it/s]
+
+2018-11-23 11:19:36,794 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1180 ||: 100%|##########| 94/94 [00:02<00:00, 32.50it/s]
+
+2018-11-23 11:19:39,687 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:19:39,687 - INFO - allennlp.training.trainer - loss |     4.957  |     5.118
+2018-11-23 11:19:40,025 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 11:19:40,177 - INFO - allennlp.training.trainer - Epoch duration: 00:08:55
+2018-11-23 11:19:40,177 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:22:18
+2018-11-23 11:19:40,177 - INFO - allennlp.training.trainer - Epoch 6/14
+2018-11-23 11:19:40,177 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9699.76
+2018-11-23 11:19:40,493 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:19:40,494 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:19:40,494 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:19:40,494 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:19:40,494 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.8228 ||:   0%|          | 7/5937 [00:10<2:21:40,  1.43s/it]
+loss: 4.7981 ||:   2%|2         | 120/5937 [00:20<1:39:51,  1.03s/it]
+loss: 4.9041 ||:   4%|3         | 233/5937 [00:30<1:11:04,  1.34it/s]
+loss: 4.9127 ||:   6%|5         | 347/5937 [00:40<51:13,  1.82it/s]  
+loss: 4.9064 ||:   8%|7         | 461/5937 [00:50<37:32,  2.43it/s]
+loss: 4.9144 ||:  10%|9         | 575/5937 [01:00<28:05,  3.18it/s]
+loss: 4.8989 ||:  12%|#1        | 691/5937 [01:10<21:31,  4.06it/s]
+loss: 4.9076 ||:  14%|#3        | 806/5937 [01:20<16:58,  5.04it/s]
+loss: 4.9136 ||:  16%|#5        | 921/5937 [01:30<13:50,  6.04it/s]
+loss: 4.9080 ||:  17%|#7        | 1034/5937 [01:40<11:38,  7.01it/s]
+loss: 4.8846 ||:  19%|#9        | 1153/5937 [01:50<09:59,  7.98it/s]
+loss: 4.8866 ||:  21%|##1       | 1271/5937 [02:01<08:53,  8.75it/s]
+loss: 4.8954 ||:  23%|##3       | 1384/5937 [02:11<08:06,  9.37it/s]
+loss: 4.8924 ||:  25%|##5       | 1500/5937 [02:21<07:26,  9.93it/s]
+loss: 4.8907 ||:  27%|##7       | 1616/5937 [02:31<07:00, 10.28it/s]
+loss: 4.9018 ||:  29%|##9       | 1728/5937 [02:41<06:39, 10.53it/s]
+loss: 4.9001 ||:  31%|###1      | 1842/5937 [02:51<06:20, 10.78it/s]
+loss: 4.9041 ||:  33%|###2      | 1957/5937 [03:01<06:03, 10.95it/s]
+loss: 4.9012 ||:  35%|###4      | 2073/5937 [03:11<05:47, 11.11it/s]
+loss: 4.9072 ||:  37%|###6      | 2189/5937 [03:22<05:35, 11.18it/s]
+loss: 4.9098 ||:  39%|###8      | 2304/5937 [03:32<05:22, 11.26it/s]
+loss: 4.9053 ||:  41%|####      | 2419/5937 [03:42<05:11, 11.29it/s]
+loss: 4.9104 ||:  43%|####2     | 2533/5937 [03:52<05:02, 11.25it/s]
+loss: 4.9099 ||:  45%|####4     | 2647/5937 [04:02<04:51, 11.27it/s]
+loss: 4.9042 ||:  47%|####6     | 2763/5937 [04:12<04:39, 11.36it/s]
+loss: 4.9040 ||:  48%|####8     | 2879/5937 [04:22<04:27, 11.41it/s]
+loss: 4.9105 ||:  50%|#####     | 2995/5937 [04:32<04:19, 11.36it/s]
+loss: 4.9159 ||:  52%|#####2    | 3110/5937 [04:43<04:08, 11.37it/s]
+loss: 4.9104 ||:  54%|#####4    | 3226/5937 [04:53<03:57, 11.42it/s]
+loss: 4.9106 ||:  56%|#####6    | 3342/5937 [05:03<03:47, 11.40it/s]
+loss: 4.9134 ||:  58%|#####8    | 3456/5937 [05:13<03:38, 11.38it/s]
+loss: 4.9142 ||:  60%|######    | 3571/5937 [05:23<03:27, 11.39it/s]
+loss: 4.9173 ||:  62%|######2   | 3686/5937 [05:33<03:17, 11.38it/s]
+loss: 4.9180 ||:  64%|######4   | 3801/5937 [05:43<03:07, 11.40it/s]
+loss: 4.9229 ||:  66%|######5   | 3916/5937 [05:53<02:58, 11.34it/s]
+loss: 4.9214 ||:  68%|######7   | 4031/5937 [06:03<02:47, 11.37it/s]
+loss: 4.9239 ||:  70%|######9   | 4146/5937 [06:14<02:38, 11.31it/s]
+loss: 4.9212 ||:  72%|#######1  | 4261/5937 [06:24<02:27, 11.35it/s]
+loss: 4.9214 ||:  74%|#######3  | 4376/5937 [06:34<02:17, 11.35it/s]
+loss: 4.9219 ||:  76%|#######5  | 4490/5937 [06:44<02:07, 11.31it/s]
+loss: 4.9211 ||:  78%|#######7  | 4606/5937 [06:54<01:57, 11.37it/s]
+loss: 4.9219 ||:  80%|#######9  | 4722/5937 [07:04<01:47, 11.35it/s]
+loss: 4.9230 ||:  81%|########1 | 4836/5937 [07:15<01:37, 11.30it/s]
+loss: 4.9231 ||:  83%|########3 | 4951/5937 [07:25<01:26, 11.34it/s]
+loss: 4.9270 ||:  85%|########5 | 5066/5937 [07:35<01:16, 11.31it/s]
+loss: 4.9272 ||:  87%|########7 | 5179/5937 [07:45<01:07, 11.28it/s]
+loss: 4.9276 ||:  89%|########9 | 5293/5937 [07:55<00:57, 11.29it/s]
+loss: 4.9290 ||:  91%|#########1| 5407/5937 [08:05<00:46, 11.32it/s]
+loss: 4.9274 ||:  93%|#########3| 5522/5937 [08:15<00:36, 11.35it/s]
+loss: 4.9295 ||:  95%|#########4| 5637/5937 [08:26<00:26, 11.26it/s]
+loss: 4.9289 ||:  97%|#########6| 5752/5937 [08:36<00:16, 11.32it/s]
+loss: 4.9309 ||:  99%|#########8| 5867/5937 [08:46<00:06, 11.32it/s]
+loss: 4.9316 ||: 100%|##########| 5937/5937 [08:52<00:00, 11.15it/s]
+
+2018-11-23 11:28:32,850 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0836 ||: 100%|##########| 94/94 [00:02<00:00, 32.54it/s]
+
+2018-11-23 11:28:35,740 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:28:35,740 - INFO - allennlp.training.trainer - loss |     4.932  |     5.084
+2018-11-23 11:28:36,080 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 11:28:36,236 - INFO - allennlp.training.trainer - Epoch duration: 00:08:56
+2018-11-23 11:28:36,236 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:12:55
+2018-11-23 11:28:36,236 - INFO - allennlp.training.trainer - Epoch 7/14
+2018-11-23 11:28:36,236 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9713.7
+2018-11-23 11:28:36,536 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:28:36,537 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:28:36,537 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:28:36,537 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:28:36,537 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.0280 ||:   0%|          | 7/5937 [00:10<2:21:50,  1.44s/it]
+loss: 4.7534 ||:   2%|2         | 122/5937 [00:20<1:39:54,  1.03s/it]
+loss: 4.8071 ||:   4%|3         | 237/5937 [00:30<1:11:02,  1.34it/s]
+loss: 4.8152 ||:   6%|5         | 353/5937 [00:40<51:08,  1.82it/s]  
+loss: 4.8100 ||:   8%|7         | 469/5937 [00:50<37:26,  2.43it/s]
+loss: 4.8387 ||:  10%|9         | 584/5937 [01:00<28:00,  3.18it/s]
+loss: 4.8235 ||:  12%|#1        | 700/5937 [01:10<21:27,  4.07it/s]
+loss: 4.8387 ||:  14%|#3        | 815/5937 [01:20<16:56,  5.04it/s]
+loss: 4.8401 ||:  16%|#5        | 931/5937 [01:30<13:45,  6.06it/s]
+loss: 4.8497 ||:  18%|#7        | 1047/5937 [01:40<11:32,  7.06it/s]
+loss: 4.8490 ||:  20%|#9        | 1162/5937 [01:50<09:58,  7.98it/s]
+loss: 4.8427 ||:  22%|##1       | 1277/5937 [02:00<08:51,  8.77it/s]
+loss: 4.8461 ||:  23%|##3       | 1392/5937 [02:10<08:01,  9.43it/s]
+loss: 4.8596 ||:  25%|##5       | 1507/5937 [02:21<07:26,  9.92it/s]
+loss: 4.8588 ||:  27%|##7       | 1622/5937 [02:31<06:57, 10.34it/s]
+loss: 4.8540 ||:  29%|##9       | 1737/5937 [02:41<06:35, 10.62it/s]
+loss: 4.8498 ||:  31%|###1      | 1854/5937 [02:51<06:14, 10.90it/s]
+loss: 4.8460 ||:  33%|###3      | 1970/5937 [03:01<05:58, 11.05it/s]
+loss: 4.8495 ||:  35%|###5      | 2085/5937 [03:11<05:45, 11.13it/s]
+loss: 4.8540 ||:  37%|###7      | 2199/5937 [03:21<05:34, 11.17it/s]
+loss: 4.8549 ||:  39%|###8      | 2314/5937 [03:31<05:21, 11.26it/s]
+loss: 4.8596 ||:  41%|####      | 2429/5937 [03:42<05:11, 11.25it/s]
+loss: 4.8685 ||:  43%|####2     | 2542/5937 [03:52<05:05, 11.13it/s]
+loss: 4.8740 ||:  45%|####4     | 2654/5937 [04:02<04:54, 11.14it/s]
+loss: 4.8785 ||:  47%|####6     | 2767/5937 [04:12<04:43, 11.17it/s]
+loss: 4.8808 ||:  49%|####8     | 2880/5937 [04:22<04:33, 11.19it/s]
+loss: 4.8839 ||:  50%|#####     | 2994/5937 [04:32<04:22, 11.22it/s]
+loss: 4.8855 ||:  52%|#####2    | 3107/5937 [04:42<04:11, 11.23it/s]
+loss: 4.8920 ||:  54%|#####4    | 3220/5937 [04:52<04:01, 11.23it/s]
+loss: 4.8954 ||:  56%|#####6    | 3335/5937 [05:02<03:50, 11.27it/s]
+loss: 4.8986 ||:  58%|#####8    | 3450/5937 [05:13<03:39, 11.31it/s]
+loss: 4.9044 ||:  60%|######    | 3565/5937 [05:23<03:30, 11.28it/s]
+loss: 4.9076 ||:  62%|######1   | 3679/5937 [05:33<03:19, 11.31it/s]
+loss: 4.9049 ||:  64%|######3   | 3795/5937 [05:43<03:08, 11.38it/s]
+loss: 4.9022 ||:  66%|######5   | 3911/5937 [05:53<02:58, 11.35it/s]
+loss: 4.8996 ||:  68%|######7   | 4026/5937 [06:03<02:47, 11.39it/s]
+loss: 4.8981 ||:  70%|######9   | 4141/5937 [06:13<02:37, 11.40it/s]
+loss: 4.8992 ||:  72%|#######1  | 4256/5937 [06:23<02:28, 11.35it/s]
+loss: 4.8937 ||:  74%|#######3  | 4373/5937 [06:34<02:16, 11.43it/s]
+loss: 4.8927 ||:  76%|#######5  | 4490/5937 [06:44<02:07, 11.33it/s]
+loss: 4.8923 ||:  78%|#######7  | 4606/5937 [06:54<01:56, 11.39it/s]
+loss: 4.8955 ||:  80%|#######9  | 4722/5937 [07:05<01:47, 11.29it/s]
+loss: 4.8974 ||:  81%|########1 | 4835/5937 [07:15<01:37, 11.28it/s]
+loss: 4.8992 ||:  83%|########3 | 4948/5937 [07:25<01:28, 11.23it/s]
+loss: 4.8956 ||:  85%|########5 | 5062/5937 [07:35<01:17, 11.27it/s]
+loss: 4.8969 ||:  87%|########7 | 5176/5937 [07:45<01:07, 11.25it/s]
+loss: 4.8957 ||:  89%|########9 | 5290/5937 [07:55<00:57, 11.28it/s]
+loss: 4.8968 ||:  91%|#########1| 5404/5937 [08:05<00:47, 11.26it/s]
+loss: 4.9007 ||:  93%|#########2| 5516/5937 [08:15<00:37, 11.23it/s]
+loss: 4.8997 ||:  95%|#########4| 5630/5937 [08:25<00:27, 11.27it/s]
+loss: 4.9012 ||:  97%|#########6| 5744/5937 [08:35<00:17, 11.29it/s]
+loss: 4.9027 ||:  99%|#########8| 5858/5937 [08:46<00:07, 11.25it/s]
+loss: 4.9033 ||: 100%|##########| 5937/5937 [08:53<00:00, 11.14it/s]
+
+2018-11-23 11:37:29,571 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0953 ||: 100%|##########| 94/94 [00:02<00:00, 32.37it/s]
+
+2018-11-23 11:37:32,476 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:37:32,476 - INFO - allennlp.training.trainer - loss |     4.903  |     5.095
+2018-11-23 11:37:32,819 - INFO - allennlp.training.trainer - Epoch duration: 00:08:56
+2018-11-23 11:37:32,820 - INFO - allennlp.training.trainer - Estimated training time remaining: 1:03:39
+2018-11-23 11:37:32,820 - INFO - allennlp.training.trainer - Epoch 8/14
+2018-11-23 11:37:32,820 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9728.344
+2018-11-23 11:37:33,095 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:37:33,096 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:37:33,096 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:37:33,096 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:37:33,096 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 5.2180 ||:   0%|          | 7/5937 [00:10<2:22:01,  1.44s/it]
+loss: 5.0764 ||:   2%|2         | 120/5937 [00:20<1:40:07,  1.03s/it]
+loss: 4.9846 ||:   4%|3         | 234/5937 [00:30<1:11:13,  1.33it/s]
+loss: 4.9127 ||:   6%|5         | 349/5937 [00:40<51:17,  1.82it/s]  
+loss: 4.8918 ||:   8%|7         | 464/5937 [00:50<37:36,  2.43it/s]
+loss: 4.9073 ||:  10%|9         | 577/5937 [01:00<28:11,  3.17it/s]
+loss: 4.9030 ||:  12%|#1        | 690/5937 [01:10<21:39,  4.04it/s]
+loss: 4.8662 ||:  14%|#3        | 805/5937 [01:20<17:03,  5.01it/s]
+loss: 4.8604 ||:  15%|#5        | 920/5937 [01:30<13:53,  6.02it/s]
+loss: 4.8629 ||:  17%|#7        | 1034/5937 [01:40<11:40,  7.00it/s]
+loss: 4.8682 ||:  19%|#9        | 1148/5937 [01:51<10:05,  7.90it/s]
+loss: 4.8687 ||:  21%|##1       | 1261/5937 [02:01<08:58,  8.68it/s]
+loss: 4.8781 ||:  23%|##3       | 1374/5937 [02:11<08:10,  9.30it/s]
+loss: 4.8755 ||:  25%|##5       | 1487/5937 [02:21<07:33,  9.81it/s]
+loss: 4.8670 ||:  27%|##6       | 1600/5937 [02:31<07:05, 10.20it/s]
+loss: 4.8656 ||:  29%|##8       | 1713/5937 [02:41<06:43, 10.48it/s]
+loss: 4.8737 ||:  31%|###       | 1826/5937 [02:51<06:25, 10.66it/s]
+loss: 4.8854 ||:  33%|###2      | 1939/5937 [03:01<06:09, 10.81it/s]
+loss: 4.8865 ||:  35%|###4      | 2051/5937 [03:11<05:56, 10.90it/s]
+loss: 4.8855 ||:  36%|###6      | 2163/5937 [03:21<05:43, 10.98it/s]
+loss: 4.8891 ||:  38%|###8      | 2275/5937 [03:32<05:34, 10.95it/s]
+loss: 4.8937 ||:  40%|####      | 2385/5937 [03:42<05:24, 10.96it/s]
+loss: 4.8857 ||:  42%|####2     | 2497/5937 [03:52<05:11, 11.03it/s]
+loss: 4.8838 ||:  44%|####3     | 2609/5937 [04:02<05:01, 11.04it/s]
+loss: 4.8852 ||:  46%|####5     | 2720/5937 [04:12<04:52, 10.99it/s]
+loss: 4.8809 ||:  48%|####7     | 2831/5937 [04:22<04:41, 11.02it/s]
+loss: 4.8846 ||:  50%|####9     | 2945/5937 [04:32<04:29, 11.10it/s]
+loss: 4.8903 ||:  52%|#####1    | 3059/5937 [04:42<04:18, 11.15it/s]
+loss: 4.8916 ||:  53%|#####3    | 3173/5937 [04:52<04:07, 11.19it/s]
+loss: 4.8868 ||:  55%|#####5    | 3288/5937 [05:02<03:55, 11.27it/s]
+loss: 4.8876 ||:  57%|#####7    | 3403/5937 [05:12<03:44, 11.28it/s]
+loss: 4.8905 ||:  59%|#####9    | 3516/5937 [05:23<03:35, 11.24it/s]
+loss: 4.8824 ||:  61%|######1   | 3632/5937 [05:33<03:23, 11.34it/s]
+loss: 4.8809 ||:  63%|######3   | 3748/5937 [05:43<03:12, 11.37it/s]
+loss: 4.8808 ||:  65%|######5   | 3863/5937 [05:53<03:02, 11.39it/s]
+loss: 4.8810 ||:  67%|######7   | 3978/5937 [06:03<02:52, 11.38it/s]
+loss: 4.8763 ||:  69%|######8   | 4093/5937 [06:13<02:41, 11.41it/s]
+loss: 4.8809 ||:  71%|#######   | 4208/5937 [06:23<02:32, 11.37it/s]
+loss: 4.8795 ||:  73%|#######2  | 4324/5937 [06:33<02:21, 11.42it/s]
+loss: 4.8843 ||:  75%|#######4  | 4440/5937 [06:44<02:11, 11.34it/s]
+loss: 4.8851 ||:  77%|#######6  | 4555/5937 [06:54<02:01, 11.36it/s]
+loss: 4.8875 ||:  79%|#######8  | 4670/5937 [07:04<01:52, 11.31it/s]
+loss: 4.8867 ||:  81%|########  | 4785/5937 [07:14<01:41, 11.35it/s]
+loss: 4.8863 ||:  83%|########2 | 4900/5937 [07:24<01:31, 11.32it/s]
+loss: 4.8904 ||:  84%|########4 | 5013/5937 [07:35<01:22, 11.22it/s]
+loss: 4.8865 ||:  86%|########6 | 5129/5937 [07:45<01:11, 11.31it/s]
+loss: 4.8867 ||:  88%|########8 | 5245/5937 [07:55<01:01, 11.25it/s]
+loss: 4.8868 ||:  90%|######### | 5359/5937 [08:05<00:51, 11.27it/s]
+loss: 4.8880 ||:  92%|#########2| 5472/5937 [08:15<00:41, 11.26it/s]
+loss: 4.8885 ||:  94%|#########4| 5585/5937 [08:25<00:31, 11.26it/s]
+loss: 4.8905 ||:  96%|#########5| 5698/5937 [08:35<00:21, 11.20it/s]
+loss: 4.8935 ||:  98%|#########7| 5810/5937 [08:45<00:11, 11.20it/s]
+loss: 4.8929 ||: 100%|#########9| 5924/5937 [08:55<00:01, 11.26it/s]
+loss: 4.8917 ||: 100%|##########| 5937/5937 [08:57<00:00, 11.05it/s]
+
+2018-11-23 11:46:30,189 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.1147 ||: 100%|##########| 94/94 [00:02<00:00, 32.22it/s]
+
+2018-11-23 11:46:33,107 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:46:33,108 - INFO - allennlp.training.trainer - loss |     4.892  |     5.115
+2018-11-23 11:46:33,474 - INFO - allennlp.training.trainer - Epoch duration: 00:09:00
+2018-11-23 11:46:33,474 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:54:30
+2018-11-23 11:46:33,474 - INFO - allennlp.training.trainer - Epoch 9/14
+2018-11-23 11:46:33,475 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9743.368
+2018-11-23 11:46:33,721 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:46:33,721 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:46:33,721 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:46:33,721 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:46:33,722 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.3488 ||:   0%|          | 8/5937 [00:10<2:04:38,  1.26s/it]
+loss: 4.8220 ||:   2%|2         | 122/5937 [00:20<1:28:08,  1.10it/s]
+loss: 4.8100 ||:   4%|3         | 236/5937 [00:30<1:03:00,  1.51it/s]
+loss: 4.8871 ||:   6%|5         | 350/5937 [00:40<45:43,  2.04it/s]  
+loss: 4.8960 ||:   8%|7         | 463/5937 [00:50<33:47,  2.70it/s]
+loss: 4.8732 ||:  10%|9         | 577/5937 [01:00<25:31,  3.50it/s]
+loss: 4.8740 ||:  12%|#1        | 691/5937 [01:10<19:49,  4.41it/s]
+loss: 4.8776 ||:  14%|#3        | 804/5937 [01:20<15:51,  5.39it/s]
+loss: 4.8833 ||:  15%|#5        | 917/5937 [01:30<13:06,  6.38it/s]
+loss: 4.8801 ||:  17%|#7        | 1031/5937 [01:40<11:07,  7.35it/s]
+loss: 4.8673 ||:  19%|#9        | 1146/5937 [01:50<09:42,  8.23it/s]
+loss: 4.8664 ||:  21%|##1       | 1261/5937 [02:01<08:41,  8.97it/s]
+loss: 4.8661 ||:  23%|##3       | 1376/5937 [02:11<07:55,  9.59it/s]
+loss: 4.8688 ||:  25%|##5       | 1491/5937 [02:21<07:20, 10.08it/s]
+loss: 4.8598 ||:  27%|##7       | 1607/5937 [02:31<06:53, 10.47it/s]
+loss: 4.8486 ||:  29%|##9       | 1723/5937 [02:41<06:31, 10.76it/s]
+loss: 4.8554 ||:  31%|###       | 1838/5937 [02:51<06:15, 10.91it/s]
+loss: 4.8523 ||:  33%|###2      | 1953/5937 [03:01<05:59, 11.08it/s]
+loss: 4.8568 ||:  35%|###4      | 2068/5937 [03:11<05:48, 11.11it/s]
+loss: 4.8540 ||:  37%|###6      | 2182/5937 [03:21<05:35, 11.19it/s]
+loss: 4.8622 ||:  39%|###8      | 2296/5937 [03:32<05:25, 11.19it/s]
+loss: 4.8669 ||:  41%|####      | 2408/5937 [03:42<05:16, 11.16it/s]
+loss: 4.8687 ||:  42%|####2     | 2519/5937 [03:52<05:06, 11.14it/s]
+loss: 4.8656 ||:  44%|####4     | 2633/5937 [04:02<04:54, 11.21it/s]
+loss: 4.8692 ||:  46%|####6     | 2747/5937 [04:12<04:44, 11.23it/s]
+loss: 4.8701 ||:  48%|####8     | 2860/5937 [04:22<04:33, 11.24it/s]
+loss: 4.8743 ||:  50%|#####     | 2973/5937 [04:32<04:24, 11.20it/s]
+loss: 4.8720 ||:  52%|#####1    | 3085/5937 [04:42<04:14, 11.20it/s]
+loss: 4.8749 ||:  54%|#####3    | 3199/5937 [04:52<04:03, 11.24it/s]
+loss: 4.8762 ||:  56%|#####5    | 3313/5937 [05:02<03:53, 11.22it/s]
+loss: 4.8792 ||:  58%|#####7    | 3425/5937 [05:12<03:44, 11.18it/s]
+loss: 4.8835 ||:  60%|#####9    | 3537/5937 [05:22<03:34, 11.17it/s]
+loss: 4.8871 ||:  61%|######1   | 3650/5937 [05:32<03:24, 11.19it/s]
+loss: 4.8903 ||:  63%|######3   | 3763/5937 [05:43<03:14, 11.18it/s]
+loss: 4.8961 ||:  65%|######5   | 3875/5937 [05:53<03:06, 11.08it/s]
+loss: 4.8947 ||:  67%|######7   | 3988/5937 [06:03<02:54, 11.15it/s]
+loss: 4.8957 ||:  69%|######9   | 4101/5937 [06:13<02:44, 11.14it/s]
+loss: 4.8944 ||:  71%|#######   | 4214/5937 [06:23<02:34, 11.18it/s]
+loss: 4.8964 ||:  73%|#######2  | 4327/5937 [06:33<02:24, 11.14it/s]
+loss: 4.8941 ||:  75%|#######4  | 4441/5937 [06:43<02:13, 11.19it/s]
+loss: 4.8911 ||:  77%|#######6  | 4555/5937 [06:53<02:03, 11.23it/s]
+loss: 4.8906 ||:  79%|#######8  | 4669/5937 [07:04<01:52, 11.25it/s]
+loss: 4.8892 ||:  81%|########  | 4783/5937 [07:14<01:42, 11.27it/s]
+loss: 4.8833 ||:  82%|########2 | 4898/5937 [07:24<01:31, 11.32it/s]
+loss: 4.8875 ||:  84%|########4 | 5013/5937 [07:34<01:22, 11.24it/s]
+loss: 4.8888 ||:  86%|########6 | 5127/5937 [07:44<01:11, 11.26it/s]
+loss: 4.8879 ||:  88%|########8 | 5241/5937 [07:54<01:01, 11.28it/s]
+loss: 4.8895 ||:  90%|######### | 5355/5937 [08:05<00:51, 11.22it/s]
+loss: 4.8885 ||:  92%|#########2| 5469/5937 [08:15<00:41, 11.25it/s]
+loss: 4.8880 ||:  94%|#########4| 5585/5937 [08:25<00:31, 11.35it/s]
+loss: 4.8887 ||:  96%|#########6| 5701/5937 [08:35<00:20, 11.34it/s]
+loss: 4.8905 ||:  98%|#########7| 5815/5937 [08:45<00:10, 11.29it/s]
+loss: 4.8891 ||: 100%|#########9| 5928/5937 [08:55<00:00, 11.28it/s]
+loss: 4.8891 ||: 100%|##########| 5937/5937 [08:56<00:00, 11.07it/s]
+
+2018-11-23 11:55:30,115 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0746 ||: 100%|##########| 94/94 [00:02<00:00, 32.32it/s]
+
+2018-11-23 11:55:33,024 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 11:55:33,025 - INFO - allennlp.training.trainer - loss |     4.889  |     5.075
+2018-11-23 11:55:33,503 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to '/gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/best.th'.
+2018-11-23 11:55:33,697 - INFO - allennlp.training.trainer - Epoch duration: 00:09:00
+2018-11-23 11:55:33,698 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:45:22
+2018-11-23 11:55:33,698 - INFO - allennlp.training.trainer - Epoch 10/14
+2018-11-23 11:55:33,698 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9757.804
+2018-11-23 11:55:33,914 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 11:55:33,914 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 11:55:33,914 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 11:55:33,915 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 11:55:33,915 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.6065 ||:   0%|          | 9/5937 [00:10<1:50:26,  1.12s/it]
+loss: 4.8447 ||:   2%|2         | 123/5937 [00:20<1:18:23,  1.24it/s]
+loss: 4.8563 ||:   4%|3         | 237/5937 [00:30<56:20,  1.69it/s]  
+loss: 4.7829 ||:   6%|5         | 351/5937 [00:40<41:06,  2.26it/s]
+loss: 4.7727 ||:   8%|7         | 466/5937 [00:50<30:34,  2.98it/s]
+loss: 4.7906 ||:  10%|9         | 581/5937 [01:00<23:19,  3.83it/s]
+loss: 4.7706 ||:  12%|#1        | 694/5937 [01:10<18:18,  4.77it/s]
+loss: 4.8074 ||:  14%|#3        | 807/5937 [01:20<14:53,  5.74it/s]
+loss: 4.7960 ||:  16%|#5        | 922/5937 [01:31<12:23,  6.75it/s]
+loss: 4.8183 ||:  17%|#7        | 1037/5937 [01:41<10:43,  7.62it/s]
+loss: 4.8331 ||:  19%|#9        | 1150/5937 [01:51<09:27,  8.44it/s]
+loss: 4.8413 ||:  21%|##1       | 1263/5937 [02:01<08:31,  9.13it/s]
+loss: 4.8521 ||:  23%|##3       | 1376/5937 [02:11<07:54,  9.62it/s]
+loss: 4.8494 ||:  25%|##5       | 1490/5937 [02:21<07:21, 10.08it/s]
+loss: 4.8550 ||:  27%|##7       | 1604/5937 [02:32<06:56, 10.40it/s]
+loss: 4.8609 ||:  29%|##8       | 1717/5937 [02:42<06:36, 10.65it/s]
+loss: 4.8591 ||:  31%|###       | 1831/5937 [02:52<06:18, 10.85it/s]
+loss: 4.8530 ||:  33%|###2      | 1945/5937 [03:02<06:02, 11.01it/s]
+loss: 4.8522 ||:  35%|###4      | 2059/5937 [03:12<05:49, 11.09it/s]
+loss: 4.8525 ||:  37%|###6      | 2173/5937 [03:22<05:36, 11.17it/s]
+loss: 4.8561 ||:  39%|###8      | 2287/5937 [03:32<05:25, 11.21it/s]
+loss: 4.8588 ||:  40%|####      | 2401/5937 [03:42<05:14, 11.24it/s]
+loss: 4.8559 ||:  42%|####2     | 2516/5937 [03:52<05:02, 11.30it/s]
+loss: 4.8572 ||:  44%|####4     | 2631/5937 [04:02<04:52, 11.31it/s]
+loss: 4.8555 ||:  46%|####6     | 2745/5937 [04:12<04:42, 11.29it/s]
+loss: 4.8601 ||:  48%|####8     | 2858/5937 [04:23<04:35, 11.17it/s]
+loss: 4.8561 ||:  50%|#####     | 2973/5937 [04:33<04:23, 11.26it/s]
+loss: 4.8523 ||:  52%|#####2    | 3089/5937 [04:43<04:11, 11.34it/s]
+loss: 4.8555 ||:  54%|#####3    | 3205/5937 [04:53<04:04, 11.19it/s]
+loss: 4.8529 ||:  56%|#####5    | 3319/5937 [05:03<03:52, 11.25it/s]
+loss: 4.8581 ||:  58%|#####7    | 3433/5937 [05:14<03:43, 11.20it/s]
+loss: 4.8522 ||:  60%|#####9    | 3549/5937 [05:24<03:31, 11.32it/s]
+loss: 4.8550 ||:  62%|######1   | 3665/5937 [05:34<03:20, 11.33it/s]
+loss: 4.8474 ||:  64%|######3   | 3780/5937 [05:44<03:10, 11.35it/s]
+loss: 4.8519 ||:  66%|######5   | 3895/5937 [05:54<03:00, 11.29it/s]
+loss: 4.8574 ||:  67%|######7   | 4007/5937 [06:04<02:51, 11.23it/s]
+loss: 4.8565 ||:  69%|######9   | 4122/5937 [06:15<02:40, 11.28it/s]
+loss: 4.8602 ||:  71%|#######1  | 4237/5937 [06:25<02:32, 11.18it/s]
+loss: 4.8629 ||:  73%|#######3  | 4351/5937 [06:35<02:21, 11.22it/s]
+loss: 4.8650 ||:  75%|#######5  | 4465/5937 [06:45<02:11, 11.23it/s]
+loss: 4.8654 ||:  77%|#######7  | 4578/5937 [06:55<02:01, 11.21it/s]
+loss: 4.8679 ||:  79%|#######9  | 4692/5937 [07:05<01:50, 11.25it/s]
+loss: 4.8691 ||:  81%|########  | 4806/5937 [07:15<01:40, 11.28it/s]
+loss: 4.8712 ||:  83%|########2 | 4920/5937 [07:26<01:30, 11.26it/s]
+loss: 4.8725 ||:  85%|########4 | 5034/5937 [07:36<01:20, 11.28it/s]
+loss: 4.8757 ||:  87%|########6 | 5148/5937 [07:46<01:09, 11.28it/s]
+loss: 4.8737 ||:  89%|########8 | 5262/5937 [07:56<00:59, 11.31it/s]
+loss: 4.8706 ||:  91%|######### | 5378/5937 [08:06<00:49, 11.38it/s]
+loss: 4.8751 ||:  93%|#########2| 5494/5937 [08:16<00:39, 11.25it/s]
+loss: 4.8757 ||:  94%|#########4| 5608/5937 [08:26<00:29, 11.28it/s]
+loss: 4.8738 ||:  96%|#########6| 5722/5937 [08:37<00:19, 11.26it/s]
+loss: 4.8764 ||:  98%|#########8| 5835/5937 [08:47<00:09, 11.24it/s]
+loss: 4.8769 ||: 100%|##########| 5937/5937 [08:56<00:00, 11.07it/s]
+
+2018-11-23 12:04:30,169 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0838 ||: 100%|##########| 94/94 [00:02<00:00, 31.36it/s]
+
+2018-11-23 12:04:33,167 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 12:04:33,168 - INFO - allennlp.training.trainer - loss |     4.877  |     5.084
+2018-11-23 12:04:33,606 - INFO - allennlp.training.trainer - Epoch duration: 00:08:59
+2018-11-23 12:04:33,606 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:36:16
+2018-11-23 12:04:33,606 - INFO - allennlp.training.trainer - Epoch 11/14
+2018-11-23 12:04:33,606 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9772.408
+2018-11-23 12:04:33,807 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 12:04:33,807 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 12:04:33,807 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 12:04:33,807 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 12:04:33,808 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 5.4062 ||:   0%|          | 9/5937 [00:10<1:50:21,  1.12s/it]
+loss: 4.8444 ||:   2%|2         | 123/5937 [00:20<1:18:19,  1.24it/s]
+loss: 4.7566 ||:   4%|4         | 238/5937 [00:30<56:13,  1.69it/s]  
+loss: 4.7925 ||:   6%|5         | 353/5937 [00:40<41:00,  2.27it/s]
+loss: 4.7870 ||:   8%|7         | 467/5937 [00:50<30:33,  2.98it/s]
+loss: 4.7904 ||:  10%|9         | 580/5937 [01:00<23:22,  3.82it/s]
+loss: 4.8162 ||:  12%|#1        | 693/5937 [01:10<18:21,  4.76it/s]
+loss: 4.8229 ||:  14%|#3        | 808/5937 [01:20<14:48,  5.77it/s]
+loss: 4.8139 ||:  16%|#5        | 924/5937 [01:30<12:18,  6.79it/s]
+loss: 4.8059 ||:  18%|#7        | 1040/5937 [01:41<10:34,  7.72it/s]
+loss: 4.7991 ||:  19%|#9        | 1154/5937 [01:51<09:21,  8.52it/s]
+loss: 4.8026 ||:  21%|##1       | 1269/5937 [02:01<08:26,  9.22it/s]
+loss: 4.8126 ||:  23%|##3       | 1384/5937 [02:11<07:47,  9.73it/s]
+loss: 4.8091 ||:  25%|##5       | 1498/5937 [02:21<07:16, 10.17it/s]
+loss: 4.8141 ||:  27%|##7       | 1613/5937 [02:31<06:50, 10.53it/s]
+loss: 4.8219 ||:  29%|##9       | 1728/5937 [02:42<06:34, 10.66it/s]
+loss: 4.8251 ||:  31%|###1      | 1841/5937 [02:52<06:18, 10.83it/s]
+loss: 4.8318 ||:  33%|###2      | 1954/5937 [03:02<06:03, 10.97it/s]
+loss: 4.8297 ||:  35%|###4      | 2067/5937 [03:12<05:50, 11.05it/s]
+loss: 4.8262 ||:  37%|###6      | 2183/5937 [03:22<05:35, 11.19it/s]
+loss: 4.8171 ||:  39%|###8      | 2301/5937 [03:32<05:20, 11.35it/s]
+loss: 4.8249 ||:  41%|####      | 2419/5937 [03:43<05:14, 11.20it/s]
+loss: 4.8324 ||:  43%|####2     | 2531/5937 [03:53<05:04, 11.18it/s]
+loss: 4.8400 ||:  45%|####4     | 2643/5937 [04:03<04:56, 11.12it/s]
+loss: 4.8509 ||:  46%|####6     | 2755/5937 [04:13<04:46, 11.12it/s]
+loss: 4.8600 ||:  48%|####8     | 2867/5937 [04:23<04:35, 11.14it/s]
+loss: 4.8615 ||:  50%|#####     | 2983/5937 [04:33<04:22, 11.25it/s]
+loss: 4.8633 ||:  52%|#####2    | 3099/5937 [04:43<04:12, 11.25it/s]
+loss: 4.8679 ||:  54%|#####4    | 3212/5937 [04:53<04:02, 11.25it/s]
+loss: 4.8713 ||:  56%|#####6    | 3325/5937 [05:03<03:51, 11.26it/s]
+loss: 4.8721 ||:  58%|#####7    | 3438/5937 [05:13<03:42, 11.25it/s]
+loss: 4.8707 ||:  60%|#####9    | 3554/5937 [05:24<03:30, 11.33it/s]
+loss: 4.8649 ||:  62%|######1   | 3670/5937 [05:34<03:19, 11.37it/s]
+loss: 4.8621 ||:  64%|######3   | 3785/5937 [05:44<03:09, 11.38it/s]
+loss: 4.8619 ||:  66%|######5   | 3900/5937 [05:54<02:59, 11.35it/s]
+loss: 4.8636 ||:  68%|######7   | 4014/5937 [06:04<02:49, 11.35it/s]
+loss: 4.8623 ||:  70%|######9   | 4128/5937 [06:14<02:40, 11.30it/s]
+loss: 4.8616 ||:  71%|#######1  | 4242/5937 [06:24<02:29, 11.31it/s]
+loss: 4.8620 ||:  73%|#######3  | 4356/5937 [06:34<02:20, 11.28it/s]
+loss: 4.8617 ||:  75%|#######5  | 4470/5937 [06:44<02:09, 11.30it/s]
+loss: 4.8599 ||:  77%|#######7  | 4586/5937 [06:54<01:58, 11.37it/s]
+loss: 4.8595 ||:  79%|#######9  | 4702/5937 [07:05<01:48, 11.35it/s]
+loss: 4.8644 ||:  81%|########1 | 4815/5937 [07:15<01:39, 11.26it/s]
+loss: 4.8651 ||:  83%|########3 | 4929/5937 [07:25<01:29, 11.30it/s]
+loss: 4.8669 ||:  85%|########4 | 5043/5937 [07:35<01:20, 11.16it/s]
+loss: 4.8682 ||:  87%|########6 | 5155/5937 [07:46<01:10, 11.15it/s]
+loss: 4.8720 ||:  89%|########8 | 5267/5937 [07:56<01:00, 11.11it/s]
+loss: 4.8732 ||:  91%|######### | 5380/5937 [08:06<00:49, 11.14it/s]
+loss: 4.8754 ||:  93%|#########2| 5493/5937 [08:16<00:39, 11.15it/s]
+loss: 4.8736 ||:  94%|#########4| 5608/5937 [08:26<00:29, 11.24it/s]
+loss: 4.8714 ||:  96%|#########6| 5724/5937 [08:36<00:18, 11.32it/s]
+loss: 4.8745 ||:  98%|#########8| 5840/5937 [08:46<00:08, 11.32it/s]
+loss: 4.8738 ||: 100%|##########| 5937/5937 [08:55<00:00, 11.09it/s]
+
+2018-11-23 12:13:29,052 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0823 ||: 100%|##########| 94/94 [00:02<00:00, 32.43it/s]
+
+2018-11-23 12:13:31,951 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 12:13:31,951 - INFO - allennlp.training.trainer - loss |     4.874  |     5.082
+2018-11-23 12:13:32,363 - INFO - allennlp.training.trainer - Epoch duration: 00:08:58
+2018-11-23 12:13:32,363 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:27:11
+2018-11-23 12:13:32,363 - INFO - allennlp.training.trainer - Epoch 12/14
+2018-11-23 12:13:32,363 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9787.26
+2018-11-23 12:13:32,561 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 12:13:32,562 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 12:13:32,562 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 12:13:32,562 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 12:13:32,562 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 4.5952 ||:   0%|          | 11/5937 [00:10<1:30:06,  1.10it/s]
+loss: 4.8453 ||:   2%|2         | 124/5937 [00:20<1:04:27,  1.50it/s]
+loss: 4.8458 ||:   4%|4         | 238/5937 [00:30<46:45,  2.03it/s]  
+loss: 4.8633 ||:   6%|5         | 352/5937 [00:40<34:33,  2.69it/s]
+loss: 4.8030 ||:   8%|7         | 468/5937 [00:50<26:03,  3.50it/s]
+loss: 4.8027 ||:  10%|9         | 584/5937 [01:00<20:13,  4.41it/s]
+loss: 4.8067 ||:  12%|#1        | 698/5937 [01:10<16:09,  5.40it/s]
+loss: 4.7893 ||:  14%|#3        | 812/5937 [01:20<13:19,  6.41it/s]
+loss: 4.7993 ||:  16%|#5        | 927/5937 [01:30<11:19,  7.38it/s]
+loss: 4.8022 ||:  18%|#7        | 1042/5937 [01:41<09:54,  8.23it/s]
+loss: 4.8035 ||:  19%|#9        | 1156/5937 [01:51<08:53,  8.97it/s]
+loss: 4.8188 ||:  21%|##1       | 1270/5937 [02:01<08:10,  9.51it/s]
+loss: 4.8256 ||:  23%|##3       | 1381/5937 [02:11<07:38,  9.94it/s]
+loss: 4.8388 ||:  25%|##5       | 1494/5937 [02:21<07:11, 10.30it/s]
+loss: 4.8426 ||:  27%|##7       | 1607/5937 [02:31<06:51, 10.52it/s]
+loss: 4.8428 ||:  29%|##8       | 1721/5937 [02:41<06:31, 10.77it/s]
+loss: 4.8407 ||:  31%|###       | 1835/5937 [02:51<06:14, 10.94it/s]
+loss: 4.8419 ||:  33%|###2      | 1949/5937 [03:01<06:01, 11.05it/s]
+loss: 4.8408 ||:  35%|###4      | 2062/5937 [03:11<05:50, 11.05it/s]
+loss: 4.8391 ||:  37%|###6      | 2176/5937 [03:22<05:37, 11.14it/s]
+loss: 4.8464 ||:  39%|###8      | 2290/5937 [03:32<05:28, 11.10it/s]
+loss: 4.8466 ||:  41%|####      | 2405/5937 [03:42<05:15, 11.20it/s]
+loss: 4.8484 ||:  42%|####2     | 2520/5937 [03:52<05:04, 11.23it/s]
+loss: 4.8526 ||:  44%|####4     | 2634/5937 [04:02<04:53, 11.25it/s]
+loss: 4.8527 ||:  46%|####6     | 2748/5937 [04:12<04:42, 11.29it/s]
+loss: 4.8519 ||:  48%|####8     | 2862/5937 [04:22<04:33, 11.25it/s]
+loss: 4.8507 ||:  50%|#####     | 2977/5937 [04:33<04:22, 11.29it/s]
+loss: 4.8513 ||:  52%|#####2    | 3091/5937 [04:43<04:12, 11.29it/s]
+loss: 4.8449 ||:  54%|#####4    | 3208/5937 [04:53<03:59, 11.39it/s]
+loss: 4.8447 ||:  56%|#####6    | 3325/5937 [05:03<03:49, 11.36it/s]
+loss: 4.8452 ||:  58%|#####7    | 3441/5937 [05:13<03:38, 11.41it/s]
+loss: 4.8449 ||:  60%|#####9    | 3557/5937 [05:23<03:28, 11.40it/s]
+loss: 4.8445 ||:  62%|######1   | 3671/5937 [05:33<03:19, 11.38it/s]
+loss: 4.8444 ||:  64%|######3   | 3785/5937 [05:43<03:09, 11.38it/s]
+loss: 4.8472 ||:  66%|######5   | 3899/5937 [05:53<02:59, 11.38it/s]
+loss: 4.8517 ||:  68%|######7   | 4013/5937 [06:04<02:49, 11.32it/s]
+loss: 4.8497 ||:  70%|######9   | 4130/5937 [06:14<02:38, 11.41it/s]
+loss: 4.8555 ||:  72%|#######1  | 4247/5937 [06:24<02:29, 11.28it/s]
+loss: 4.8558 ||:  73%|#######3  | 4361/5937 [06:34<02:19, 11.31it/s]
+loss: 4.8573 ||:  75%|#######5  | 4475/5937 [06:44<02:09, 11.28it/s]
+loss: 4.8566 ||:  77%|#######7  | 4588/5937 [06:55<01:59, 11.27it/s]
+loss: 4.8548 ||:  79%|#######9  | 4703/5937 [07:05<01:48, 11.33it/s]
+loss: 4.8544 ||:  81%|########1 | 4819/5937 [07:15<01:38, 11.39it/s]
+loss: 4.8542 ||:  83%|########3 | 4935/5937 [07:25<01:28, 11.36it/s]
+loss: 4.8517 ||:  85%|########5 | 5050/5937 [07:35<01:17, 11.38it/s]
+loss: 4.8503 ||:  87%|########6 | 5165/5937 [07:45<01:07, 11.39it/s]
+loss: 4.8535 ||:  89%|########8 | 5280/5937 [07:55<00:58, 11.32it/s]
+loss: 4.8568 ||:  91%|######### | 5392/5937 [08:06<00:48, 11.22it/s]
+loss: 4.8570 ||:  93%|#########2| 5505/5937 [08:16<00:38, 11.24it/s]
+loss: 4.8575 ||:  95%|#########4| 5619/5937 [08:26<00:28, 11.28it/s]
+loss: 4.8587 ||:  97%|#########6| 5733/5937 [08:36<00:18, 11.25it/s]
+loss: 4.8595 ||:  98%|#########8| 5846/5937 [08:46<00:08, 11.24it/s]
+loss: 4.8610 ||: 100%|##########| 5937/5937 [08:54<00:00, 11.11it/s]
+
+2018-11-23 12:22:27,027 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0911 ||: 100%|##########| 94/94 [00:02<00:00, 32.48it/s]
+
+2018-11-23 12:22:29,922 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 12:22:29,922 - INFO - allennlp.training.trainer - loss |     4.861  |     5.091
+2018-11-23 12:22:30,410 - INFO - allennlp.training.trainer - Epoch duration: 00:08:58
+2018-11-23 12:22:30,410 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:18:06
+2018-11-23 12:22:30,410 - INFO - allennlp.training.trainer - Epoch 13/14
+2018-11-23 12:22:30,411 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9802.552
+2018-11-23 12:22:30,609 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 12:22:30,609 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 12:22:30,610 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 12:22:30,610 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 12:22:30,610 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 5.0912 ||:   0%|          | 10/5937 [00:10<1:39:32,  1.01s/it]
+loss: 4.8260 ||:   2%|2         | 124/5937 [00:20<1:10:53,  1.37it/s]
+loss: 4.7915 ||:   4%|4         | 238/5937 [00:30<51:10,  1.86it/s]  
+loss: 4.7939 ||:   6%|5         | 353/5937 [00:40<37:33,  2.48it/s]
+loss: 4.8098 ||:   8%|7         | 467/5937 [00:50<28:09,  3.24it/s]
+loss: 4.8151 ||:  10%|9         | 581/5937 [01:00<21:44,  4.11it/s]
+loss: 4.8174 ||:  12%|#1        | 696/5937 [01:10<17:11,  5.08it/s]
+loss: 4.8239 ||:  14%|#3        | 810/5937 [01:20<14:02,  6.09it/s]
+loss: 4.8344 ||:  16%|#5        | 923/5937 [01:30<11:50,  7.05it/s]
+loss: 4.8314 ||:  17%|#7        | 1037/5937 [01:41<10:16,  7.95it/s]
+loss: 4.8350 ||:  19%|#9        | 1151/5937 [01:51<09:09,  8.71it/s]
+loss: 4.8358 ||:  21%|##1       | 1264/5937 [02:01<08:20,  9.34it/s]
+loss: 4.8392 ||:  23%|##3       | 1379/5937 [02:11<07:40,  9.89it/s]
+loss: 4.8166 ||:  25%|##5       | 1496/5937 [02:21<07:09, 10.35it/s]
+loss: 4.8297 ||:  27%|##7       | 1613/5937 [02:31<06:48, 10.58it/s]
+loss: 4.8300 ||:  29%|##9       | 1726/5937 [02:41<06:31, 10.76it/s]
+loss: 4.8385 ||:  31%|###       | 1839/5937 [02:52<06:16, 10.88it/s]
+loss: 4.8348 ||:  33%|###2      | 1953/5937 [03:02<06:01, 11.02it/s]
+loss: 4.8350 ||:  35%|###4      | 2067/5937 [03:12<05:48, 11.11it/s]
+loss: 4.8399 ||:  37%|###6      | 2181/5937 [03:22<05:35, 11.18it/s]
+loss: 4.8340 ||:  39%|###8      | 2295/5937 [03:32<05:24, 11.24it/s]
+loss: 4.8308 ||:  41%|####      | 2410/5937 [03:42<05:12, 11.29it/s]
+loss: 4.8325 ||:  43%|####2     | 2525/5937 [03:52<05:03, 11.25it/s]
+loss: 4.8272 ||:  44%|####4     | 2640/5937 [04:02<04:51, 11.31it/s]
+loss: 4.8303 ||:  46%|####6     | 2755/5937 [04:13<04:43, 11.24it/s]
+loss: 4.8357 ||:  48%|####8     | 2869/5937 [04:23<04:32, 11.26it/s]
+loss: 4.8361 ||:  50%|#####     | 2983/5937 [04:33<04:22, 11.25it/s]
+loss: 4.8393 ||:  52%|#####2    | 3096/5937 [04:43<04:13, 11.21it/s]
+loss: 4.8392 ||:  54%|#####4    | 3208/5937 [04:53<04:03, 11.19it/s]
+loss: 4.8353 ||:  56%|#####5    | 3322/5937 [05:03<03:52, 11.25it/s]
+loss: 4.8370 ||:  58%|#####7    | 3436/5937 [05:13<03:42, 11.23it/s]
+loss: 4.8399 ||:  60%|#####9    | 3548/5937 [05:23<03:33, 11.16it/s]
+loss: 4.8405 ||:  62%|######1   | 3661/5937 [05:33<03:23, 11.19it/s]
+loss: 4.8397 ||:  64%|######3   | 3774/5937 [05:43<03:13, 11.20it/s]
+loss: 4.8416 ||:  65%|######5   | 3887/5937 [05:54<03:03, 11.17it/s]
+loss: 4.8416 ||:  67%|######7   | 4000/5937 [06:04<02:53, 11.19it/s]
+loss: 4.8393 ||:  69%|######9   | 4115/5937 [06:14<02:41, 11.26it/s]
+loss: 4.8408 ||:  71%|#######1  | 4230/5937 [06:24<02:31, 11.26it/s]
+loss: 4.8413 ||:  73%|#######3  | 4343/5937 [06:34<02:21, 11.24it/s]
+loss: 4.8391 ||:  75%|#######5  | 4458/5937 [06:44<02:10, 11.29it/s]
+loss: 4.8381 ||:  77%|#######7  | 4573/5937 [06:54<02:00, 11.32it/s]
+loss: 4.8390 ||:  79%|#######8  | 4688/5937 [07:04<01:49, 11.37it/s]
+loss: 4.8420 ||:  81%|########  | 4803/5937 [07:14<01:39, 11.37it/s]
+loss: 4.8436 ||:  83%|########2 | 4917/5937 [07:24<01:29, 11.34it/s]
+loss: 4.8432 ||:  85%|########4 | 5031/5937 [07:35<01:19, 11.34it/s]
+loss: 4.8459 ||:  87%|########6 | 5145/5937 [07:45<01:09, 11.32it/s]
+loss: 4.8481 ||:  89%|########8 | 5258/5937 [07:55<01:00, 11.28it/s]
+loss: 4.8502 ||:  90%|######### | 5372/5937 [08:05<00:49, 11.31it/s]
+loss: 4.8519 ||:  92%|#########2| 5486/5937 [08:15<00:39, 11.29it/s]
+loss: 4.8533 ||:  94%|#########4| 5600/5937 [08:25<00:29, 11.30it/s]
+loss: 4.8560 ||:  96%|#########6| 5714/5937 [08:35<00:19, 11.28it/s]
+loss: 4.8545 ||:  98%|#########8| 5829/5937 [08:45<00:09, 11.33it/s]
+loss: 4.8535 ||: 100%|##########| 5937/5937 [08:55<00:00, 11.09it/s]
+
+2018-11-23 12:31:25,723 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0808 ||: 100%|##########| 94/94 [00:02<00:00, 32.38it/s]
+
+2018-11-23 12:31:28,626 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 12:31:28,627 - INFO - allennlp.training.trainer - loss |     4.854  |     5.081
+2018-11-23 12:31:29,192 - INFO - allennlp.training.trainer - Epoch duration: 00:08:58
+2018-11-23 12:31:29,193 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:09:02
+2018-11-23 12:31:29,193 - INFO - allennlp.training.trainer - Epoch 14/14
+2018-11-23 12:31:29,193 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 9816.48
+2018-11-23 12:31:29,393 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 5021
+2018-11-23 12:31:29,394 - INFO - allennlp.training.trainer - GPU 1 memory usage MB: 18
+2018-11-23 12:31:29,394 - INFO - allennlp.training.trainer - GPU 2 memory usage MB: 18
+2018-11-23 12:31:29,394 - INFO - allennlp.training.trainer - GPU 3 memory usage MB: 18
+2018-11-23 12:31:29,394 - INFO - allennlp.training.trainer - Training
+  0%|          | 0/5937 [00:00<?, ?it/s]
+loss: 5.0210 ||:   0%|          | 10/5937 [00:10<1:39:04,  1.00s/it]
+loss: 4.8526 ||:   2%|2         | 123/5937 [00:20<1:10:36,  1.37it/s]
+loss: 4.7908 ||:   4%|3         | 236/5937 [00:30<51:01,  1.86it/s]  
+loss: 4.8377 ||:   6%|5         | 348/5937 [00:40<37:33,  2.48it/s]
+loss: 4.8025 ||:   8%|7         | 463/5937 [00:50<28:08,  3.24it/s]
+loss: 4.7866 ||:  10%|9         | 578/5937 [01:00<21:39,  4.12it/s]
+loss: 4.7999 ||:  12%|#1        | 691/5937 [01:10<17:10,  5.09it/s]
+loss: 4.7932 ||:  14%|#3        | 804/5937 [01:20<14:02,  6.09it/s]
+loss: 4.7830 ||:  15%|#5        | 917/5937 [01:30<11:52,  7.04it/s]
+loss: 4.8083 ||:  17%|#7        | 1028/5937 [01:41<10:23,  7.88it/s]
+loss: 4.8061 ||:  19%|#9        | 1141/5937 [01:51<09:13,  8.66it/s]
+loss: 4.7960 ||:  21%|##1       | 1256/5937 [02:01<08:20,  9.35it/s]
+loss: 4.7797 ||:  23%|##3       | 1371/5937 [02:11<07:41,  9.89it/s]
+loss: 4.7829 ||:  25%|##5       | 1486/5937 [02:21<07:13, 10.27it/s]
+loss: 4.7871 ||:  27%|##6       | 1599/5937 [02:31<06:52, 10.51it/s]
+loss: 4.7840 ||:  29%|##8       | 1713/5937 [02:41<06:32, 10.76it/s]
+loss: 4.7744 ||:  31%|###       | 1828/5937 [02:51<06:15, 10.95it/s]
+loss: 4.7790 ||:  33%|###2      | 1943/5937 [03:01<06:01, 11.04it/s]
+loss: 4.7823 ||:  35%|###4      | 2058/5937 [03:11<05:47, 11.17it/s]
+loss: 4.7820 ||:  37%|###6      | 2173/5937 [03:21<05:35, 11.22it/s]
+loss: 4.7897 ||:  39%|###8      | 2287/5937 [03:32<05:26, 11.17it/s]
+loss: 4.7915 ||:  40%|####      | 2401/5937 [03:42<05:15, 11.21it/s]
+loss: 4.7915 ||:  42%|####2     | 2515/5937 [03:52<05:03, 11.26it/s]
+loss: 4.7948 ||:  44%|####4     | 2629/5937 [04:02<04:54, 11.25it/s]
+loss: 4.7957 ||:  46%|####6     | 2745/5937 [04:12<04:41, 11.33it/s]
+loss: 4.7992 ||:  48%|####8     | 2861/5937 [04:22<04:31, 11.34it/s]
+loss: 4.8053 ||:  50%|#####     | 2975/5937 [04:33<04:22, 11.29it/s]
+loss: 4.8055 ||:  52%|#####1    | 3087/5937 [04:43<04:13, 11.24it/s]
+loss: 4.8039 ||:  54%|#####3    | 3202/5937 [04:53<04:01, 11.31it/s]
+loss: 4.8057 ||:  56%|#####5    | 3317/5937 [05:03<03:51, 11.30it/s]
+loss: 4.8123 ||:  58%|#####7    | 3430/5937 [05:13<03:43, 11.23it/s]
+loss: 4.8162 ||:  60%|#####9    | 3542/5937 [05:23<03:33, 11.21it/s]
+loss: 4.8127 ||:  62%|######1   | 3657/5937 [05:33<03:22, 11.27it/s]
+loss: 4.8149 ||:  64%|######3   | 3772/5937 [05:44<03:13, 11.20it/s]
+loss: 4.8149 ||:  65%|######5   | 3885/5937 [05:54<03:02, 11.23it/s]
+loss: 4.8166 ||:  67%|######7   | 3998/5937 [06:04<02:53, 11.18it/s]
+loss: 4.8143 ||:  69%|######9   | 4114/5937 [06:14<02:41, 11.28it/s]
+loss: 4.8188 ||:  71%|#######1  | 4230/5937 [06:25<02:32, 11.16it/s]
+loss: 4.8187 ||:  73%|#######3  | 4343/5937 [06:35<02:22, 11.18it/s]
+loss: 4.8191 ||:  75%|#######5  | 4456/5937 [06:45<02:12, 11.20it/s]
+loss: 4.8231 ||:  77%|#######6  | 4569/5937 [06:55<02:02, 11.21it/s]
+loss: 4.8196 ||:  79%|#######8  | 4684/5937 [07:05<01:51, 11.27it/s]
+loss: 4.8222 ||:  81%|########  | 4799/5937 [07:15<01:41, 11.22it/s]
+loss: 4.8207 ||:  83%|########2 | 4913/5937 [07:25<01:30, 11.26it/s]
+loss: 4.8202 ||:  85%|########4 | 5027/5937 [07:35<01:20, 11.28it/s]
+loss: 4.8226 ||:  87%|########6 | 5141/5937 [07:45<01:10, 11.24it/s]
+loss: 4.8238 ||:  88%|########8 | 5254/5937 [07:56<01:00, 11.23it/s]
+loss: 4.8270 ||:  90%|######### | 5368/5937 [08:06<00:50, 11.28it/s]
+loss: 4.8303 ||:  92%|#########2| 5482/5937 [08:16<00:40, 11.26it/s]
+loss: 4.8311 ||:  94%|#########4| 5596/5937 [08:26<00:30, 11.30it/s]
+loss: 4.8336 ||:  96%|#########6| 5710/5937 [08:36<00:20, 11.28it/s]
+loss: 4.8341 ||:  98%|#########8| 5824/5937 [08:46<00:10, 11.29it/s]
+loss: 4.8362 ||: 100%|##########| 5937/5937 [08:56<00:00, 11.07it/s]
+
+2018-11-23 12:40:25,921 - INFO - allennlp.training.trainer - Validating
+  0%|          | 0/94 [00:00<?, ?it/s]
+loss: 5.0957 ||: 100%|##########| 94/94 [00:02<00:00, 32.28it/s]
+
+2018-11-23 12:40:28,834 - INFO - allennlp.training.trainer -          Training |  Validation
+2018-11-23 12:40:28,835 - INFO - allennlp.training.trainer - loss |     4.836  |     5.096
+2018-11-23 12:40:29,277 - INFO - allennlp.training.trainer - Epoch duration: 00:09:00
+2018-11-23 12:40:29,278 - INFO - allennlp.models.archival - archiving weights and vocabulary to /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2sjiji/model.tar.gz
+2018-11-23 12:40:33,939 - INFO - allennlp.commands.train - Loading the best epoch weights.
+2018-11-23 12:40:34,166 - INFO - allennlp.common.util - Metrics: {
+  "training_duration": "02:15:41",
+  "training_start_epoch": 0,
+  "training_epochs": 14,
+  "epoch": 14,
+  "training_loss": 4.836199558361504,
+  "validation_loss": 5.0957337034509536,
+  "best_epoch": 9,
+  "best_validation_loss": 5.074587010322733
+}
+[INFO/MainProcess] process shutting down
