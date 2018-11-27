@@ -42,7 +42,9 @@
     "target_embedding_dim": 400,
     "target_namespace": "target_tokens",
     "attention": {
-      "type": "bilinear"
+      "type": "bilinear",
+      "vector_dim": 400,
+      "matrix_dim": 400
     },
     "beam_size": 5
   },
@@ -55,6 +57,7 @@
     "num_epochs": 15,
     "patience": 10,
     "cuda_device": 0,
+    "grad_clipping": 5.0
     "optimizer": {
       "type": "adam",
       "lr": 0.001

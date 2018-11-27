@@ -5494,3 +5494,194 @@ loss: 5.9581 ||: 100%|##########| 47/47 [00:02<00:00, 21.45it/s]
   "best_validation_loss": 5.9383930855609
 }
 [INFO/MainProcess] process shutting down
+2018-11-27 12:50:41,230 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-27 12:50:41,233 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-27 12:50:41,234 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-27 12:50:41,235 - INFO - allennlp.common.registrable - instantiating registered subclass relu of <class 'allennlp.nn.activations.Activation'>
+2018-11-27 12:50:42,152 - INFO - allennlp.common.params - random_seed = 13370
+2018-11-27 12:50:42,152 - INFO - allennlp.common.params - numpy_seed = 1337
+2018-11-27 12:50:42,152 - INFO - allennlp.common.params - pytorch_seed = 133
+2018-11-27 12:50:42,155 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+2018-11-27 12:50:43,224 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'source_tokenizer': {'type': 'word', 'word_splitter': {'type': 'just_spaces'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}, 'type': 'seq2seq'} and extras {}
+2018-11-27 12:50:43,224 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-11-27 12:50:43,225 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'source_tokenizer': {'type': 'word', 'word_splitter': {'type': 'just_spaces'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}} and extras {}
+2018-11-27 12:50:43,225 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.tokenizer.Tokenizer'> from params {'type': 'word', 'word_splitter': {'type': 'just_spaces'}} and extras {}
+2018-11-27 12:50:43,225 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.type = word
+2018-11-27 12:50:43,225 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_tokenizer.WordTokenizer'> from params {'word_splitter': {'type': 'just_spaces'}} and extras {}
+2018-11-27 12:50:43,226 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_splitter.WordSplitter'> from params {'type': 'just_spaces'} and extras {}
+2018-11-27 12:50:43,226 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.word_splitter.type = just_spaces
+2018-11-27 12:50:43,226 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_splitter.JustSpacesWordSplitter'> from params {} and extras {}
+2018-11-27 12:50:43,226 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.start_tokens = None
+2018-11-27 12:50:43,226 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.end_tokens = None
+2018-11-27 12:50:43,226 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'source_tokens', 'type': 'single_id'} and extras {}
+2018-11-27 12:50:43,226 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = single_id
+2018-11-27 12:50:43,226 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'source_tokens'} and extras {}
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = source_tokens
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.lowercase_tokens = False
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.start_tokens = None
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.end_tokens = None
+2018-11-27 12:50:43,227 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.type = single_id
+2018-11-27 12:50:43,227 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2018-11-27 12:50:43,227 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.namespace = target_tokens
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.lowercase_tokens = False
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.start_tokens = None
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.end_tokens = None
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-11-27 12:50:43,228 - INFO - allennlp.common.params - train_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv
+2018-11-27 12:50:43,228 - INFO - allennlp.commands.train - Reading training data from /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv
+0it [00:00, ?it/s]
+2018-11-27 12:50:43,244 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv
+36640it [00:10, 3646.29it/s]
+78572it [00:20, 3794.77it/s]
+120504it [00:31, 3772.50it/s]
+163272it [00:41, 3910.84it/s]
+206040it [00:51, 3958.43it/s]
+246782it [01:02, 3903.52it/s]
+284594it [01:13, 3747.11it/s]
+341849it [01:23, 4180.45it/s]
+399104it [01:39, 4030.46it/s]
+441633it [01:53, 3666.18it/s]
+498928it [02:03, 4110.22it/s]
+556222it [02:21, 3770.44it/s]
+613581it [02:31, 4202.43it/s]
+670987it [02:41, 4569.76it/s]
+728393it [03:01, 3876.35it/s]
+785749it [03:11, 4293.93it/s]
+843173it [03:21, 4645.44it/s]
+900597it [03:43, 3732.98it/s]
+957809it [03:53, 4167.45it/s]
+1015021it [04:03, 4533.77it/s]
+1072057it [04:13, 4828.62it/s]
+1128982it [04:39, 3586.71it/s]
+1185844it [04:49, 4033.47it/s]
+1242738it [04:59, 4419.34it/s]
+1299744it [05:09, 4738.86it/s]
+1356750it [05:38, 3323.13it/s]
+1413678it [05:48, 3797.32it/s]
+1470673it [05:58, 4219.81it/s]
+1527706it [06:08, 4576.96it/s]
+1584739it [06:18, 4864.50it/s]
+1641785it [06:28, 5089.34it/s]
+1698831it [07:01, 3174.06it/s]
+1755672it [07:11, 3658.76it/s]
+1812582it [07:21, 4097.74it/s]
+1825812it [07:24, 4109.26it/s]
+
+2018-11-27 12:58:07,546 - INFO - allennlp.common.params - validation_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_valid_3snt_spm.tsv
+2018-11-27 12:58:07,546 - INFO - allennlp.commands.train - Reading validation data from /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_valid_3snt_spm.tsv
+0it [00:00, ?it/s]
+2018-11-27 12:58:07,563 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_valid_3snt_spm.tsv
+3000it [00:00, 4958.42it/s]
+
+2018-11-27 12:58:08,151 - INFO - allennlp.common.params - test_data_path = None
+2018-11-27 12:58:08,152 - INFO - allennlp.commands.train - From dataset instances, train, validation will be considered for vocabulary creation.
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.type = None
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-11-27 12:58:08,152 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-11-27 12:58:08,153 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+0it [00:00, ?it/s]
+104917it [00:10, 10491.62it/s]
+209834it [00:21, 9995.27it/s] 
+299851it [00:31, 9650.27it/s]
+389161it [00:41, 9408.60it/s]
+478155it [00:51, 9249.79it/s]
+581158it [01:01, 9541.73it/s]
+684289it [01:11, 9760.73it/s]
+787559it [01:21, 9923.97it/s]
+890829it [01:31, 10024.79it/s]
+994104it [01:41, 10113.72it/s]
+1098176it [01:51, 10200.01it/s]
+1202248it [02:01, 10238.38it/s]
+1305576it [02:11, 10266.50it/s]
+1409315it [02:21, 10298.47it/s]
+1513054it [02:31, 10299.40it/s]
+1616070it [02:41, 10296.04it/s]
+1719105it [02:51, 10298.27it/s]
+1822140it [03:02, 10296.07it/s]
+1828812it [03:02, 10010.12it/s]
+
+2018-11-27 13:01:10,938 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'attention': {'type': 'bilinear'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 400, 'input_size': 400, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 400, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 400, 'target_namespace': 'target_tokens', 'type': 'simple_seq2seq'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:10,939 - INFO - allennlp.common.params - model.type = simple_seq2seq
+2018-11-27 13:01:10,939 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.encoder_decoders.simple_seq2seq.SimpleSeq2Seq'> from params {'attention': {'type': 'bilinear'}, 'beam_size': 5, 'encoder': {'bidirectional': True, 'hidden_size': 400, 'input_size': 400, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 60, 'source_embedder': {'tokens': {'embedding_dim': 400, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}}, 'target_embedding_dim': 400, 'target_namespace': 'target_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:10,939 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'tokens': {'embedding_dim': 400, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:10,939 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-11-27 13:01:10,939 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-11-27 13:01:10,939 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.token_embedders = None
+2018-11-27 13:01:10,940 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 400, 'trainable': True, 'type': 'embedding', 'vocab_namespace': 'source_tokens'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.type = embedding
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.num_embeddings = None
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.vocab_namespace = source_tokens
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.embedding_dim = 400
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.pretrained_file = None
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.projection_dim = None
+2018-11-27 13:01:10,940 - INFO - allennlp.common.params - model.source_embedder.tokens.trainable = True
+2018-11-27 13:01:10,941 - INFO - allennlp.common.params - model.source_embedder.tokens.padding_index = None
+2018-11-27 13:01:10,941 - INFO - allennlp.common.params - model.source_embedder.tokens.max_norm = None
+2018-11-27 13:01:10,941 - INFO - allennlp.common.params - model.source_embedder.tokens.norm_type = 2.0
+2018-11-27 13:01:10,941 - INFO - allennlp.common.params - model.source_embedder.tokens.scale_grad_by_freq = False
+2018-11-27 13:01:10,941 - INFO - allennlp.common.params - model.source_embedder.tokens.sparse = False
+2018-11-27 13:01:11,022 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': True, 'hidden_size': 400, 'input_size': 400, 'num_layers': 2, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:11,022 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-11-27 13:01:11,022 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-27 13:01:11,022 - INFO - allennlp.common.params - model.encoder.stateful = False
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - model.encoder.bidirectional = True
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - model.encoder.hidden_size = 400
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - model.encoder.input_size = 400
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - model.encoder.num_layers = 2
+2018-11-27 13:01:11,023 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-11-27 13:01:11,084 - INFO - allennlp.common.params - model.max_decoding_steps = 60
+2018-11-27 13:01:11,084 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.attention.Attention'> from params {'type': 'bilinear'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+2018-11-27 13:01:11,084 - INFO - allennlp.common.params - model.attention.type = bilinear
+2018-11-27 13:01:11,084 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.attention.bilinear_attention.BilinearAttention'> from params {} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x2aabed677eb8>}
+Traceback (most recent call last):
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 170, in pop
+    value = self.params.pop(key)
+KeyError: 'vector_dim'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp2/free/python/3.6.5/gnu/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in <module>
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 72, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 111, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 298, in train_model
+    model = Model.from_params(vocab=vocab, params=params.pop('model'))
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 274, in from_params
+    return subclass.from_params(params=params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 285, in from_params
+    kwargs = create_kwargs(cls, params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 147, in create_kwargs
+    kwargs[name] = annotation.from_params(params=subparams, **subextras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 274, in from_params
+    return subclass.from_params(params=params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 285, in from_params
+    kwargs = create_kwargs(cls, params, **extras)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/from_params.py", line 163, in create_kwargs
+    else params.pop_int(name))
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 183, in pop_int
+    value = self.pop(key, default)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 172, in pop
+    raise ConfigurationError("key \"{}\" is required at location \"{}\"".format(key, self.history))
+allennlp.common.checks.ConfigurationError: 'key "vector_dim" is required at location "model.attention."'
+[INFO/MainProcess] process shutting down
