@@ -17,4 +17,4 @@ module load cudnn/7.3
 
 source ~/allennlp/venv/bin/activate
 
-allennlp train -f ~/entasum/simple_seq2seq_wmt14.json --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss5swmt14
+allennlp train -f ~/entasum/simple_seq2seq_wmt14.json --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/ss2swmt14

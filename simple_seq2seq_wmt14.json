@@ -1,6 +1,12 @@
 {
   "dataset_reader": {
     "type": "seq2seq",
+    "source_tokenizer": {
+      "type": "word",
+      "word_splitter": {
+        "type": "just_spaces"
+      }
+    },
     "source_token_indexers": {
       "tokens": {
         "type": "single_id",
