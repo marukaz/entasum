@@ -4,17 +4,18 @@ Also not using word features for now
 """
 
 import torch
+from torch import nn
+from torch.nn import functional as F
+from torch.autograd import Variable
+from torch import optim
 from allennlp.common import Params
 from allennlp.modules.augmented_lstm import AugmentedLstm
 from allennlp.modules.seq2seq_encoders.pytorch_seq2seq_wrapper import PytorchSeq2SeqWrapper
 from allennlp.modules.token_embedders.embedding import Embedding
-from torch import nn
-from torch.nn import functional as F
-from torch.autograd import Variable
 import pandas as pd
-from model.pytorch_misc import clip_grad_norm, optimistic_restore, print_para, time_batch
-from torch import optim
 import numpy as np
+
+from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
 
 
 #################### Model types
@@ -37,7 +38,7 @@ class LMFeatsModel(nn.Module):
     def __init__(self, input_dim=5, hidden_dim=1024):
         """
         Averaged embeddings of ending -> label
-        :param embed_dim: dimension to use
+        :param hidden_dim: dimension to use
         """
         super(LMFeatsModel, self).__init__()
         self.mapping = nn.Sequential(
@@ -55,7 +56,7 @@ class LMFeatsModel(nn.Module):
     @reshape
     def forward(self, feats):
         """
-        :param words: [batch, dim] indices
+        :param feats: [batch, dim] indices
         :return: [batch] scores of real-ness.
         """
         inter_feats = self.mapping(feats)
@@ -69,7 +70,7 @@ class LMFeatsModel(nn.Module):
         for epoch_num in range(num_epoch):
             tr = []
             for b, (time_per_batch, batch) in enumerate(time_batch(data, reset_every=100)):
-                results = self(batch['lm_feats'].cuda(async=True))[0]
+                results = self(batch['lm_feats'].cuda(non_blocking=True))[0]
                 loss = F.cross_entropy(results, Variable(results.data.new(results.size(0)).long().fill_(0)))
                 summ_dict = {'loss': loss.data[0], 'acc': (results.max(1)[1] == 0).float().mean().data[0]}
 
@@ -95,7 +96,7 @@ class LMFeatsModel(nn.Module):
         self.eval()
         all_predictions = []
         for b, (time_per_batch, batch) in enumerate(time_batch(data, reset_every=100)):
-            results = self(batch['lm_feats'].cuda(async=True))[0]
+            results = self(batch['lm_feats'].cuda(non_blocking=True))[0]
             all_predictions.append(results.data.cpu().numpy())
         all_predictions = np.concatenate(all_predictions, 0)
         acc = (all_predictions.argmax(1) == 0).mean()
@@ -290,7 +291,7 @@ class Ensemble(nn.Module):
         all_predictions = {'mlp': [], 'fasttext': [], 'cnn': [], 'lstm_pos': [], #'lstm_lex': [],
                            'ensemble': []}
         for b, (time_per_batch, batch) in enumerate(time_batch(val_dataloader, reset_every=100)):
-            batch = {k: v.cuda(async=True) if hasattr(v, 'cuda') else v for k, v in batch.items()}
+            batch = {k: v.cuda(non_blocking=True) if hasattr(v, 'cuda') else v for k, v in batch.items()}
             if b % 100 == 0 and b > 0:
                 print("\nb{:5d}/{:5d} {:.3f}s/batch, {:.1f}m/epoch".format(
                     b, len(val_dataloader), time_per_batch,
@@ -313,7 +314,7 @@ class Ensemble(nn.Module):
             tr = []
             self.train()
             for b, (time_per_batch, batch) in enumerate(time_batch(train_dataloader, reset_every=print_every)):
-                batch = {k: v.cuda(async=True) if hasattr(v, 'cuda') else v for k, v in batch.items()}
+                batch = {k: v.cuda(non_blocking=True) if hasattr(v, 'cuda') else v for k, v in batch.items()}
                 results = self(**batch)
                 losses = {'{}-loss'.format(k): F.cross_entropy(
                     v, Variable(v.data.new(v.size(0)).long().fill_(0))) for k, v in results.items()}

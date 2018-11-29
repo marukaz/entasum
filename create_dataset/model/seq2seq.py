@@ -9,7 +9,8 @@ from torch.nn.modules.rnn import LSTMCell
 
 from allennlp.common.checks import ConfigurationError
 from allennlp.common.util import START_SYMBOL, END_SYMBOL
-from allennlp.data.vocabulary import Vocabulary
+from allennlp.data import Instance, Vocabulary
+from allennlp.data.dataset import Batch
 from allennlp.modules.attention import LegacyAttention
 from allennlp.modules import Attention, TextFieldEmbedder, Seq2SeqEncoder
 from allennlp.modules.similarity_functions import SimilarityFunction
@@ -210,6 +211,9 @@ class Seq2Seq(Model):
         # metrics during validation. Since we haven't implemented custom metrics yet,
         # it only makes sense to run the beam search during prediction.
         return self._forward_beam_search(state)
+
+    # forward_on_instances を書き換える必要があるかも
+    # https://github.com/allenai/allennlp/blob/master/allennlp/models/model.py
 
     @overrides
     def decode(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:
