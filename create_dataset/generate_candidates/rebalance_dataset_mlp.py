@@ -3,15 +3,9 @@ The big idea will be to add in the worst scoring one. But we want to use a MULTI
 Also not using word features for now
 
 """
-<<<<<<< HEAD
-import matplotlib as mpl
-=======
-
 import os
 
 import matplotlib as mpl
-mpl.use('Agg')
->>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
 import seaborn as sns
 import matplotlib.pyplot as plt
 from allennlp.data import Vocabulary
@@ -22,23 +16,12 @@ from torch import nn
 from torch.autograd import Variable
 import pickle as pkl
 import numpy as np
-<<<<<<< HEAD
-from torch import optim
-import torch
 from tqdm import trange
 from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
 import pandas as pd
-import os
 
 
 mpl.use('Agg')
-=======
-from tqdm import trange
-import pandas as pd
-
-from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
-
->>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
 
 ######### PARAMETERS
 
