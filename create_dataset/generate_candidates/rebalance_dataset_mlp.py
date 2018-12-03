@@ -4,8 +4,6 @@ Also not using word features for now
 
 """
 import matplotlib as mpl
-
-mpl.use('Agg')
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -17,10 +15,14 @@ import pickle as pkl
 import numpy as np
 from torch import optim
 import torch
-from tqdm import tqdm, trange
-from pytorch_misc import clip_grad_norm, time_batch
+from tqdm import trange
+from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
 import pandas as pd
 import os
+
+
+mpl.use('Agg')
+
 ######### PARAMETERS
 
 NUM_DISTRACTORS = 9
