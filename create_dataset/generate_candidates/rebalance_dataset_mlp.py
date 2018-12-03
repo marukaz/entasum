@@ -38,9 +38,8 @@ else:
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
     with open('data/data.json', 'r') as f:
-        for line in f:
-            d = json.loads(line)
-            d = d.values()  # jsonはidの辞書になっているので中身を取り出す
+        # TODO json.loadとvakues()がiterableか確認
+        for d in json.load(f).values():
             feats = np.column_stack((
                 # スコア
                 np.log(np.array([np.array(hypo['scores']) for hypo in d['hypos']], dtype=np.float32)),
