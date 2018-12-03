@@ -4,6 +4,7 @@ Also not using word features for now
 
 """
 import os
+import json
 
 import matplotlib as mpl
 import seaborn as sns
@@ -35,29 +36,30 @@ if os.path.exists('feats_cached.npy'):
     all_data = np.load('feats_cached.npy')
 else:
     print("loading data. this will take hella time probably!", flush=True)
-    for fold in trange(5):
-        print("tryna load {}".format(fold, flush=True))
-        with open('examples{}-of-5.pkl'.format(fold), 'rb') as f:
-            examples = pkl.load(f)
-            for this_ex in examples:
-                feats_vals = this_ex['scores'].values
-                if np.isinf(feats_vals).any():
-                    feats_vals[np.isinf(feats_vals)] = 1e17
-                feats = np.column_stack((
-                    # スコア
-                    np.log(feats_vals),
-                    # 生成文の長さ
-                    np.array([len(gen) for gen in this_ex['generations']], dtype=np.float32),
-                    # 最初のNPの長さ
-                    np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['startphrase']),
-                    # contextの長さ
-                    np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['sent1']),
-                ))
-                all_data.append(feats)
+    # TODO 生成文を交差検証式に分割する
+    # for fold in trange(5):
+    # print("tryna load {}".format(fold, flush=True))
+    print("try to load")
+    with open('data.json', 'r') as f:
+        for line in f:
+            d = json.loads(line)
+            d = d.values()  # jsonはidの辞書になっているので中身を取り出す
+            feats = np.column_stack((
+                # スコア
+                np.log(np.array([np.array(hypo['scores']) for hypo in d['hypos']], dtype=np.float32)),
+                # 生成文の長さ
+                np.array([len(hypo['text']) for hypo in d['hypos']], dtype=np.float32),
+                # 最初のNPの長さ
+                # np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['startphrase']),
+                # contextの長さ
+                np.ones(d['hypos'].shape[0], dtype=np.float32) * len(d['source']),
+            ))
+            all_data.append(feats)
     all_data = np.stack(all_data)
     np.save('feats_cached.npy', all_data)
 
 print("There are {} things".format(all_data.shape[0]), flush=True)
+# 各dataにNUM_DISTRACTORSごとのidを割り振ってる
 assignments = np.arange(NUM_DISTRACTORS + 1, dtype=np.uint16)[None].repeat(all_data.shape[0], axis=0)
 
 

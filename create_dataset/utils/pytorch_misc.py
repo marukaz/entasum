@@ -465,6 +465,7 @@ def clip_grad_norm(named_parameters, max_norm, clip=False, verbose=False):
 
     return total_norm
 
+
 def time_batch(gen, reset_every=100):
     """
     Gets timing info for a batch
@@ -481,10 +482,12 @@ def time_batch(gen, reset_every=100):
             start = time.time()
             start_t = i
 
+
 def update_lr(optimizer, lr=1e-4):
     print("------ Learning rate -> {}".format(lr))
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr
+
 
 def all_upper_triangular_pairs(gen):
     """ Iterates over all pairs from a generator where x < y """
@@ -493,6 +496,7 @@ def all_upper_triangular_pairs(gen):
         for h in hist:
             yield (h, g)
         hist.append(g)
+
 
 def pad_last_dim(tensor, new_size):
     """
