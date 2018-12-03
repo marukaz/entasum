@@ -5,31 +5,28 @@ Also not using word features for now
 """
 import os
 import json
+import pickle as pkl
 
 import matplotlib as mpl
 import seaborn as sns
 import matplotlib.pyplot as plt
-from allennlp.data import Vocabulary
 import torch
 from torch import optim
 from torch.nn import functional as F
 from torch import nn
 from torch.autograd import Variable
-import pickle as pkl
 import numpy as np
 from tqdm import trange
-from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
 import pandas as pd
+
+from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
 
 
 mpl.use('Agg')
 
 ######### PARAMETERS
-
 NUM_DISTRACTORS = 9
 TRAIN_PERC = 0.8
-
-vocab = Vocabulary.from_files('../lm/vocabulary')
 
 all_data = []
 if os.path.exists('feats_cached.npy'):
@@ -40,7 +37,7 @@ else:
     # for fold in trange(5):
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
-    with open('data.json', 'r') as f:
+    with open('data/data.json', 'r') as f:
         for line in f:
             d = json.loads(line)
             d = d.values()  # jsonはidの辞書になっているので中身を取り出す
@@ -188,7 +185,6 @@ class MLPModel(nn.Module):
         mr = (-masked_predictions).argsort(1).argsort(1)[:, 0].mean()
         # print("acc is {:.3f}, mean rank is {:.3f}".format(acc, mr))
         return all_predictions, acc
-
 
 
 accs = []
