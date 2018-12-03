@@ -38,8 +38,8 @@ else:
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
     with open('data/data.json', 'r') as f:
-        # TODO json.loadとvakues()がiterableか確認
-        for d in json.load(f).values():
+        for line in f:
+            d = json.loads(line)
             feats = np.column_stack((
                 # スコア
                 np.log(np.array([np.array(hypo['scores']) for hypo in d['hypos']], dtype=np.float32)),
