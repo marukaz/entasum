@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6e652aa-5c02-475b-8c36-4f24e4290067" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/entasum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/entasum.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_dataset/generate_candidates/rebalance_dataset_mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset/generate_candidates/rebalance_dataset_mlp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_dataset/utils/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset/utils/load_data.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/create_dataset/rebalance_dataset_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset/rebalance_dataset_ensemble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_dataset/rebalance_dataset_mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset/rebalance_dataset_mlp.py" afterDir="false" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +58,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/sample_candidates.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="391">
               <caret line="155" column="95" lean-forward="true" selection-start-line="155" selection-start-column="95" selection-end-line="155" selection-end-column="95" />
+=======
+            <state relative-caret-position="572">
+              <caret line="123" column="53" lean-forward="true" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -62,11 +72,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/classifiers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1037">
               <caret line="73" column="108" selection-start-line="73" selection-start-column="108" selection-end-line="73" selection-end-column="108" />
+=======
+      <file leaf-file-name="classifiers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/classifiers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="293" column="43" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="43" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
               <folding>
                 <element signature="e#144#156#0" expanded="true" />
               </folding>
@@ -74,6 +92,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/rebalance_dataset_mlp.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,19 +101,38 @@
               <folding>
                 <element signature="e#144#168#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="rebalance_dataset_ensemble.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_dataset/rebalance_dataset_ensemble.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dataset/utils/pytorch_misc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+=======
+      <file leaf-file-name="rebalance_dataset_mlp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create_dataset/rebalance_dataset_mlp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" column="53" lean-forward="true" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+              <folding>
+                <element signature="e#145#154#0" expanded="true" />
+              </folding>
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_dataset/utils/load_data.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,11 +141,31 @@
               <folding>
                 <element signature="e#35#44#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="load_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_dataset/utils/load_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="pytorch_misc.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_dataset/utils/pytorch_misc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
         <entry file="file://$PROJECT_DIR$/create_dataset/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -131,7 +189,11 @@
       <find>beam_s</find>
       <find>beam_se</find>
       <find>async</find>
+<<<<<<< HEAD
       <find>RawPassages</find>
+=======
+      <find>ctx_scores</find>
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,8 +207,13 @@
         <option value="$PROJECT_DIR$/create_dataset/generate_candidates/sample_candidates.py" />
         <option value="$PROJECT_DIR$/create_dataset/model/seq2seq.py" />
         <option value="$PROJECT_DIR$/create_dataset/generate_candidates/classifiers.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/create_dataset/generate_candidates/rebalance_dataset_mlp.py" />
         <option value="$PROJECT_DIR$/create_dataset/utils/load_data.py" />
+=======
+        <option value="$PROJECT_DIR$/create_dataset/rebalance_dataset_ensemble.py" />
+        <option value="$PROJECT_DIR$/create_dataset/rebalance_dataset_mlp.py" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
       </list>
     </option>
   </component>
@@ -157,9 +224,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1087" />
+=======
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="877" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -251,7 +324,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="0" width="1294" height="1087" extended-state="0" />
+=======
+    <frame x="0" y="23" width="1280" height="877" extended-state="0" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25364667" />
@@ -284,8 +361,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/seq2seq.py" />
     <entry file="file://$PROJECT_DIR$/create_dataset/model/seq2seq.py">
+=======
+    <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/sample_candidates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/utils/load_data.py">
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="892">
           <caret line="214" column="40" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="40" />
@@ -316,18 +407,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/model/seq2seq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="892">
+          <caret line="214" column="40" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/classifiers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="293" column="43" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="43" />
+          <folding>
+            <element signature="e#144#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/utils/pytorch_misc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_dataset/utils/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="289">
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="e#35#44#0" expanded="true" />
-          </folding>
+=======
+        <state relative-caret-position="254">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/create_dataset/generate_candidates/sample_candidates.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="123" column="53" lean-forward="true" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/rebalance_dataset_ensemble.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="391">
           <caret line="155" column="95" lean-forward="true" selection-start-line="155" selection-start-column="95" selection-end-line="155" selection-end-column="95" />
           <folding>
@@ -342,6 +475,19 @@
           <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
           <folding>
             <element signature="e#144#168#0" expanded="true" />
+=======
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_dataset/rebalance_dataset_mlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="53" lean-forward="true" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+          <folding>
+            <element signature="e#145#154#0" expanded="true" />
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
           </folding>
         </state>
       </provider>

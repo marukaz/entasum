@@ -23,8 +23,8 @@ from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 
-from create_swag.lm.config import NUM_FOLDS
-from create_swag.generate_candidates.classifiers import Ensemble, LMFeatsModel
+from create_dataset.config import NUM_FOLDS
+from create_dataset.generate_candidates.classifiers import Ensemble, LMFeatsModel
 
 ######### PARAMETERS
 

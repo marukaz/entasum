@@ -3,16 +3,26 @@ The big idea will be to add in the worst scoring one. But we want to use a MULTI
 Also not using word features for now
 
 """
+<<<<<<< HEAD
 import matplotlib as mpl
+=======
+
+import os
+
+import matplotlib as mpl
+mpl.use('Agg')
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 from allennlp.data import Vocabulary
+import torch
+from torch import optim
 from torch.nn import functional as F
 from torch import nn
 from torch.autograd import Variable
 import pickle as pkl
 import numpy as np
+<<<<<<< HEAD
 from torch import optim
 import torch
 from tqdm import trange
@@ -22,6 +32,13 @@ import os
 
 
 mpl.use('Agg')
+=======
+from tqdm import trange
+import pandas as pd
+
+from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
+
+>>>>>>> a9867d2b8c500bf41a6883c6e2418b9aa99a28c7
 
 ######### PARAMETERS
 
@@ -44,9 +61,13 @@ else:
                 if np.isinf(feats_vals).any():
                     feats_vals[np.isinf(feats_vals)] = 1e17
                 feats = np.column_stack((
+                    # スコア
                     np.log(feats_vals),
+                    # 生成文の長さ
                     np.array([len(gen) for gen in this_ex['generations']], dtype=np.float32),
+                    # 最初のNPの長さ
                     np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['startphrase']),
+                    # contextの長さ
                     np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['sent1']),
                 ))
                 all_data.append(feats)
@@ -89,7 +110,7 @@ class SimpleCudaLoader(object):
             feats_to_use = self.feats
             inds_to_use = self.indices
 
-        feats_cuda = torch.FloatTensor(feats_to_use).contiguous().cuda(async=True)
+        feats_cuda = torch.FloatTensor(feats_to_use).contiguous().cuda(non_blocking=True)
 
         for s_idx in range(len(self)):
             s_ind = s_idx * self.batch_size
