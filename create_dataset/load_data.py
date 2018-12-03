@@ -18,7 +18,7 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 
 from raw_data.events import DATA_PATH
-from .pytorch_misc import pairwise
+from create_dataset.pytorch_misc import pairwise
 from create_dataset.config import NUM_FOLDS
 
 

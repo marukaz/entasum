@@ -15,7 +15,7 @@ from allennlp.modules.token_embedders.embedding import Embedding
 import pandas as pd
 import numpy as np
 
-from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
+from create_dataset.pytorch_misc import clip_grad_norm, time_batch
 
 
 #################### Model types

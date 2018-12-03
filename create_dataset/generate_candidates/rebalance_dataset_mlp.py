@@ -19,7 +19,7 @@ import numpy as np
 from tqdm import trange
 import pandas as pd
 
-from create_dataset.utils.pytorch_misc import clip_grad_norm, time_batch
+from create_dataset.pytorch_misc import clip_grad_norm, time_batch
 
 
 mpl.use('Agg')
