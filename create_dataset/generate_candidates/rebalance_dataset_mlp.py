@@ -37,12 +37,13 @@ else:
     # for fold in trange(5):
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
+    max_len = 0
     with open('data/data.json', 'r') as f:
         for line in f:
             d = json.loads(line)
             feats = np.column_stack((
                 # スコア
-                np.log(np.array([np.array(hypo['scores']) for hypo in d['hypos']], dtype=np.float32)),
+                np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
                 np.array([len(hypo['text']) for hypo in d['hypos']], dtype=np.float32),
                 # 最初のNPの長さ
