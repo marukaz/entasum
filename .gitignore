@@ -1,5 +1,8 @@
 ### https://raw.github.com/github/gitignore/8218e6b32048a4a6f99af99109ad36f1f3bd7e24/Global/macOS.gitignore
 
+*.npy
+data.json
+
 # General
 .DS_Store
 .AppleDouble
