@@ -8,6 +8,7 @@ import json
 import pickle as pkl
 
 import matplotlib as mpl
+mpl.use('Agg')
 import seaborn as sns
 import matplotlib.pyplot as plt
 import torch
@@ -22,7 +23,7 @@ import pandas as pd
 from create_dataset.pytorch_misc import clip_grad_norm, time_batch
 
 
-mpl.use('Agg')
+
 
 ######### PARAMETERS
 NUM_DISTRACTORS = 9
