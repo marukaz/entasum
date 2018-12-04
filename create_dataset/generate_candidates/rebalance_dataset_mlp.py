@@ -56,7 +56,7 @@ else:
     np.save('feats_cached.npy', all_data)
 
 print("There are {} things".format(all_data.shape[0]), flush=True)
-# 各dataにNUM_DISTRACTORSごとのidを割り振ってる
+# 各batchにNUM_DISTRACTORSの数(選択肢の数)だけ初期idを割り振ってる
 assignments = np.arange(NUM_DISTRACTORS + 1, dtype=np.uint16)[None].repeat(all_data.shape[0], axis=0)
 
 
@@ -218,9 +218,9 @@ for iter in trange(100):
         # print("adversarial ex we can add {:4d} easy idxs {:4d} were changing {:4d}".format(
         #     adversarial_examples.shape[0], easy_idxs.shape[0], num2change))
         if num2change == 0:
-            # print("Continuing, nothing we can change")
-            pass
+            print("Continuing, nothing we can change")
         else:
+            print(f'change {num2change} examples')
             # change a random index
             ind_loc = np.random.choice(easy_inds, replace=False, size=num2change)
             adv_loc = np.random.choice(adversarial_examples, replace=False, size=num2change)
@@ -233,13 +233,15 @@ for iter in trange(100):
 
 # Plot the accuracy as time goes by
 np.save('assignments-pretrained.npy', assignments)
-start_idx = 0
-for fold in trange(5):
-    with open('examples{}-of-5.pkl'.format(fold), 'rb') as f:
-        examples = pkl.load(f)
-    assignments_this_fold = assignments[start_idx:start_idx+len(examples)]
-    np.save('assignments-pretrained-fold{}.npy'.format(fold), assignments_this_fold)
-    start_idx += len(examples)
+# start_idx = 0
+# for fold in trange(5):
+    # with open('examples{}-of-5.pkl'.format(fold), 'rb') as f:
+        # examples = pkl.load(f)
+    # assignments_this_fold = assignments[start_idx:start_idx+len(examples)]
+    # np.save('assignments-pretrained-fold{}.npy'.format(fold), assignments_this_fold)
+    # start_idx += len(examples)
+
+np.save('assignments-pretrained.npy', assignments)
 
 plt.clf()
 accuracy = pd.Series(np.array(accs))
