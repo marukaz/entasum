@@ -49,7 +49,7 @@ else:
                 # 最初のNPの長さ
                 # np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['startphrase']),
                 # contextの長さ
-                np.ones(d['hypos'].shape[0], dtype=np.float32) * len(d['source']),
+                np.ones(len(d['hypos']), dtype=np.float32) * len(d['source']),
             ))
             all_data.append(feats)
     all_data = np.stack(all_data)
