@@ -30,19 +30,18 @@ NUM_DISTRACTORS = 9
 TRAIN_PERC = 0.8
 
 all_data = []
-if os.path.exists('feats_cached.npy'):
-    all_data = np.load('feats_cached.npy')
+if os.path.exists('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy'):
+    all_data = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy')
 else:
     print("loading data. this will take hella time probably!", flush=True)
     # TODO 生成文を交差検証式に分割する
     # for fold in trange(5):
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
-    max_len = 0
-    with open('data/data.json', 'r') as f:
+    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/data.json', 'r') as f:
         for line in f:
             d = json.loads(line)
-            feats = np.column_stack((
+            feats = np.column_stacks((
                 # スコア
                 np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
@@ -54,7 +53,7 @@ else:
             ))
             all_data.append(feats)
     all_data = np.stack(all_data)
-    np.save('feats_cached.npy', all_data)
+    np.save('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', all_data)
 
 print("There are {} things".format(all_data.shape[0]), flush=True)
 # 各batchにNUM_DISTRACTORSの数(選択肢の数)だけ初期idを割り振ってる
@@ -233,7 +232,7 @@ for iter in trange(100):
     assert np.all(assignments[:, 0] == 0)
 
 # Plot the accuracy as time goes by
-np.save('assignments-pretrained.npy', assignments)
+np.save('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/assignments-pretrained.npy', assignments)
 # start_idx = 0
 # for fold in trange(5):
     # with open('examples{}-of-5.pkl'.format(fold), 'rb') as f:
@@ -241,8 +240,6 @@ np.save('assignments-pretrained.npy', assignments)
     # assignments_this_fold = assignments[start_idx:start_idx+len(examples)]
     # np.save('assignments-pretrained-fold{}.npy'.format(fold), assignments_this_fold)
     # start_idx += len(examples)
-
-np.save('assignments-pretrained.npy', assignments)
 
 plt.clf()
 accuracy = pd.Series(np.array(accs))
