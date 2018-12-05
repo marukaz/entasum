@@ -40,8 +40,11 @@ else:
     print("try to load")
     with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/data.json', 'r') as f:
         for line in f:
-            d = json.loads(line)
-            feats = np.column_stacks((
+            try:
+                d = json.loads(line)
+            except:
+                continue
+            feats = np.column_stack((
                 # スコア
                 np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
@@ -218,9 +221,10 @@ for iter in trange(100):
         # print("adversarial ex we can add {:4d} easy idxs {:4d} were changing {:4d}".format(
         #     adversarial_examples.shape[0], easy_idxs.shape[0], num2change))
         if num2change == 0:
-            print("Continuing, nothing we can change")
+            pass
+            # print("Continuing, nothing we can change")
         else:
-            print(f'change {num2change} examples')
+            # print(f'change {num2change} examples')
             # change a random index
             ind_loc = np.random.choice(easy_inds, replace=False, size=num2change)
             adv_loc = np.random.choice(adversarial_examples, replace=False, size=num2change)
