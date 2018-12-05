@@ -24,31 +24,31 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 
 from create_dataset.config import NUM_FOLDS
-from create_dataset.generate_candidates.classifiers import Ensemble, LMFeatsModel
-
-######### PARAMETERS
+from create_dataset.generate_candidates.classifiers import Ensemble
 
 
+# PARAMETERS
 NUM_DISTRACTORS = 9
 TRAIN_PERC = 0.8
 BATCH_SIZE = 1024
 
-vocab = Vocabulary.from_files('../lm/vocabulary')
-pos_vocab = Vocabulary(counter={'tokens': {name: i + 9000 for i, name in enumerate(
-    [vocab.get_token_from_index(x) for x in range(100)] + [pos for pos in spacy.parts_of_speech.NAMES.values() if
-                                                           len(pos) > 0]
-)}})
-vocab._token_to_index['pos'] = pos_vocab._token_to_index['tokens']
-vocab._index_to_token['pos'] = pos_vocab._index_to_token['tokens']
+# TODO SentencePieceでは品詞情報は扱えない。トップ100以外はunkにしてしまう？
+# vocab = Vocabulary.from_files('../lm/vocabulary')
+# pos_vocab = Vocabulary(counter={'tokens': {name: i + 9000 for i, name in enumerate(
+#     [vocab.get_token_from_index(x) for x in range(100)] + [pos for pos in spacy.parts_of_speech.NAMES.values() if
+#                                                            len(pos) > 0]
+# )}})
+# vocab._token_to_index['pos'] = pos_vocab._token_to_index['tokens']
+# vocab._index_to_token['pos'] = pos_vocab._index_to_token['tokens']
 
-parser = ArgumentParser(description='which fold to use')
-parser.add_argument('-fold', dest='fold', help='Which fold to use. If you say -1 we will use ALL OF THEM!', type=int,
-                    default=0)
-fold = parser.parse_args().fold
-assert fold in set(range(NUM_FOLDS)) or fold == -1
-print("~~~~~~~~~USING SPLIT#{}~~~~~~~~~~~~~".format(fold))
-if fold == -1:
-    assignments = []
+# parser = ArgumentParser(description='which fold to use')
+# parser.add_argument('-fold', dest='fold', help='Which fold to use. If you say -1 we will use ALL OF THEM!', type=int,
+#                     default=0)
+# fold = parser.parse_args().fold
+# assert fold in set(range(NUM_FOLDS)) or fold == -1
+# print("~~~~~~~~~USING SPLIT#{}~~~~~~~~~~~~~".format(fold))
+# if fold == -1:
+if True:
     assignments = np.load('assignments-pretrained.npy')
     # for i in range(5):
     #     assignments.append(np.load('assignments-fold-{}-19.npy'.format(i)))

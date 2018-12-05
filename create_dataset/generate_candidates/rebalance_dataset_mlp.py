@@ -42,11 +42,11 @@ else:
         for line in f:
             try:
                 d = json.loads(line)
-            except:
+            except json.JSONDecodeError:
                 continue
             feats = np.column_stack((
                 # スコア
-                np.log([-hypo['score'] for hypo in d['hypos']]),
+                # np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
                 np.array([len(hypo['text']) for hypo in d['hypos']], dtype=np.float32),
                 # 最初のNPの長さ
