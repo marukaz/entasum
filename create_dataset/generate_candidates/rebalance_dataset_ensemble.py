@@ -24,15 +24,21 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 
 from create_dataset.config import NUM_FOLDS
+from create_dataset.config import NUM_DISTRACTORS
+from create_dataset.config import TRAIN_PERC
 from create_dataset.generate_candidates.classifiers import Ensemble
 
 
-# PARAMETERS
-NUM_DISTRACTORS = 9
-TRAIN_PERC = 0.8
-BATCH_SIZE = 1024
+fold = -1
 
-# TODO SentencePieceでは品詞情報は扱えない。トップ100以外はunkにしてしまう？
+# SentencePieceでは品詞情報は扱えないので、トップ100以外はunkにしてしまう
+vocab = Vocabulary()
+with open('data/dict.tgt.txt') as f:
+    for i, line in enumerate(f):
+        if i == 100:
+            break
+        vocab.add_token_to_namespace(line.split(' ')[0])
+
 # vocab = Vocabulary.from_files('../lm/vocabulary')
 # pos_vocab = Vocabulary(counter={'tokens': {name: i + 9000 for i, name in enumerate(
 #     [vocab.get_token_from_index(x) for x in range(100)] + [pos for pos in spacy.parts_of_speech.NAMES.values() if
@@ -94,7 +100,7 @@ class AssignmentsDataLoader(Dataset):
                 instances.append(Instance(instance_d))
         batch = Batch(instances)
         batch.index_instances(vocab)
-        tensor_dict = batch.as_tensor_dict(for_training=self.train)
+        tensor_dict = batch.as_tensor_dict()
 
         # instances_mask = torch.LongTensor(np.stack([np.array([len(sub_g) > 0 for sub_g in g], dtype=np.int64)
         #                                             for g in selected_gens]))

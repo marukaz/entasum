@@ -4,6 +4,7 @@
       <w>dataset</w>
       <w>optim</w>
       <w>preds</w>
+      <w>pretrained</w>
     </words>
   </dictionary>
 </component>
