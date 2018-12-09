@@ -113,12 +113,11 @@ class BoWModel(nn.Module):
         assert embed_dim == 100
         self.embeds = Embedding.from_params(
             vocab,
+            # Gloveは使えないので削除
             Params({'vocab_namespace': 'tokens',
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
-                    'pretrained_file':
-                        'https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.txt.gz'
                     }))
 
         self.embed_dim = embed_dim
@@ -183,7 +182,8 @@ class CNNModel(nn.Module):
 
 
 class BLSTMModel(nn.Module):
-    def __init__(self, vocab, use_postags_only=True, embed_dim=100, hidden_size=200, recurrent_dropout_probability=0.3,
+    # オリジナルがuse_postags_only=Trueだったが使えないのでFalseにした。また、Gloveも使えないので該当箇所を削除
+    def __init__(self, vocab, use_postags_only=False, embed_dim=100, hidden_size=200, recurrent_dropout_probability=0.3,
                  use_highway=False,
                  maxpool=True):
         super(BLSTMModel, self).__init__()
@@ -194,7 +194,6 @@ class BLSTMModel(nn.Module):
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
-                    'pretrained_file': None if use_postags_only else 'https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.txt.gz',
                     }))
         self.binary_feature_embedding = Embedding(2, embed_dim)
 
@@ -239,7 +238,7 @@ class Ensemble(nn.Module):
 
         self.fasttext_model = BoWModel(vocab, use_mean=True, embed_dim=100)
         self.mlp_model = LMFeatsModel(input_dim=8, hidden_dim=1024)
-        self.lstm_pos_model = BLSTMModel(vocab, use_postags_only=True, maxpool=True)
+        self.lstm_pos_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
         # self.lstm_lex_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
         self.cnn_model = CNNModel(vocab)
 

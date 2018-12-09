@@ -7,6 +7,7 @@ Also not using word features for now
 import pickle as pkl
 from argparse import ArgumentParser
 from copy import deepcopy
+import json
 
 import numpy as np
 import pandas as pd
@@ -78,6 +79,7 @@ class AssignmentsDataLoader(Dataset):
                                      shuffle=self.train, num_workers=0,
                                      collate_fn=self.collate, drop_last=self.train)
 
+    # TODO: 形式をあわせる
     def collate(self, items_l):
         # Assume all of these have the same length
         index_l, second_sentences_l, pos_tags_l, feats_l, context_len_l = zip(*items_l)
@@ -155,7 +157,6 @@ class AssignmentsDataLoader(Dataset):
     def splits(cls, assignments):
         """ if assignments is none we initialize by looking at topN"""
 
-        s_idx = 0
         train_instances = []
         val_instances = []
         test_instances = []
@@ -174,29 +175,40 @@ class AssignmentsDataLoader(Dataset):
 
             for i in tqdm(train_idx):
                 item_copy = example_list[i]
-                item_copy['generations'] = [example_list[i]['generations'][j] for j in assignments[i + offset]]
-                item_copy['postags'] = [example_list[i]['postags'][j] for j in assignments[i + offset]]
-                item_copy['scores'] = example_list[i]['scores'].iloc[assignments[i + offset]]
+                item_copy['texts'] = [example_list[i]['hypos'][j]['text'] for j in assignments[i + offset]]
+                # item_copy['postags'] = [example_list[i]['postags'][j] for j in assignments[i + offset]]
+                item_copy['scores'] = [example_list[i]['hypos'][j]['score'] for j in assignments[i + offset]]
                 train_instances.append(item_copy)
 
             for i in tqdm(val_idx):
                 item_copy = deepcopy(example_list[i])
-                item_copy['generations'] = [example_list[i]['generations'][j] for j in assignments[i + offset]]
-                item_copy['postags'] = [example_list[i]['postags'][j] for j in assignments[i + offset]]
-                item_copy['scores'] = example_list[i]['scores'].iloc[assignments[i + offset]]
+                item_copy['texts'] = [example_list[i]['hypos'][j]['text'] for j in assignments[i + offset]]
+                # item_copy['postags'] = [example_list[i]['postags'][j] for j in assignments[i + offset]]
+                item_copy['scores'] = [example_list[i]['hypos'][j]['score'] for j in assignments[i + offset]]
                 val_instances.append(item_copy)
                 test_instances.append(example_list[i])
-            return len(ex_this_fold)
+            return len(example_list)
 
-        folds2use = range(5) if fold == -1 else [fold]
-        for fold_no in folds2use:
-            print("loading data from fold {}".format(fold_no), flush=True)
-            with open('examples{}-of-5.pkl'.format(fold_no), 'rb') as f:
-                ex_this_fold = pkl.load(f)
-            s_idx += _load_from_examples(ex_this_fold, s_idx)
+        # folds2use = range(5) if fold == -1 else [fold]
+        # for fold_no in folds2use:
+        #     print("loading data from fold {}".format(fold_no), flush=True)
+        #     with open('examples{}-of-5.pkl'.format(fold_no), 'rb') as f:
+        #         ex_this_fold = pkl.load(f)
+        #     s_idx += _load_from_examples(ex_this_fold, s_idx)
+        print("loading data", flush=True)
+        with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/data.json') as f:
+            examples = []
+            for line in f:
+                try:
+                    d = json.loads(line)
+                    examples.append(d)
+                except json.JSONDecodeError:
+                    continue
+            s_idx = 0
+            s_idx = _load_from_examples(examples, s_idx)
 
-        train_indices = np.concatenate(train_indices, 0)
-        test_indices = np.concatenate(test_indices, 0)
+        train_indices = np.concatenate(train_indices, axis=0)
+        test_indices = np.concatenate(test_indices, axis=0)
 
         return cls(train_instances, train_indices, train=True), cls(val_instances, test_indices, train=False), cls(
             test_instances, test_indices, train=False, recompute_assignments=True)
