@@ -150,8 +150,6 @@ class CNNModel(nn.Module):
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
-                    'pretrained_file':
-                        'https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.100d.txt.gz'
                     }))
         self.binary_feature_embedding = Embedding(2, embed_dim)
 

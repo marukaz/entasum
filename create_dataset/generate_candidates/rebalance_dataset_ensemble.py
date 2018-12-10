@@ -56,7 +56,7 @@ with open('data/dict.tgt.txt') as f:
 # print("~~~~~~~~~USING SPLIT#{}~~~~~~~~~~~~~".format(fold))
 # if fold == -1:
 if True:
-    assignments = np.load('assignments-pretrained.npy')
+    assignments = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/assignments-pretrained.npy')
     # for i in range(5):
     #     assignments.append(np.load('assignments-fold-{}-19.npy'.format(i)))
     # assignments = np.concatenate(assignments)
