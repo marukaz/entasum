@@ -142,7 +142,7 @@ class AssignmentsDataLoader(Dataset):
 
         feats = np.column_stack((
             np.log([-hypo['score'] for hypo in this_ex['hypos']]),
-            np.array([len(hypo['text']) for hypo in d['hypos']], dtype=np.float32),
+            np.array([len(hypo['text']) for hypo in this_ex['hypos']], dtype=np.float32),
             # np.ones(feats_vals.shape[0], dtype=np.float32) * context_len,
             np.ones(len(this_ex['hypos']), dtype=np.float32) * len(this_ex['source']),
         ))
