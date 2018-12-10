@@ -82,23 +82,22 @@ class AssignmentsDataLoader(Dataset):
     # TODO: 形式をあわせる
     def collate(self, items_l):
         # Assume all of these have the same length
-        index_l, second_sentences_l, pos_tags_l, feats_l, context_len_l = zip(*items_l)
+        index_l, second_sentences_l, feats_l = zip(*items_l)
 
         feats = Variable(torch.FloatTensor(np.stack(feats_l)))
         inds = np.array(index_l)
 
         instances = []
-        for second_sentences, pos_tags, context_len in zip(second_sentences_l, pos_tags_l, context_len_l):
-            for second_sent, pos_tag in zip(second_sentences, pos_tags):
+        for second_sentences in second_sentences_l:
+            for second_sent in second_sentences:
+                second_sent = second_sent.split(' ')
                 instance_d = {
                     'words': TextField([Token(token) for token in ['@@bos@@'] + second_sent + ['@@eos@@']],
-                                       {'tokens': SingleIdTokenIndexer(namespace='tokens', lowercase_tokens=True)}),
-                    'postags': TextField([Token(token) for token in ['@@bos@@'] + pos_tag + ['@@eos@@']],
-                                         {'pos': SingleIdTokenIndexer(namespace='pos', lowercase_tokens=False)}),
+                                       {'tokens': SingleIdTokenIndexer(namespace='tokens')})
                 }
-                instance_d['context_indicator'] = SequenceLabelField([1] * (context_len + 1) +
-                                                                     [0] * (len(second_sent) - context_len + 1),
-                                                                     instance_d['words'])
+                # instance_d['context_indicator'] = SequenceLabelField([1] * (context_len + 1) +
+                #                                                      [0] * (len(second_sent) - context_len + 1),
+                #                                                      instance_d['words'])
                 instances.append(Instance(instance_d))
         batch = Batch(instances)
         batch.index_instances(vocab)
@@ -111,10 +110,10 @@ class AssignmentsDataLoader(Dataset):
             'inds': inds,
             'ending_word_ids': tensor_dict['words']['tokens'].view(inds.shape[0], -1,
                                                                    tensor_dict['words']['tokens'].size(1)),
-            'postags_word_ids': tensor_dict['postags']['pos'].view(inds.shape[0], -1,
-                                                                   tensor_dict['postags']['pos'].size(1)),
-            'ctx_indicator': tensor_dict['context_indicator'].view(inds.shape[0], -1,
-                                                                   tensor_dict['context_indicator'].size(1)),
+            # 'postags_word_ids': tensor_dict['postags']['pos'].view(inds.shape[0], -1,
+            #                                                        tensor_dict['postags']['pos'].size(1)),
+            # 'ctx_indicator': tensor_dict['context_indicator'].view(inds.shape[0], -1,
+            #                                                        tensor_dict['context_indicator'].size(1)),
         }
 
     def __len__(self):
@@ -129,29 +128,25 @@ class AssignmentsDataLoader(Dataset):
         generations: List[List[str]] of tokenized responses. The first one is GT.
         postags: List[List[str]] of POSTags and some lexicalization for startphrase+generations.
 
-        They're all of the same size (1024)
+        They're all of the same size (NUM_HYPOS + 1)
         :return: index
-                 second_sentences List[List[str]] full s2's
+                 second_sentences List[str] full s2's
                  pos_tags List[List[str]] full PosTags of S2's
                  feats [#ex, dim] np array of features
                  context_len length of context size in second_sentences and pos_tags
         """
         this_ex = self.instances[index]
-
-        second_sentences = [this_ex['startphrase'] + gen for gen in this_ex['generations']]
-        context_len = len(this_ex['startphrase'])
-
-        feats_vals = this_ex['scores'].values
-        if np.isinf(feats_vals).any():
-            feats_vals[np.isinf(feats_vals)] = 1e17
+        # この先はrebalance_dataset_mlpと同じ
+        second_sentences = [hypo['text'] for hypo in this_ex['hypos']]
+        # context_len = len(this_ex['startphrase'])
 
         feats = np.column_stack((
-            np.log(feats_vals),
+            np.log([-hypo['score'] for hypo in this_ex['hypos']]),
             np.array([len(gen) for gen in this_ex['generations']], dtype=np.float32),
-            np.ones(feats_vals.shape[0], dtype=np.float32) * context_len,
-            np.ones(feats_vals.shape[0], dtype=np.float32) * len(this_ex['sent1']),
+            # np.ones(feats_vals.shape[0], dtype=np.float32) * context_len,
+            np.ones(len(this_ex['hypos']), dtype=np.float32) * len(this_ex['source']),
         ))
-        return index, second_sentences, this_ex['postags'], feats, context_len
+        return index, second_sentences, feats
 
     @classmethod
     def splits(cls, assignments):
