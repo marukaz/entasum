@@ -197,12 +197,12 @@ class BLSTMModel(nn.Module):
         self.binary_feature_embedding = Embedding(2, embed_dim)
 
         self.fwd_lstm = PytorchSeq2SeqWrapper(AugmentedLstm(
-            input_size=embed_dim * 2, hidden_size=hidden_size, go_forward=True,
+            input_size=embed_dim, hidden_size=hidden_size, go_forward=True,
             recurrent_dropout_probability=recurrent_dropout_probability,
             use_input_projection_bias=False, use_highway=use_highway), stateful=False)
 
         self.bwd_lstm = PytorchSeq2SeqWrapper(AugmentedLstm(
-            input_size=embed_dim * 2, hidden_size=hidden_size, go_forward=False,
+            input_size=embed_dim, hidden_size=hidden_size, go_forward=False,
             recurrent_dropout_probability=recurrent_dropout_probability,
             use_input_projection_bias=False, use_highway=use_highway), stateful=False)
 
@@ -210,12 +210,12 @@ class BLSTMModel(nn.Module):
         self.fc = nn.Linear(hidden_size * 2, 1, bias=False)
 
     @reshape
-    def forward(self, word_ids, indicator_ids):
+    def forward(self, word_ids):
         """
         :param word_ids: [batch, length] ids
         :param indicator_ids: [batch, length] ids
         """
-        embeds = torch.cat((self.embeds(word_ids), self.binary_feature_embedding(indicator_ids)), 2)
+        embeds = self.embeds(word_ids)
         mask = (word_ids != 0).long()
 
         fwd_activation = self.fwd_lstm(embeds, mask)  # [B, L, D]

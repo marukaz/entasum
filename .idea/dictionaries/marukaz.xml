@@ -2,6 +2,7 @@
   <dictionary name="marukaz">
     <words>
       <w>dataset</w>
+      <w>lstm</w>
       <w>optim</w>
       <w>preds</w>
       <w>pretrained</w>
