@@ -36,9 +36,12 @@ fold = -1
 vocab = Vocabulary()
 with open('data/dict.tgt.txt') as f:
     for i, line in enumerate(f):
-        if i == 100:
-            break
-        vocab.add_token_to_namespace(line.split(' ')[0])
+        token = line.split(' ')[0]
+        vocab.add_token_to_namespace(token, namespace='tokens')
+        if i < 100:
+            vocab.add_token_to_namespace(token, namespace='masked_tokens')
+
+
 
 # vocab = Vocabulary.from_files('../lm/vocabulary')
 # pos_vocab = Vocabulary(counter={'tokens': {name: i + 9000 for i, name in enumerate(

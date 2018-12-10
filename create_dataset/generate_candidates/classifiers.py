@@ -151,21 +151,21 @@ class CNNModel(nn.Module):
                     'trainable': True,
                     'padding_index': 0,
                     }))
-        self.binary_feature_embedding = Embedding(2, embed_dim)
+        # self.binary_feature_embedding = Embedding(2, embed_dim)
 
         self.convs = nn.ModuleList([
-            nn.Conv1d(embed_dim * 2, num_filters, kernel_size=window_size, padding=window_size - 1) for window_size in
+            nn.Conv1d(embed_dim, num_filters, kernel_size=window_size, padding=window_size - 1) for window_size in
             window_sizes
         ])
         self.fc = nn.Linear(num_filters * len(window_sizes), 1, bias=False)
 
     @reshape
-    def forward(self, word_ids, indicator_ids):
+    def forward(self, word_ids):
         """
         :param word_ids: [batch, length] ids
         :param indicator_ids: [batch, length] ids
         """
-        embeds = torch.cat((self.embeds(word_ids), self.binary_feature_embedding(indicator_ids)), 2)
+        embeds = self.embeds(word_ids)
         # mask = (word_ids != 0).long()
 
         embeds_t = embeds.transpose(1, 2)  # [B, D, L]
@@ -180,7 +180,8 @@ class CNNModel(nn.Module):
 
 
 class BLSTMModel(nn.Module):
-    # オリジナルがuse_postags_only=Trueだったが使えないのでFalseにした。また、Gloveも使えないので該当箇所を削除
+    # オリジナルがuse_postags_only=Trueだったが使えないのでFalseにし、else節をmasked_tokensにした。
+    # また、Gloveも使えないので該当箇所を削除
     def __init__(self, vocab, use_postags_only=False, embed_dim=100, hidden_size=200, recurrent_dropout_probability=0.3,
                  use_highway=False,
                  maxpool=True):
@@ -188,7 +189,7 @@ class BLSTMModel(nn.Module):
 
         self.embeds = Embedding.from_params(
             vocab,
-            Params({'vocab_namespace': 'pos' if use_postags_only else 'tokens',
+            Params({'vocab_namespace': 'pos' if use_postags_only else 'masked_tokens',
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
@@ -235,9 +236,9 @@ class Ensemble(nn.Module):
         super(Ensemble, self).__init__()
 
         self.fasttext_model = BoWModel(vocab, use_mean=True, embed_dim=100)
-        self.mlp_model = LMFeatsModel(input_dim=8, hidden_dim=1024)
-        self.lstm_pos_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
-        # self.lstm_lex_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
+        self.mlp_model = LMFeatsModel(input_dim=3, hidden_dim=1024) # input_dim=featsの要素の数
+        # self.lstm_pos_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
+        self.lstm_lex_model = BLSTMModel(vocab, use_postags_only=False, maxpool=True)
         self.cnn_model = CNNModel(vocab)
 
         self.mlp = nn.Sequential(
@@ -250,7 +251,7 @@ class Ensemble(nn.Module):
             nn.Linear(2048, 1, bias=False),
         )
 
-    def forward(self, lm_feats, ending_word_ids, postags_word_ids, ctx_indicator, inds):
+    def forward(self, lm_feats, inds, ending_word_ids):
         """
         :param lm_feats: [batch_size, #options, dim]
         :param ending_word_ids: [batch_size, #options, L] word ids
@@ -262,18 +263,18 @@ class Ensemble(nn.Module):
         results = {}
         results['mlp'], mlp_feats = self.mlp_model(lm_feats)
         results['fasttext'], fasttext_feats = self.fasttext_model(ending_word_ids)
-        results['cnn'], cnn_feats = self.cnn_model(ending_word_ids, ctx_indicator)
-        results['lstm_pos'], lstm_feats = self.lstm_pos_model(postags_word_ids, ctx_indicator)
-        # results['lstm_lex'], _ = self.lstm_lex_model(ending_word_ids, ctx_indicator)
+        results['cnn'], cnn_feats = self.cnn_model(ending_word_ids)
+        # results['lstm_pos'], lstm_feats = self.lstm_pos_model(postag_word_ids)
+        results['lstm_lex'], lstm_feats = self.lstm_lex_model(ending_word_ids)
         results['ensemble'] = self.mlp(
             torch.cat((mlp_feats, fasttext_feats, cnn_feats, lstm_feats), 2)).squeeze(2)
         return results
 
-    def predict(self, lm_feats, ending_word_ids, postags_word_ids, ctx_indicator, inds):
+    def predict(self, lm_feats, ending_word_ids, inds):
         """ Predict a distribution of probabilities
         :return: Dict from model type -> prob dist
         """
-        results = self.forward(lm_feats, ending_word_ids, postags_word_ids, ctx_indicator, inds)
+        results = self.forward(lm_feats, ending_word_ids, inds)
         results = {k: F.softmax(v, 1).data.cpu().numpy() for k, v in results.items()}
         return results
 
@@ -285,7 +286,7 @@ class Ensemble(nn.Module):
         """
         # Compute the validation performance
         self.eval()
-        all_predictions = {'mlp': [], 'fasttext': [], 'cnn': [], 'lstm_pos': [], #'lstm_lex': [],
+        all_predictions = {'mlp': [], 'fasttext': [], 'cnn': [], 'lstm_lex': [],
                            'ensemble': []}
         for b, (time_per_batch, batch) in enumerate(time_batch(val_dataloader, reset_every=100)):
             batch = {k: v.cuda(non_blocking=True) if hasattr(v, 'cuda') else v for k, v in batch.items()}
