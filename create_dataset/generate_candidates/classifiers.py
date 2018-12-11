@@ -190,7 +190,7 @@ class BLSTMModel(nn.Module):
 
         self.embeds = Embedding.from_params(
             vocab,
-            Params({'vocab_namespace': 'pos' if use_postags_only else 'masked_tokens',
+            Params({'vocab_namespace': 'pos' if use_postags_only else 'tokens',
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
