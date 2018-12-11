@@ -113,11 +113,11 @@ class BoWModel(nn.Module):
         assert embed_dim == 100
         self.embeds = Embedding.from_params(
             vocab,
-            # Gloveは使えないので削除
             Params({'vocab_namespace': 'tokens',
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
+                    'pretrained_file': '/home/6/18M31289/entasum/create_dataset/generate_candidates/data/word2vec.model'
                     }))
 
         self.embed_dim = embed_dim
@@ -150,6 +150,7 @@ class CNNModel(nn.Module):
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
+                    'pretrained_file': '/home/6/18M31289/entasum/create_dataset/generate_candidates/data/word2vec.model'
                     }))
         # self.binary_feature_embedding = Embedding(2, embed_dim)
 
@@ -193,8 +194,8 @@ class BLSTMModel(nn.Module):
                     'embedding_dim': embed_dim,
                     'trainable': True,
                     'padding_index': 0,
+                    'pretrained_file': '/home/6/18M31289/entasum/create_dataset/generate_candidates/data/word2vec.model'
                     }))
-        self.binary_feature_embedding = Embedding(2, embed_dim)
 
         self.fwd_lstm = PytorchSeq2SeqWrapper(AugmentedLstm(
             input_size=embed_dim, hidden_size=hidden_size, go_forward=True,
