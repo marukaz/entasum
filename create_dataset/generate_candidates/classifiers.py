@@ -271,11 +271,11 @@ class Ensemble(nn.Module):
             torch.cat((mlp_feats, fasttext_feats, cnn_feats, lstm_feats), 2)).squeeze(2)
         return results
 
-    def predict(self, lm_feats, ending_word_ids, inds):
+    def predict(self, lm_feats, inds, ending_word_ids):
         """ Predict a distribution of probabilities
         :return: Dict from model type -> prob dist
         """
-        results = self.forward(lm_feats, ending_word_ids, inds)
+        results = self.forward(lm_feats, inds, ending_word_ids)
         results = {k: F.softmax(v, 1).data.cpu().numpy() for k, v in results.items()}
         return results
 
