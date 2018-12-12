@@ -4,9 +4,9 @@ import json
 
 def main(args):
     with open(args.load, 'r') as f:
-        unique_hypos = []
-        texts = []
         for line in f:
+            unique_hypos = []
+            texts = []
             try:
                 d = json.loads(line)
             except json.JSONDecodeError:
