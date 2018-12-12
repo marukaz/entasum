@@ -17,7 +17,7 @@ def main(args):
                     unique_hypos.append(hypo)
                     texts.append(text)
             d['hypos'] = unique_hypos
-            print(json.dumps(d))
+            print(json.dumps(d, ensure_ascii=False))
 
 
 if __name__ == "__main__":
