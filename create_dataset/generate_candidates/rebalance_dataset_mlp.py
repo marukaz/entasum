@@ -26,7 +26,7 @@ from create_dataset.pytorch_misc import clip_grad_norm, time_batch
 
 
 ######### PARAMETERS
-NUM_DISTRACTORS = 9
+NUM_DISTRACTORS = 4
 TRAIN_PERC = 0.8
 
 all_data = []
