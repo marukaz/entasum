@@ -3,9 +3,10 @@ The big idea will be to add in the worst scoring one. But we want to use a MULTI
 Also not using word features for now
 
 """
-import os
-import json
+
 import argparse
+import json
+import pickle
 
 import matplotlib as mpl
 mpl.use('Agg')
@@ -56,9 +57,11 @@ if args.load is not None:
             ))
             all_data.append(feats)
     all_data = np.stack(all_data)
-    np.save('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', all_data)
+    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', 'w')as f:
+        pickle.dump(all_data, f)
 else:
-    all_data = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy')
+    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy') as f:
+        all_data = pickle.load(f)
 
 
 print("There are {} things".format(all_data.shape[0]), flush=True)
