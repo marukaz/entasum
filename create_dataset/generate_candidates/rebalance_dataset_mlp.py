@@ -5,7 +5,7 @@ Also not using word features for now
 """
 import os
 import json
-import
+import argparse
 
 import matplotlib as mpl
 mpl.use('Agg')
@@ -23,22 +23,22 @@ import pandas as pd
 from create_dataset.pytorch_misc import clip_grad_norm, time_batch
 
 
-
+parser = argparse.ArgumentParser()
+parser.add_argument('-l', '--load', default=None)
+args = parser.parse_args()
 
 ######### PARAMETERS
 NUM_DISTRACTORS = 4
 TRAIN_PERC = 0.8
 
 all_data = []
-if os.path.exists('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy'):
-    all_data = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy')
-else:
+if args.load is not None:
     print("loading data. this will take hella time probably!", flush=True)
     # TODO 生成文を交差検証式に分割する
     # for fold in trange(5):
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
-    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/data.json', 'r') as f:
+    with open(args.load, 'r') as f:
         for line in f:
             try:
                 d = json.loads(line)
@@ -57,6 +57,9 @@ else:
             all_data.append(feats)
     all_data = np.stack(all_data)
     np.save('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', all_data)
+else:
+    all_data = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy')
+
 
 print("There are {} things".format(all_data.shape[0]), flush=True)
 # 各batchにNUM_DISTRACTORSの数(選択肢の数)だけ初期idを割り振ってる
