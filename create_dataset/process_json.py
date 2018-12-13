@@ -28,7 +28,8 @@ def main(args):
                         unique_hypos.append(hypo)
                         texts.append(text)
                 if len(unique_hypos) >= args.threshold:
-                    d['hypos'] = random.sample(unique_hypos, args.threshold)
+                    d['hypos'] = random.sample(unique_hypos[1:], args.threshold-1)
+                    d['hypos'].insert(unique_hypos[0], 0)
                     print(json.dumps(d, ensure_ascii=False), file=wf)
 
 
