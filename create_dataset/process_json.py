@@ -1,5 +1,6 @@
 import argparse
 import json
+import random
 
 import numpy as np
 
@@ -27,7 +28,7 @@ def main(args):
                         unique_hypos.append(hypo)
                         texts.append(text)
                 if len(unique_hypos) >= args.threshold:
-                    d['hypos'] = unique_hypos[:args.threshold]
+                    d['hypos'] = random.sample(unique_hypos, args.threshold)
                     print(json.dumps(d, ensure_ascii=False), file=wf)
 
 
