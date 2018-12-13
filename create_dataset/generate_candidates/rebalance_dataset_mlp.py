@@ -5,7 +5,7 @@ Also not using word features for now
 """
 import os
 import json
-import pickle as pkl
+import
 
 import matplotlib as mpl
 mpl.use('Agg')

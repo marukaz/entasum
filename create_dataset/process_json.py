@@ -10,8 +10,8 @@ def main(args):
     :param args:
     :return:
     """
-    with open(args.load, 'r') as f:
-        for line in f:
+    with open(args.load, 'r') as rf, open(f'{args.load}.unique', 'w') as wf:
+        for line in rf:
             unique_hypos = []
             texts = []
             try:
@@ -26,7 +26,7 @@ def main(args):
                         unique_hypos.append(hypo)
                         texts.append(text)
                 d['hypos'] = unique_hypos
-                print(json.dumps(d, ensure_ascii=False))
+                print(json.dumps(d, ensure_ascii=False), file=wf)
 
 
 if __name__ == "__main__":
