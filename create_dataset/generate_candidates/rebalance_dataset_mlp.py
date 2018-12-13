@@ -56,10 +56,10 @@ if args.load is not None:
                 np.ones(len(d['hypos']), dtype=np.float32) * len(d['source']),
             ))
             all_data.append(feats)
-    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', 'w')as f:
+    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', 'wb')as f:
         pickle.dump(all_data, f)
 else:
-    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy') as f:
+    with open('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/feats_cached.npy', 'rb') as f:
         all_data = pickle.load(f)
 
 
