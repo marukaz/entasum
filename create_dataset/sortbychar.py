@@ -4,6 +4,13 @@ import json
 from nltk.util import ngrams
 
 
+def print2file(f, d, key_score, reverse=False):
+    print(d['source'], file=f)
+    print(d['id'], file=f)
+    for hypo in sorted(d['hypos'], key=lambda x: x[key_score], reverse=reverse):
+        print(hypo['text'], hypo['uni_score'], hypo['bi_score'], hypo['tri_score'], sep='\t', file=f)
+
+
 def main(args):
     fname = args.json_file
     with open(fname) as rf, \
@@ -14,12 +21,6 @@ def main(args):
             except json.JSONDecodeError:
                 continue
             source_concat = d['source'].replace(' ', '')
-            print(d['source'], file=wfu)
-            print(d['source'], file=wfb)
-            print(d['source'], file=wft)
-            print(d['id'], file=wfu)
-            print(d['id'], file=wfb)
-            print(d['id'], file=wft)
             for hypo in d['hypos']:
                 uni_score = len([True for c in hypo['text'].replace(' ', '') if c in source_concat])
                 hypo['uni_score'] = uni_score
@@ -32,16 +33,13 @@ def main(args):
 
             source_tri = set(ngrams(source_concat, 3))
             for hypo in d['hypos']:
-                bigram = ngrams(hypo['text'].replace(' ', ''), 2)
-                tri_score = len([True for bi in bigram if bi in source_tri])
+                trigram = ngrams(hypo['text'].replace(' ', ''), 3)
+                tri_score = len([True for tri in trigram if tri in source_tri])
                 hypo['tri_score'] = tri_score
 
-            for hypo in sorted(d['hypos'], key=lambda x: x['uni_score'], reverse=True):
-                print(hypo, file=wfu)
-            for hypo in sorted(d['hypos'], key=lambda x: x['bi_score']):
-                print(hypo, file=wfb)
-            for hypo in sorted(d['hypos'], key=lambda x: x['tri_score']):
-                print(hypo, file=wft)
+            print2file(wfu, d, 'uni_score', reverse=True)
+            print2file(wfb, d, 'bi_score')
+            print2file(wft, d, 'tri_score')
 
 
 if __name__ == "__main__":
