@@ -21,7 +21,7 @@ def main(args):
             print(d['id'], file=wfb)
             print(d['id'], file=wft)
             for hypo in d['hypos']:
-                uni_score = len([True for c in hypo['text'].replace(' ', '') if c in source])
+                uni_score = len([True for c in hypo['text'].replace(' ', '') if c in source_concat])
                 hypo['uni_score'] = uni_score
             source_bi = ngrams(source_concat, 2)
             for hypo in d['hypos']:
