@@ -3,6 +3,7 @@ import json
 
 import numpy as np
 from nltk.util import ngrams
+from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 
@@ -41,7 +42,8 @@ def main(args):
     batch_size = len(d['hypos'])
     cv = CountVectorizer()
     bag_of_words = cv.fit_transform(corpus)
-    X = np.column_stack((gen_scores, gram_scores))
+
+    X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
     y = [0]*len(X)
     for i in range(len(y)):
         if i % batch_size == 0:
