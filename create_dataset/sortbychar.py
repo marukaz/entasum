@@ -1,6 +1,8 @@
 import argparse
 import json
 
+from nltk.util import ngrams
+
 
 def main(args):
     fname = args.json_file
@@ -11,14 +13,26 @@ def main(args):
                 d = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            source = d['source']
-            unis = []
+            source_concat = d['source'].replace(' ', '')
+            print(d['source'], file=wfu)
+            print(d['source'], file=wfb)
+            print(d['source'], file=wft)
+            print(d['id'], file=wfu)
+            print(d['id'], file=wfb)
+            print(d['id'], file=wft)
             for hypo in d['hypos']:
                 uni_score = len([True for c in hypo['text'].replace(' ', '') if c in source])
                 hypo['uni_score'] = uni_score
-            print(d['id'], file=wfu)
-            for hypo in sorted(d['hypos'], key=lambda x: x['uni_score']):
+            source_bi = ngrams(source_concat, 2)
+            for hypo in d['hypos']:
+                bigram = ngrams(hypo['text'].replace(' ', ''), 2)
+                bi_score = len([True for bi in bigram if bi in source_bi])
+                hypo['bi_score'] = bi_score
+
+            for hypo in sorted(d['hypos'], key=lambda x: x['uni_score'], reverse=True):
                 print(hypo, file=wfu)
+            for hypo in sorted(d['hypos'], key=lambda x: x['bi_score']):
+                print(hypo, file=wfb)
 
 
 if __name__ == "__main__":
