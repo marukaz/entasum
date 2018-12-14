@@ -44,7 +44,7 @@ def main(args):
     bag_of_words = cv.fit_transform(corpus)
 
     X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
-    y = [0]*len(X)
+    y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
             y[i] = 1
