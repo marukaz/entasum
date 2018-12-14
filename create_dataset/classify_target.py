@@ -1,7 +1,7 @@
 import argparse
 import json
 
-import  numpy as np
+import numpy as np
 from nltk.util import ngrams
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -21,7 +21,7 @@ def ngram_score(source, sentences):
     uni_scores_div = [a/len(b) for a, b in zip(uni_scores, sentences)]
     bi_scores_div = [a/len(b) for a, b in zip(bi_scores, sentences)]
     tri_scores_div = [a/len(b) for a, b in zip(tri_scores, sentences)]
-    return zip(uni_scores, bi_scores, tri_scores, uni_scores_div, bi_scores_div, tri_scores_div)
+    return list(zip(uni_scores, bi_scores, tri_scores, uni_scores_div, bi_scores_div, tri_scores_div))
 
 
 def main(args):
@@ -47,6 +47,7 @@ def main(args):
         if i % batch_size == 0:
             y[i] = 1
     clf = LogisticRegression()
+    print('start to learn')
     clf.fit(X, y)
     print(clf.score(X, y))
 
