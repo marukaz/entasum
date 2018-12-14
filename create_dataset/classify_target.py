@@ -51,9 +51,9 @@ def main(args):
     clf = LogisticRegression()
     print('start to learn')
     clf.fit(X, y)
-    for i, m in enumerate(np.argmax(clf.predict_proba(X), axis=1)):
-        if m == 1:
-            print(i)
+    for i, m in enumerate(clf.predict_proba(X), axis=1):
+        if np.argmax(m) == 1:
+            print(i, m)
 
 
 if __name__ == "__main__":
