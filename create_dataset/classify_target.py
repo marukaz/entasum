@@ -51,7 +51,7 @@ def main(args):
     clf = LogisticRegression()
     print('start to learn')
     clf.fit(X, y)
-    print(clf.score(X, y))
+    print(clf.predict_proba(X))
 
 
 if __name__ == "__main__":
