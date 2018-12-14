@@ -23,16 +23,25 @@ def main(args):
             for hypo in d['hypos']:
                 uni_score = len([True for c in hypo['text'].replace(' ', '') if c in source_concat])
                 hypo['uni_score'] = uni_score
-            source_bi = ngrams(source_concat, 2)
+
+            source_bi = set(ngrams(source_concat, 2))
             for hypo in d['hypos']:
                 bigram = ngrams(hypo['text'].replace(' ', ''), 2)
                 bi_score = len([True for bi in bigram if bi in source_bi])
                 hypo['bi_score'] = bi_score
 
+            source_tri = set(ngrams(source_concat, 3))
+            for hypo in d['hypos']:
+                bigram = ngrams(hypo['text'].replace(' ', ''), 2)
+                tri_score = len([True for bi in bigram if bi in source_tri])
+                hypo['tri_score'] = tri_score
+
             for hypo in sorted(d['hypos'], key=lambda x: x['uni_score'], reverse=True):
                 print(hypo, file=wfu)
             for hypo in sorted(d['hypos'], key=lambda x: x['bi_score']):
                 print(hypo, file=wfb)
+            for hypo in sorted(d['hypos'], key=lambda x: x['tri_score']):
+                print(hypo, file=wft)
 
 
 if __name__ == "__main__":
