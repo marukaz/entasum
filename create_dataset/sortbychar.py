@@ -7,6 +7,7 @@ from nltk.util import ngrams
 def print2file(f, d, key_score, reverse=False):
     print(d['source'], file=f)
     print(d['id'], file=f)
+    print('text\tuni\tbi\ttri')
     for hypo in sorted(d['hypos'], key=lambda x: x[key_score], reverse=reverse):
         print(hypo['text'], hypo['uni_score'], hypo['bi_score'], hypo['tri_score'], sep='\t', file=f)
 
