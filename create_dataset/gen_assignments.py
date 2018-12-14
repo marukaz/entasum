@@ -11,6 +11,7 @@ def main(args):
                 d = json.loads(line)
             except json.JSONDecodeError:
                 continue
+            print(d['source'])
             for ix in a:
                 print(d['hypos'][ix])
             print('------------------------------------------------------------')
