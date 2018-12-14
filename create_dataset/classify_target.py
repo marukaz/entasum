@@ -39,9 +39,8 @@ def main(args):
             gram_scores.extend(ngram_score(d['source'], sentences))
             corpus.extend(sentences)
     batch_size = len(d['hypos'])
-    # cv = CountVectorizer()
-    # bag_of_words = cv.fit_transform(corpus)
-    print(len(gen_scores), len(gram_scores))
+    cv = CountVectorizer()
+    bag_of_words = cv.fit_transform(corpus)
     X = np.column_stack((gen_scores, gram_scores))
     y = [0]*len(X)
     for i in range(len(y)):
