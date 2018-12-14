@@ -36,7 +36,7 @@ def main(args):
             except json.JSONDecodeError:
                 continue
             sentences = [hypo['text'] for hypo in d['hypos']]
-            gen_scores.extend([hypo['score'] for hypo in d['hypos']])
+            gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
             gram_scores.extend(ngram_score(d['source'], sentences))
             corpus.extend(sentences)
     batch_size = len(d['hypos'])
