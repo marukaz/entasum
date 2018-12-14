@@ -15,9 +15,9 @@ def ngram_score(source, sentences):
         snt_grams = [ngrams(snt.replace(' ', ''), n) for snt in snts]
         for snt_gram in snt_grams:
             yield len([True for g in snt_gram if g in src_gram])
-    uni_scores = _score(source_concat, sentences, 1)
-    bi_scores = _score(source_concat, sentences, 2)
-    tri_scores = _score(source_concat, sentences, 3)
+    uni_scores = list(_score(source_concat, sentences, 1))
+    bi_scores = list(_score(source_concat, sentences, 2))
+    tri_scores = list(_score(source_concat, sentences, 3))
     uni_scores_div = [a/len(b) for a, b in zip(uni_scores, sentences)]
     bi_scores_div = [a/len(b) for a, b in zip(bi_scores, sentences)]
     tri_scores_div = [a/len(b) for a, b in zip(tri_scores, sentences)]
@@ -41,6 +41,7 @@ def main(args):
     batch_size = len(d['hypos'])
     # cv = CountVectorizer()
     # bag_of_words = cv.fit_transform(corpus)
+    print(len(gen_scores), len(gram_scores))
     X = np.column_stack((gen_scores, gram_scores))
     y = [0]*len(X)
     for i in range(len(y)):
