@@ -7,7 +7,10 @@ def main(args):
     assignments = np.load('/home/6/18M31289/entasum/create_dataset/generate_candidates/data/assignments-pretrained.npy')
     with open(args.json_file) as f:
         for a, line in zip(assignments, f):
-            d = json.loads(line)
+            try:
+                d = json.loads(line)
+            except json.JSONDecodeError:
+                continue
             for ix in a:
                 print(d['hypos'][ix])
             print('------------------------------------------------------------')
