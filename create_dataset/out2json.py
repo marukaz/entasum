@@ -3,7 +3,7 @@ import json
 
 
 def main(args):
-    with open(args.json_file) as f:
+    with open(args.file) as f:
         for line in f:
             try:
                 d = json.loads(line)
