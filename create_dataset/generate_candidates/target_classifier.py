@@ -6,6 +6,7 @@ from nltk.util import ngrams
 from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.externals import joblib
 
 
 def ngram_score(source, sentences):
@@ -27,6 +28,7 @@ def ngram_score(source, sentences):
 
 def main(args):
     corpus = []
+    sources = []
     gen_scores = []
     gram_scores = []
     with open(args.file) as f:
@@ -35,10 +37,11 @@ def main(args):
                 d = json.loads(line)
             except json.JSONDecodeError:
                 continue
+            sources.append(d['source'])
             sentences = [hypo['text'] for hypo in d['hypos']]
+            corpus.extend(sentences)
             gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
             gram_scores.extend(ngram_score(d['source'], sentences))
-            corpus.extend(sentences)
     batch_size = len(d['hypos'])
     cv = CountVectorizer()
     bag_of_words = cv.fit_transform(corpus)
@@ -48,16 +51,30 @@ def main(args):
     for i in range(len(y)):
         if i % batch_size == 0:
             y[i] = 1
-    clf = LogisticRegression()
-    print('start to learn')
-    clf.fit(X, y)
-    for i, m in enumerate(clf.predict_proba(X)):
-        if np.argmax(m) == 1:
-            print(i, m)
+    if args.train:
+        clf = LogisticRegression()
+        print('start to learn')
+        clf.fit(X, y)
+        print(clf.score(X, y))
+        joblib.dump(clf, 'clf.pkl')
+    elif args.eval:
+        clf = joblib.load('clf.pkl')
+        probas = clf.predict_proba(X)
+        corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
+        probas_batch_itr = zip(*[iter(probas)] * batch_size)
+        for snt_b, proba_b, src in zip(corpus_batch_itr, probas_batch_itr, sources):
+            print(f'source: {src}')
+            batch = np.column_stack(snt_b, proba_b)
+            for snt, proba in sorted(batch, key=lambda x: x[1], reverse=True):
+                print(f'{snt}\t{proba}')
+            print('*************************************************************************************')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('file')
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("-t", "--train", action="store_true")
+    group.add_argument("-e", "--eval", action="store_true")
     args = parser.parse_args()
     main(args)
