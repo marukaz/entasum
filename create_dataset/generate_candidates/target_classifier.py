@@ -64,9 +64,13 @@ def main(args):
         probas_batch_itr = zip(*[iter(probas)] * batch_size)
         for snt_b, proba_b, src in zip(corpus_batch_itr, probas_batch_itr, sources):
             print(f'source: {src}')
-            batch = np.column_stack((snt_b, proba_b))
-            for snt, proba in sorted(batch, key=lambda x: x[1], reverse=True):
-                print(f'{snt}\t{proba}')
+            batch_id = range(batch_size)
+            batch = np.column_stack((batch_id, snt_b, proba_b))
+            for id_, snt, proba in sorted(batch, key=lambda x: x[1], reverse=True):
+                if id_ == 0:
+                    print(f'\n{id_}: {snt}\t{proba}\n')
+                else:
+                    print(f'{id_}: {snt}\t{proba}')
             print('*************************************************************************************')
 
 
