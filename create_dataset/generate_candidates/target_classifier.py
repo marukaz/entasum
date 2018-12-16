@@ -1,5 +1,6 @@
 import argparse
 import json
+from operator import itemgetter
 
 import numpy as np
 from nltk.util import ngrams
@@ -66,7 +67,7 @@ def main(args):
             print(f'source: {src}')
             batch_id = range(batch_size)
             batch = np.column_stack((batch_id, snt_b, proba_b))
-            for id_, snt, proba in sorted(batch, key=lambda x: x[1], reverse=True):
+            for id_, snt, _, proba in sorted(batch, key=itemgetter(3)):
                 if id_ == 0:
                     print(f'\n{id_}: {snt}\t{proba}\n')
                 else:
