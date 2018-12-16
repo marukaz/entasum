@@ -68,10 +68,10 @@ def main(args):
             batch_id = range(batch_size)
             batch = np.column_stack((batch_id, snt_b, proba_b))
             for id_, snt, _, proba in sorted(batch, key=itemgetter(3)):
-                if id_ == 0:
-                    print(f'\n{id_}: {snt}\t{proba}\n')
+                if id_ == '0':
+                    print(f'\n{id_}:\t{snt}\t{proba}\n')
                 else:
-                    print(f'{id_}: {snt}\t{proba}')
+                    print(f'{id_}:\t{snt}\t{proba}')
             print('*************************************************************************************')
 
 
