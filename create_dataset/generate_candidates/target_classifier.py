@@ -46,17 +46,17 @@ def main(args):
             gram_scores.extend(ngram_score(d['source'], sentences))
     batch_size = len(d['hypos'])
 
-    cv = CountVectorizer()
-    bag_of_words = cv.fit_transform(corpus)
+    # cv = CountVectorizer()
+    # bag_of_words = cv.fit_transform(corpus)
 
     if args.ppl_file is not None:
         ppl_scores = []
         with open(args.ppl_file) as pplf:
             for line in pplf:
                 ppl_scores.append([float(line.split(' ')[1])])
-        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words, csr_matrix(ppl_scores)))
+        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), csr_matrix(ppl_scores)))
     else:
-        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
+        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores)))
     y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
