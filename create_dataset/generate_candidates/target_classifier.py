@@ -53,6 +53,7 @@ def main(args):
         if args.train:
             cv = CountVectorizer()
             bag_of_words = cv.fit_transform(corpus)
+            joblib.dump(cv, 'cv_' + args.clf_name)
         elif args.eval:
             cv = joblib.load('cv_' + args.clf_name)
             bag_of_words = cv.transform(corpus)
@@ -76,7 +77,6 @@ def main(args):
         clf.fit(X, y)
         print(clf.score(X, y))
         joblib.dump(clf, args.clf_name)
-        joblib.dump(cv, 'cv_' + args.clf_name)
     elif args.eval:
         clf = joblib.load(args.clf_name)
         probas = clf.predict_proba(X)
