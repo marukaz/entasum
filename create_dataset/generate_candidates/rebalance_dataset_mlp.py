@@ -46,7 +46,7 @@ if args.load is not None:
             except json.JSONDecodeError:
                 continue
             feats = np.column_stack((
-                ppls,
+                np.array(ppls, dtype=np.float32),
                 # スコア
                 np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
