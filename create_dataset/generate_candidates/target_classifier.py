@@ -32,8 +32,12 @@ def main(args):
     sources = []
     gen_scores = []
     gram_scores = []
-    with open(args.file) as f:
-        for line in f:
+    ppl_scores = []
+    with open(args.ppl_file) as pplf:
+        for line in pplf:
+            ppl_scores.append(line.split(' ')[1])
+    with open(args.json_file) as jsonf:
+        for line in jsonf:
             try:
                 d = json.loads(line)
             except json.JSONDecodeError:
@@ -47,7 +51,7 @@ def main(args):
     cv = CountVectorizer()
     bag_of_words = cv.fit_transform(corpus)
 
-    X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
+    X = hstack((csr_matrix(ppl_scores), csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
     y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
@@ -77,7 +81,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('file')
+    parser.add_argument('json_file')
+    parser.add_argument('ppl_file')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
