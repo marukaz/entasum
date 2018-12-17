@@ -33,6 +33,7 @@ def main(args):
     sources = []
     gen_scores = []
     gram_scores = []
+    features = []
     with open(args.json_file) as jsonf:
         for line in tqdm(jsonf):
             try:
@@ -45,18 +46,26 @@ def main(args):
             gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
             gram_scores.extend(ngram_score(d['source'], sentences))
     batch_size = len(d['hypos'])
+    features.append((csr_matrix(gen_scores)))
+    features.append((csr_matrix(gram_scores)))
 
-    # cv = CountVectorizer()
-    # bag_of_words = cv.fit_transform(corpus)
+    if args.bag_of_words:
+        if args.train:
+            cv = CountVectorizer()
+            bag_of_words = cv.fit_transform(corpus)
+        elif args.eval:
+            cv = joblib.load('cv_' + args.clf_name)
+            bag_of_words = cv.transform(corpus)
+        features.append(bag_of_words)
 
     if args.ppl_file is not None:
         ppl_scores = []
         with open(args.ppl_file) as pplf:
             for line in pplf:
                 ppl_scores.append([float(line.split('\t')[2])])
-        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), csr_matrix(ppl_scores)))
-    else:
-        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores)))
+        features.append(ppl_scores)
+
+    X = hstack(features)
     y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
@@ -67,6 +76,7 @@ def main(args):
         clf.fit(X, y)
         print(clf.score(X, y))
         joblib.dump(clf, args.clf_name)
+        joblib.dump(cv, 'cv_' + args.clf_name)
     elif args.eval:
         clf = joblib.load(args.clf_name)
         probas = clf.predict_proba(X)
@@ -89,6 +99,7 @@ if __name__ == "__main__":
     parser.add_argument('json_file')
     parser.add_argument('ppl_file', nargs='?', default=None)
     parser.add_argument('-n', '--clf-name', default='clf.pkl')
+    parser.add_argument('-bow', '--bag-of-words', action='store_true')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
