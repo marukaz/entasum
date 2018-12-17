@@ -35,7 +35,7 @@ def main(args):
     ppl_scores = []
     with open(args.ppl_file) as pplf:
         for line in pplf:
-            ppl_scores.append(line.split(' ')[1])
+            ppl_scores.append(float(line.split(' ')[1]))
     with open(args.json_file) as jsonf:
         for line in jsonf:
             try:
