@@ -8,6 +8,7 @@ from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.externals import joblib
+from tqdm import tqdm
 
 
 def ngram_score(source, sentences):
@@ -33,7 +34,7 @@ def main(args):
     gen_scores = []
     gram_scores = []
     with open(args.json_file) as jsonf:
-        for line in jsonf:
+        for line in tqdm(jsonf):
             try:
                 d = json.loads(line)
             except json.JSONDecodeError:
