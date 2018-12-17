@@ -53,7 +53,7 @@ def main(args):
         ppl_scores = []
         with open(args.ppl_file) as pplf:
             for line in pplf:
-                ppl_scores.append([float(line.split(' ')[1])])
+                ppl_scores.append([float(line.split('\t')[2])])
         X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), csr_matrix(ppl_scores)))
     else:
         X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores)))
