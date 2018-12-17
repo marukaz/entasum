@@ -32,10 +32,6 @@ def main(args):
     sources = []
     gen_scores = []
     gram_scores = []
-    ppl_scores = []
-    with open(args.ppl_file) as pplf:
-        for line in pplf:
-            ppl_scores.append([float(line.split(' ')[1])])
     with open(args.json_file) as jsonf:
         for line in jsonf:
             try:
@@ -48,10 +44,18 @@ def main(args):
             gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
             gram_scores.extend(ngram_score(d['source'], sentences))
     batch_size = len(d['hypos'])
+
     cv = CountVectorizer()
     bag_of_words = cv.fit_transform(corpus)
 
-    X = hstack((csr_matrix(ppl_scores), csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
+    if args.ppl_file is not None:
+        ppl_scores = []
+        with open(args.ppl_file) as pplf:
+            for line in pplf:
+                ppl_scores.append([float(line.split(' ')[1])])
+        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words, csr_matrix(ppl_scores)))
+    else:
+        X = hstack((csr_matrix(gen_scores), csr_matrix(gram_scores), bag_of_words))
     y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
@@ -82,7 +86,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('json_file')
-    parser.add_argument('ppl_file')
+    parser.add_argument('ppl_file', nargs='?', default=None)
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
