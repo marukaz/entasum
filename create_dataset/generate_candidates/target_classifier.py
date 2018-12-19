@@ -108,6 +108,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.param:
         clf = joblib.load(args.clf_name)
-        print(clf.get_params())
+        print(clf.coef_)
     else:
         main(args)
