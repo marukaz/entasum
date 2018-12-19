@@ -82,6 +82,9 @@ def main(args):
                 else:
                     print(f'{id_}:\t{snt}\t{proba}')
             print('*************************************************************************************')
+    elif args.param:
+        clf = joblib.load(args.clf_name)
+        print(clf.get_params())
 
 
 if __name__ == "__main__":
@@ -92,5 +95,6 @@ if __name__ == "__main__":
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
+    group.add_argument("-p", "--param", action="store_true")
     args = parser.parse_args()
     main(args)
