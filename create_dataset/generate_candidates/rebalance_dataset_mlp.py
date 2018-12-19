@@ -21,15 +21,16 @@ from tqdm import trange
 import pandas as pd
 
 from create_dataset.pytorch_misc import clip_grad_norm, time_batch
+from create_dataset.config import NUM_HYPOS, NUM_DISTRACTORS, TRAIN_PERC
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-l', '--load', default=None)
+parser.add_argument('load', nargs='?', default=None)
+parser.add_argument('-p', '--ppl-file')
 args = parser.parse_args()
 
 ######### PARAMETERS
-NUM_DISTRACTORS = 4
-TRAIN_PERC = 0.8
+BATCH_SIZE = NUM_HYPOS + 1
 
 all_data = []
 if args.load is not None:
@@ -38,13 +39,14 @@ if args.load is not None:
     # for fold in trange(5):
     # print("tryna load {}".format(fold, flush=True))
     print("try to load")
-    with open(args.load, 'r') as f:
-        for line in f:
+    with open(args.load, 'r') as jsonf, open(args.ppl_file) as pplf:
+        for line, ppls in zip(jsonf, zip(*[iter(pplf)] * BATCH_SIZE)):
             try:
                 d = json.loads(line)
             except json.JSONDecodeError:
                 continue
             feats = np.column_stack((
+                np.array([p.split('\t')[2] for p in ppls], dtype=np.float32),
                 # スコア
                 np.log([-hypo['score'] for hypo in d['hypos']]),
                 # 生成文の長さ
