@@ -92,18 +92,40 @@ def main(args):
                 else:
                     print(f'{id_}:\t{snt}\t{proba}')
             print('*************************************************************************************')
+    elif args.sample:
+        assert batch_size > args.choice_num
+        clf = joblib.load(args.clf_name)
+        probas = clf.predict_proba(X)
+        corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
+        probas_batch_itr = zip(*[iter(probas)] * batch_size)
 
+        def indice_generator(probas_itr):
+            for probs in probas_itr:
+                probs_norm = probs / sum(probs)
+                indice = []
+                while len(indice) < args.choice_num:
+                    index = np.argmax(np.random.multinomial(1, probs_norm))
+                    if index not in indice:
+                        indice.append(index)
+                yield indice
+        for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr, sources)):
+            print(f'source: {src}')
+            choices = snt_b[ixs]
+            print(*choices, sep='\n')
+            print('*************************************************************************************')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('json_file')
     parser.add_argument('ppl_file', nargs='?', default=None)
-    parser.add_argument('-n', '--clf-name', default='clf.pkl')
+    parser.add_argument('-n', '--clf-name', default='model/clf.pkl')
+    parser.add_argument('--choice-num', type=int, default=5)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
+    group.add_argument("-s", "--sample", action="store_true")
     group.add_argument("-p", "--param", action="store_true")
     args = parser.parse_args()
     if args.param:
