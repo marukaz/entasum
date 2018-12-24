@@ -111,6 +111,7 @@ def main(args):
                 yield indice
         for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr), sources):
             print(f'source: {src}')
+            snt_b = np.array(snt_b)
             choices = snt_b[ixs]
             print(*choices, sep='\n')
             print('*************************************************************************************')
