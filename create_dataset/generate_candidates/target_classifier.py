@@ -108,7 +108,7 @@ def main(args):
                     if index not in indice:
                         indice.append(index)
                 yield indice
-        for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr, sources)):
+        for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr), sources):
             print(f'source: {src}')
             choices = snt_b[ixs]
             print(*choices, sep='\n')
@@ -128,6 +128,8 @@ if __name__ == "__main__":
     group.add_argument("-s", "--sample", action="store_true")
     group.add_argument("-p", "--param", action="store_true")
     args = parser.parse_args()
+
+
     if args.param:
         clf = joblib.load(args.clf_name)
         print(clf.coef_)
