@@ -96,13 +96,12 @@ def main(args):
     elif args.sample:
         assert batch_size > args.choice_num
         clf = joblib.load(args.clf_name)
-        probas = clf.predict_proba(X)
+        probas = clf.predict_proba(X)[:, 1]
         corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
         probas_batch_itr = zip(*[iter(probas)] * batch_size)
 
         def indice_generator(probas_itr):
             for probs in probas_itr:
-                probs = probs[:, 1] # probs was from predict_proba and now be unique probabilities
                 probs_norm = probs / sum(probs)
                 indice = []
                 while len(indice) < args.choice_num:
