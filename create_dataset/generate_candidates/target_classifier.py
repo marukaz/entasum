@@ -1,6 +1,7 @@
 import argparse
 import json
 from operator import itemgetter
+from pathlib import Path
 
 import numpy as np
 from nltk.util import ngrams
@@ -101,6 +102,7 @@ def main(args):
 
         def indice_generator(probas_itr):
             for probs in probas_itr:
+                probs = probs[:, 1] # probs was from predict_proba and now be unique probabilities
                 probs_norm = probs / sum(probs)
                 indice = []
                 while len(indice) < args.choice_num:
