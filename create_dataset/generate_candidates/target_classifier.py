@@ -101,21 +101,24 @@ def main(args):
         corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
         probas_batch_itr = zip(*[iter(probas)] * batch_size)
 
-        def indice_generator(probas_itr):
-            for probs in probas_itr:
-                probs_norm = probs / sum(probs)
-                indice = []
-                while len(indice) < args.choice_num:
-                    index = np.argmax(np.random.multinomial(1, probs_norm))
-                    if index not in indice:
-                        indice.append(index)
-                yield indice
-        for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr), sources):
+        def indice_generator(probs):
+            probs_norm = probs / sum(probs)
+            indice = []
+            while len(indice) < args.choice_num:
+                index = np.argmax(np.random.multinomial(1, probs_norm))
+                if index not in indice:
+                    indice.append(index)
+            return indice
+        for snt_b, probas, src in zip(corpus_batch_itr, probas_batch_itr, sources):
             print(f'source: {src}')
             reference = snt_b[0]
             best = snt_b[1]
             snt_b = np.array(snt_b[2:])
+            ixs = indice_generator(probas[2:])
             choices = snt_b[ixs]
+            while len(set(choices)) < args.choice_num:
+                ixs = indice_generator(probas[2:])
+                choices = snt_b[ixs]
             print(reference)
             print(best)
             print(*choices, sep='\n')
