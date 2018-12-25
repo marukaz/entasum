@@ -2,6 +2,7 @@ import argparse
 import json
 from operator import itemgetter
 from pathlib import Path
+import random
 
 import numpy as np
 from nltk.util import ngrams
@@ -115,6 +116,12 @@ def main(args):
             choices = snt_b[ixs]
             print(*choices, sep='\n')
             print('*************************************************************************************')
+    elif args.random:
+        corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
+        for snt_b, src in zip(corpus_batch_itr, sources):
+            print(f'source: {src}')
+            print(*random.sample(snt_b, args.choice_num), sep='\n')
+            print('*************************************************************************************')
 
 
 if __name__ == "__main__":
@@ -128,6 +135,7 @@ if __name__ == "__main__":
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
     group.add_argument("-s", "--sample", action="store_true")
+    group.add_argument("-r", "--random", action="store_true")
     group.add_argument("-p", "--param", action="store_true")
     args = parser.parse_args()
 
