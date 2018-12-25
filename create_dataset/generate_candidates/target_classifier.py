@@ -112,15 +112,13 @@ def main(args):
                 yield indice
         for snt_b, ixs, src in zip(corpus_batch_itr, indice_generator(probas_batch_itr), sources):
             print(f'source: {src}')
-            snt_b = np.array(snt_b)
+            reference = snt_b[0]
+            best = snt_b[1]
+            snt_b = np.array(snt_b[2:])
             choices = snt_b[ixs]
+            print(reference)
+            print(best)
             print(*choices, sep='\n')
-            print('*************************************************************************************')
-    elif args.random:
-        corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
-        for snt_b, src in zip(corpus_batch_itr, sources):
-            print(f'source: {src}')
-            print(*random.sample(snt_b, args.choice_num), sep='\n')
             print('*************************************************************************************')
 
 
@@ -129,7 +127,7 @@ if __name__ == "__main__":
     parser.add_argument('json_file')
     parser.add_argument('ppl_file', nargs='?', default=None)
     parser.add_argument('-n', '--clf-name', default='model/clf.pkl')
-    parser.add_argument('--choice-num', type=int, default=5)
+    parser.add_argument('--choice-num', type=int, default=4)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
@@ -139,9 +137,18 @@ if __name__ == "__main__":
     group.add_argument("-p", "--param", action="store_true")
     args = parser.parse_args()
 
-
     if args.param:
         clf = joblib.load(args.clf_name)
         print(clf.coef_)
+    elif args.random:
+        with open(args.json_file) as jsonf:
+            for line in tqdm(jsonf):
+                try:
+                    d = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+            print(d['source'])
+            print(*random.sample([hypo['text'] for hypo in d['hypos']], args.choice_num), sep='\n')
+            print('*************************************************************************************')
     else:
         main(args)
