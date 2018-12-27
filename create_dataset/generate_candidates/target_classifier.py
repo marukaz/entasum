@@ -117,7 +117,7 @@ def main(args):
             snt_b = np.array(snt_b[2:])
             ixs = indice_generator(probas[2:])
             choices = snt_b[ixs]
-            while len(set(list(choices) + [reference, best])) < args.choice_num+1:
+            while len(set(list(choices) + [reference, best])) < args.choice_num+2:
                 ixs = indice_generator(probas[2:])
                 choices = snt_b[ixs]
             print(reference)
