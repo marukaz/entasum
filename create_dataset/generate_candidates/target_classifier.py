@@ -96,6 +96,7 @@ def main(args):
             print('*************************************************************************************')
     elif args.sample:
         assert batch_size > args.choice_num
+        np.random.seed(123)
         clf = joblib.load(args.clf_name)
         probas = clf.predict_proba(X)[:, 1]
         corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
