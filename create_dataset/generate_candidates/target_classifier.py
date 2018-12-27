@@ -119,9 +119,11 @@ def main(args):
             picked = snt_b[ixs]
             if reference == best:
                 defaults = [reference]
+                unique_num = args.choice_num - 1
             else:
                 defaults = [reference, best]
-            while len(set(list(picked) + defaults)) < args.choice_num:
+                unique_num = args.choice_num
+            while len(set(list(picked) + defaults)) < unique_num:
                 ixs = indice_generator(probas[2:])
                 picked = snt_b[ixs]
             print(reference)
