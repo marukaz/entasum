@@ -116,13 +116,16 @@ def main(args):
             best = snt_b[1]
             snt_b = np.array(snt_b[2:])
             ixs = indice_generator(probas[2:])
-            choices = snt_b[ixs]
-            while len(set(list(choices) + [reference, best])) < args.choice_num+2:
+            picked = snt_b[ixs]
+            choice_num = args.choice_num
+            if reference == best:
+                choice_num = choice_num - 1
+            while len(set(list(picked) + [reference, best])) < choice_num:
                 ixs = indice_generator(probas[2:])
-                choices = snt_b[ixs]
+                picked = snt_b[ixs]
             print(reference)
             print(best)
-            print(*choices, sep='\n')
+            print(*picked, sep='\n')
             print('*************************************************************************************')
 
 
@@ -131,7 +134,7 @@ if __name__ == "__main__":
     parser.add_argument('json_file')
     parser.add_argument('ppl_file', nargs='?', default=None)
     parser.add_argument('-n', '--clf-name', default='model/clf.pkl')
-    parser.add_argument('--choice-num', type=int, default=4)
+    parser.add_argument('--choice-num', type=int, default=6)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
