@@ -105,7 +105,7 @@ def main(args):
         def indice_generator(probs):
             probs_norm = probs / sum(probs)
             indice = []
-            while len(indice) < args.choice_num:
+            while len(indice) < args.choice_num-2:
                 index = np.argmax(np.random.multinomial(1, probs_norm))
                 if index not in indice:
                     indice.append(index)
@@ -117,10 +117,11 @@ def main(args):
             snt_b = np.array(snt_b[2:])
             ixs = indice_generator(probas[2:])
             picked = snt_b[ixs]
-            choice_num = args.choice_num
             if reference == best:
-                choice_num = choice_num - 1
-            while len(set(list(picked) + [reference, best])) < choice_num:
+                defaults = [reference]
+            else:
+                defaults = [reference, best]
+            while len(set(list(picked) + defaults)) < args.choice_num:
                 ixs = indice_generator(probas[2:])
                 picked = snt_b[ixs]
             print(reference)
