@@ -110,6 +110,7 @@ def main(args):
     elif args.sample:
         assert batch_size > args.choice_num
         np.random.seed(123)
+        random.seed(123)
         clf = joblib.load(args.clf_name)
         probas = clf.predict_proba(X)[:, 1]
         corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
@@ -123,26 +124,42 @@ def main(args):
                 if index not in indice:
                     indice.append(index)
             return indice
-        for snt_b, probas, src in zip(corpus_batch_itr, probas_batch_itr, sources):
-            print(f'source: {src}')
-            reference = snt_b[0]
-            best = snt_b[1]
-            snt_b = np.array(snt_b[2:])
-            ixs = indice_generator(probas[2:])
-            picked = snt_b[ixs]
-            if reference == best:
-                defaults = [reference]
-                unique_num = args.choice_num - 1
-            else:
-                defaults = [reference, best]
-                unique_num = args.choice_num
-            while len(set(list(picked) + defaults)) < unique_num:
+        with open('data/yahoo_template81.tsv', 'w') as wf, open('data/id.tsv', 'w') as idf:
+            print('設問ID(半角英数字20文字以内)\tチェック設問有無(0:無 1:有)\tチェック設問の解答(F04用)\t'
+                  'F01:ラベル\tF02:ラベル\tF03:ラベル\tF04:チェックボックス\tF05:ラベル', file=wf)
+            print('question_id\tref_id\tbest_id', file=idf)
+            for i, (snt_b, probas, src) in enumerate(zip(corpus_batch_itr, probas_batch_itr, sources)):
+                reference = snt_b[0]
+                best = snt_b[1]
+                snt_b = np.array(snt_b[2:])
                 ixs = indice_generator(probas[2:])
                 picked = snt_b[ixs]
-            print(reference)
-            print(best)
-            print(*picked, sep='\n')
-            print('*************************************************************************************')
+                if reference == best:
+                    defaults = [reference]
+                    unique_num = args.choice_num - 1
+                else:
+                    defaults = [reference, best]
+                    unique_num = args.choice_num
+                while len(set(list(picked) + defaults)) < unique_num:
+                    ixs = indice_generator(probas[2:])
+                    picked = snt_b[ixs]
+
+                ref_id, best_id = random.sample(range(args.choice_num), k=2)
+                if ref_id < best_id:
+                    picked.insert(ref_id, reference)
+                    picked.insert(best_id, best)
+                else:
+                    picked.insert(best_id, best)
+                    picked.insert(ref_id, reference)
+                headlines = '@'.join(picked)
+                print(f'{i}\t0\t\t記事に書かれている内容だけを含んでいる見出しを全てチェックしてください。\t'
+                      f'記事\t{src}\t{headlines}\t', file=wf)
+                print(f'{i}\t{ref_id}\t{best_id}', file=idf)
+                if args.verbose:
+                    print(f'source: {src}')
+                    print(f'ref id: {ref_id}, best id: {best_id}')
+                    print(*picked, sep='\n')
+                    print('*************************************************************************************')
 
 
 if __name__ == "__main__":
@@ -152,6 +169,7 @@ if __name__ == "__main__":
     parser.add_argument('-n', '--clf-name', default='model/clf.pkl')
     parser.add_argument('--choice-num', type=int, default=6)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
+    parser.add_argument('--verbose', action='store_true')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-t", "--train", action="store_true")
     group.add_argument("-e", "--eval", action="store_true")
