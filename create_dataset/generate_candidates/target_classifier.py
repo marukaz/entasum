@@ -14,20 +14,32 @@ from tqdm import tqdm
 
 
 def ngram_score(source, sentences):
-    source_concat = source.replace(' ', '')
 
     def _score(src, snts, n):
         src_gram = list(ngrams(src, n))
-        snt_grams = [ngrams(snt.replace(' ', ''), n) for snt in snts]
+        snt_grams = [ngrams(snt, n) for snt in snts]
         for snt_gram in snt_grams:
             yield len([True for g in snt_gram if g in src_gram])
-    uni_scores = list(_score(source_concat, sentences, 1))
-    bi_scores = list(_score(source_concat, sentences, 2))
-    tri_scores = list(_score(source_concat, sentences, 3))
+    uni_scores = list(_score(source, sentences, 1))
+    bi_scores = list(_score(source, sentences, 2))
+    tri_scores = list(_score(source, sentences, 3))
     uni_scores_div = [a/len(b) for a, b in zip(uni_scores, sentences)]
     bi_scores_div = [a/len(b) for a, b in zip(bi_scores, sentences)]
     tri_scores_div = [a/len(b) for a, b in zip(tri_scores, sentences)]
     return list(zip(uni_scores, bi_scores, tri_scores, uni_scores_div, bi_scores_div, tri_scores_div))
+
+
+def snt2rawtext(s):
+    """
+    convert Japanese sentence tokenized by sentencepiece to the raw text.
+    this function also replace underscores to spaces. This is for my JNC data.
+
+    :param s: Japanese sentence tokenized by sentencepiece
+    :return: raw text
+    """
+    s = s.replace(' ', '')
+    s = s[1:]
+    return s.replace('_', ' ')
 
 
 def main(args):
@@ -42,11 +54,12 @@ def main(args):
                 d = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            sources.append(d['source'])
-            sentences = [hypo['text'] for hypo in d['hypos']]
+            source = snt2rawtext(d['source'])
+            sources.append(source)
+            sentences = [snt2rawtext(hypo['text']) for hypo in d['hypos']]
             corpus.extend(sentences)
             gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
-            gram_scores.extend(ngram_score(d['source'], sentences))
+            gram_scores.extend(ngram_score(source, sentences))
     batch_size = len(d['hypos'])
     features.append((csr_matrix(gen_scores)))
     features.append((csr_matrix(gram_scores)))
