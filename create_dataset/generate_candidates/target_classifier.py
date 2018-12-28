@@ -143,17 +143,17 @@ def main(args):
                 while len(set(list(picked) + defaults)) < unique_num:
                     ixs = indice_generator(probas[2:])
                     picked = snt_b[ixs]
-
+                headlines = list(picked)
                 ref_id, best_id = random.sample(range(args.choice_num), k=2)
                 if ref_id < best_id:
-                    picked.insert(ref_id, reference)
-                    picked.insert(best_id, best)
+                    headlines.insert(ref_id, reference)
+                    headlines.insert(best_id, best)
                 else:
-                    picked.insert(best_id, best)
-                    picked.insert(ref_id, reference)
-                headlines = '@'.join(picked)
+                    headlines.insert(best_id, best)
+                    headlines.insert(ref_id, reference)
+                joined_headlines = "@".join(headlines)
                 print(f'{i}\t0\t\t記事に書かれている内容だけを含んでいる見出しを全てチェックしてください。\t'
-                      f'記事\t{src}\t{headlines}\t', file=wf)
+                      f'記事\t{src}\t{joined_headlines}\t', file=wf)
                 print(f'{i}\t{ref_id}\t{best_id}', file=idf)
                 if args.verbose:
                     print(f'source: {src}')
