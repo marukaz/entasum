@@ -153,7 +153,7 @@ def main(args):
                     headlines.insert(ref_id, reference)
                 joined_headlines = "@".join(headlines)
                 print(f'{i}\t0\t\t記事の内容だけをもとに書かれている見出しを全てチェックしてください。\t'
-                      f'記事\t{src}\t{joined_headlines}\t', file=wf)
+                      f'記事\t{src}\t{joined_headlines}\t記事の内容だけをもとに書かれている見出しを全てチェックしてください。', file=wf)
                 print(f'{i}\t{ref_id}\t{best_id}', file=idf)
                 if args.verbose:
                     print(f'source: {src}')
