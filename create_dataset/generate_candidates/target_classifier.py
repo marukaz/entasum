@@ -158,7 +158,7 @@ def main(args):
                 if args.verbose:
                     print(f'source: {src}')
                     print(f'ref id: {ref_id}, best id: {best_id}')
-                    print(*picked, sep='\n')
+                    print(*headlines, sep='\n')
                     print('*************************************************************************************')
 
 
