@@ -39,7 +39,7 @@ def snt2rawtext(s):
     """
     s = s.replace(' ', '')
     s = s[1:]
-    return s.replace('_', ' ')
+    return s.replace('_', '　')
 
 
 def main(args):
