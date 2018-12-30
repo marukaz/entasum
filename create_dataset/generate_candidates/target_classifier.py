@@ -124,7 +124,7 @@ def main(args):
                 if index not in indice:
                     indice.append(index)
             return indice
-        with open('data/yahoo_template81.tsv', 'w') as wf, open('data/id.tsv', 'w') as idf:
+        with open('yahoo_template81.tsv', 'w') as wf, open('data/id.tsv', 'w') as idf:
             print('設問ID(半角英数字20文字以内)\tチェック設問有無(0:無 1:有)\tチェック設問の解答(F04用)\t'
                   'F01:ラベル\tF02:ラベル\tF03:ラベル\tF04:チェックボックス\tF05:ラベル', file=wf)
             print('question_id\tref_id\tbest_id', file=idf)
@@ -152,7 +152,7 @@ def main(args):
                     headlines.insert(best_id, best)
                     headlines.insert(ref_id, reference)
                 joined_headlines = "@".join(headlines)
-                print(f'{i}\t0\t\t記事に書かれている内容だけを含んでいる見出しを全てチェックしてください。\t'
+                print(f'{i}\t0\t\t記事の内容をもとに書かれている見出しを全てチェックしてください。\t'
                       f'記事\t{src}\t{joined_headlines}\t', file=wf)
                 print(f'{i}\t{ref_id}\t{best_id}', file=idf)
                 if args.verbose:
