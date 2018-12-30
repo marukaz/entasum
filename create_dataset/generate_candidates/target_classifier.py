@@ -124,7 +124,7 @@ def main(args):
                 if index not in indice:
                     indice.append(index)
             return indice
-        with open(f'{args.tsv_file}.tsv', 'w') as wf, open(f'{args.tsv_file}_id.tsv', 'w') as idf:
+        with open(f'{args.tsv_file_name}.tsv', 'w') as wf, open(f'{args.tsv_file_name}_id.tsv', 'w') as idf:
             print('設問ID(半角英数字20文字以内)\tチェック設問有無(0:無 1:有)\tチェック設問の解答(F04用)\t'
                   'F01:ラベル\tF02:ラベル\tF03:ラベル\tF04:チェックボックス\tF05:ラベル', file=wf)
             print('question_id\tref_id\tbest_id', file=idf)
