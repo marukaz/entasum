@@ -8,7 +8,7 @@ def main(args):
     with open(args.beam_file, 'r') as beamf, open(args.entail_rate_file, 'r') as enf:
         max_prob = 0
         hypos = []
-        for i, (beam, rate) in enumerate(beamf, enf):
+        for i, (beam, rate) in enumerate(zip(beamf, enf)):
             entail_prob = json.loads(rate)['label_probs'][0]
             if entail_prob > max_prob:
                 beam_d = json.loads(beam)
