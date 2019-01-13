@@ -16,6 +16,7 @@ def main(args):
                 max_prob = entail_prob
             if i % BEAM_SIZE == MOD_NUM:
                 hypos.append((int(beam_d['s1_id']), best_hypo))
+                max_prob = 0
         for _, hypo in sorted(hypos, key=lambda x:x[0]):
             print(hypo)
 
