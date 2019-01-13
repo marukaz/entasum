@@ -25,7 +25,7 @@ class ESIMPredictor(Predictor):
         A dictionary where the key "label_probs" determines the probabilities of each of
         [entailment, contradiction, neutral].
         """
-        return self.predict_json({"sentence1" : sentence1, "sentence2": sentence2})
+        return self.predict_json({"sentence1": sentence1, "sentence2": sentence2})
 
     @overrides
     def _json_to_instance(self, json_dict: JsonDict) -> Instance:
