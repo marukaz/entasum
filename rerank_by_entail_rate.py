@@ -3,22 +3,35 @@ import json
 
 
 def main(args):
-    BEAM_SIZE = 5
-    MOD_NUM = BEAM_SIZE - 1
-    with open(args.beam_file, 'r') as beamf, open(args.entail_rate_file, 'r') as enf:
-        max_prob = 0
+    with open(args.beam_file) as beamf, open(args.entail_rate_file) as enf:
+        # get the beam size
+        prev_id = json.loads(beamf.readline())['s1_id']
+        for i, line in enumerate(beamf, 2):
+            current_id = json.loads(line)['s1_id']
+            if current_id != prev_id:
+                beam_size = i - 1
+                mod_num = beam_size - 1
+                beamf.seek(0)
+                break
+            prev_id = current_id
+
+        max_prob = -1
         hypos = []
         for i, (beam, rate) in enumerate(zip(beamf, enf)):
             entail_prob = json.loads(rate)['label_probs'][0]
             if entail_prob > max_prob:
                 beam_d = json.loads(beam)
-                best_hypo = beam_d['sentence2']
+                rerank_best = beam_d['sentence2']
+                if max_prob == -1:
+                    conventional_best = rerank_best
                 max_prob = entail_prob
-            if i % BEAM_SIZE == MOD_NUM:
-                hypos.append((int(beam_d['s1_id']), best_hypo))
-                max_prob = 0
-        for _, hypo in sorted(hypos, key=lambda x:x[0]):
-            print(hypo)
+            if i % beam_size == mod_num:
+                hypos.append((int(beam_d['s1_id']), rerank_best, conventional_best))
+                max_prob = -1
+        with open(f'{args.beam_file}.reranked', 'w') as rankf, open(f'{args.beam_file}.conventional', 'w') as convf:
+            for _, rerank, conventional in sorted(hypos, key=lambda x:x[0]):
+                print(rerank, file=rankf)
+                print(conventional, file=convf)
 
 
 if __name__ == "__main__":
