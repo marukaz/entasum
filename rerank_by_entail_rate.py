@@ -30,8 +30,8 @@ def main(args):
                 max_prob = -1
         with open(f'{args.beam_file}.reranked', 'w') as rankf, open(f'{args.beam_file}.conventional', 'w') as convf:
             for _, rerank, conventional in sorted(hypos, key=lambda x:x[0]):
-                print(rerank, file=rankf)
-                print(conventional, file=convf)
+                print(''.join(rerank.split(' ')[1:]), file=rankf)
+                print(''.join(conventional.split(' ')[1:]), file=convf)
 
 
 if __name__ == "__main__":
