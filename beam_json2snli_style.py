@@ -15,7 +15,7 @@ def main(args):
             except json.JSONDecodeError as e:
                 print(e, line)
             for hypo in d['hypos']:
-                snli_d = {'s1_id': d['id'], 'sentence1': d['source'], 'sentence2': hypo}
+                snli_d = {'s1_id': d['id'], 'sentence1': d['source'], 'sentence2': hypo['text']}
                 json.dump(snli_d, output_file, ensure_ascii=False)
         output_file.close()
 
