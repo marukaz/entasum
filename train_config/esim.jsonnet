@@ -13,8 +13,8 @@
             }
         }
     },
-  "train_data_path": "/home/6/18M31289/home/entasum/check_headline_01091610_snli_format_train.jsonl",
-  "validation_data_path": "/home/6/18M31289/home/entasum/check_headline_01091610_snli_format_test.jsonl",
+  "train_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format_train.jsonl",
+  "validation_data_path": "/home/6/18M31289/home/entasum/data/db31_1-25000_part1_01140725_snli_format_test.jsonl",
     "model": {
         "type": "esim",
         "dropout": 0.5,
@@ -22,6 +22,7 @@
             "token_embedders": {
                 "tokens": {
                     "type": "embedding",
+                    "pretrained_file": "/home/6/18M31289/entasum/create_dataset/generate_candidates/data/word2vec.model",
                     "embedding_dim": 300,
                     "trainable": true
                 }
