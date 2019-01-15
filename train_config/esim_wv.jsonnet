@@ -22,15 +22,16 @@
             "token_embedders": {
                 "tokens": {
                     "type": "embedding",
-                    "embedding_dim": 300,
+                    "pretrained_file": "/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/entity_vector.model.txt",
+                    "embedding_dim": 200,
                     "trainable": true
                 }
             }
         },
         "encoder": {
             "type": "lstm",
-            "input_size": 300,
-            "hidden_size": 300,
+            "input_size": 200,
+            "hidden_size": 400,
             "num_layers": 1,
             "bidirectional": true
         },
@@ -38,27 +39,27 @@
             "type": "dot_product"
         },
         "projection_feedforward": {
-            "input_dim": 2400,
-            "hidden_dims": 300,
+            "input_dim": 3200,
+            "hidden_dims": 400,
             "num_layers": 1,
             "activations": "relu"
         },
         "inference_encoder": {
             "type": "lstm",
-            "input_size": 300,
-            "hidden_size": 300,
+            "input_size": 400,
+            "hidden_size": 400,
             "num_layers": 1,
             "bidirectional": true
         },
         "output_feedforward": {
-            "input_dim": 2400,
+            "input_dim": 3200,
             "num_layers": 1,
-            "hidden_dims": 300,
+            "hidden_dims": 400,
             "activations": "relu",
             "dropout": 0.5
         },
         "output_logit": {
-            "input_dim": 300,
+            "input_dim": 400,
             "num_layers": 1,
             "hidden_dims": 2,
             "activations": "linear"
@@ -87,7 +88,7 @@
         "num_serialized_models_to_keep": 2,
         "num_epochs": 75,
         "grad_norm": 10.0,
-        "patience": 5,
+        "patience": 10,
         "cuda_device": 0,
         "learning_rate_scheduler": {
             "type": "reduce_on_plateau",
