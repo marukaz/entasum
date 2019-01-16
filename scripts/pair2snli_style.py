@@ -10,7 +10,7 @@ def main(args):
         else:
             output_file = sys.stdout
         for i, (premise, hypo) in enumerate(zip(pf, hf)):
-            snli_d = {'s1_id': i, 'sentence1': premise.rstrip(), 'sentence2': hypo.rstrip()}
+            snli_d = {'id': i, 'sentence1': premise.rstrip(), 'sentence2': hypo.rstrip()}
             print(json.dumps(snli_d, ensure_ascii=False), file=output_file)
         output_file.close()
 
