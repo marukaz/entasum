@@ -9,10 +9,7 @@ def main(args):
             output_file = open(args.output_file, 'w')
         else:
             output_file = sys.stdout
-        if args.contradiction_first:
-            prob_position = 1
-        else:
-            prob_position = 0
+        prob_position = 1 if args.contradiction_first else 0
         for data_d, prob_d in zip(sf, pf):
             entailment_prob = json.loads(prob_d)['label_probs'][prob_position]
             if entailment_prob > 0.5:
