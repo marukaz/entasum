@@ -15,7 +15,7 @@ def main(args):
         for data_d, prob_d in tqdm(zip(sf, pf)):
             entailment_prob = json.loads(prob_d)['label_probs'][prob_position]
             if entailment_prob > 0.5:
-                print(data_d, file=output_file)
+                output_file.write(data_d)
         output_file.close()
 
 
