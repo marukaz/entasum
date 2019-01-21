@@ -22,7 +22,7 @@ if __name__ == "__main__":
     parser.add_argument('snli_like_file', type=str, help='path to data file')
     parser.add_argument('prob_file', type=str, help='path to entailment probability file')
     parser.add_argument('-o', '--output-file', type=str, help='path to output file')
-    parser.add_argument('-c', '--contradiction-first', action='store_false',
+    parser.add_argument('-c', '--contradiction-first', action='store_true',
                         help='flag if prob format is contradiction first')
     args = parser.parse_args()
     main(args)
