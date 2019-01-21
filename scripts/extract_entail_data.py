@@ -2,6 +2,8 @@ import argparse
 import json
 import sys
 
+from tqdm import tqdm
+
 
 def main(args):
     with open(args.snli_like_file, 'r') as sf, open(args.prob_file, 'r') as pf:
@@ -10,7 +12,7 @@ def main(args):
         else:
             output_file = sys.stdout
         prob_position = 1 if args.contradiction_first else 0
-        for data_d, prob_d in zip(sf, pf):
+        for data_d, prob_d in tqdm(zip(sf, pf)):
             entailment_prob = json.loads(prob_d)['label_probs'][prob_position]
             if entailment_prob > 0.5:
                 print(data_d, file=output_file)
