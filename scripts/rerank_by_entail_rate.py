@@ -29,7 +29,8 @@ def main(args):
             if i % beam_size == mod_num:
                 hypos.append((int(beam_d['s1_id']), rerank_best, conventional_best))
                 max_prob = -1
-        with open(f'{args.beam_file}.reranked', 'w') as rankf, open(f'{args.beam_file}.conventional', 'w') as convf:
+        out_prefix = args.output_prefix or 'out'
+        with open(f'{out_prefix}.reranked', 'w') as rankf, open(f'{out_prefix}.conventional', 'w') as convf:
             for _, rerank, conventional in sorted(hypos, key=lambda x: x[0]):
                 print(''.join(rerank.split(' ')[1:]), file=rankf)
                 print(''.join(conventional.split(' ')[1:]), file=convf)
@@ -39,6 +40,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('beam_file', type=str, help='path to generated hypos file')
     parser.add_argument('entail_rate_file', type=str, help='path to esim style entail rate file')
+    parser.add_argument('-o', '--output-prefix', type=str, help='prefix of output file')
     parser.add_argument('-c', '--contradiction-first', action='store_true',
                         help='flag if prob format is contradiction first')
     args = parser.parse_args()
