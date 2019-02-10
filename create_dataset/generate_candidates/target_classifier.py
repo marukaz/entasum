@@ -1,100 +1,24 @@
 import argparse
 import json
 from operator import itemgetter
-from pathlib import Path
 import random
 
 import numpy as np
-from nltk.util import ngrams
-from scipy.sparse import csr_matrix, hstack
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.externals import joblib
 from tqdm import tqdm
 
-
-def ngram_score(source, sentences):
-    """
-    calculate scores of ngrams and normalized ngrams for each sentence against the source.
-    :param source: source text such as articles
-    :param sentences: list of texts such as headlines
-    :return: scores of unigram, bigram, trigram and the same ngrams normalized by length
-    """
-
-    def _score(src, snts, n):
-        src_gram = list(ngrams(src, n))
-        snt_grams = [ngrams(snt, n) for snt in snts]
-        return [len([True for g in snt_gram if g in src_gram]) for snt_gram in snt_grams]
-    uni_scores = _score(source, sentences, 1)
-    bi_scores = _score(source, sentences, 2)
-    tri_scores = _score(source, sentences, 3)
-    uni_scores_norm = [a/len(b) for a, b in zip(uni_scores, sentences)]
-    bi_scores_norm = [a/len(b) for a, b in zip(bi_scores, sentences)]
-    tri_scores_norm = [a/len(b) for a, b in zip(tri_scores, sentences)]
-    return list(zip(uni_scores, bi_scores, tri_scores, uni_scores_norm, bi_scores_norm, tri_scores_norm))
-
-
-def snt2rawtext(s, replace_underscore=True):
-    """
-    convert Japanese sentence tokenized by sentencepiece to the raw text.
-    this function also replace underscores to spaces. This is for JNC and JAMUL corpus.
-
-    :param s: Japanese sentence tokenized by sentencepiece
-    :param replace_underscore: replace underscores to spaces if the flag is True
-    :return: raw text
-    """
-
-    s = s.replace(' ', '')
-    raw_text = s[1:]
-    if replace_underscore:
-        raw_text = raw_text.replace('_', '　')
-    return raw_text
+from create_dataset.generate_candidates.util import feature_extractor
 
 
 def main(args):
-    corpus = []
-    sources = []
-    gen_scores = []
-    gram_scores = []
-    features = []
-    with open(args.json_file) as jsonf:
-        for line in tqdm(jsonf):
-            try:
-                d = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            source = snt2rawtext(d['source'])
-            sources.append(source)
-            sentences = [snt2rawtext(hypo['text']) for hypo in d['hypos']]
-            corpus.extend(sentences)
-            gen_scores.extend([[hypo['score']] for hypo in d['hypos']])
-            gram_scores.extend(ngram_score(source, sentences))
-    batch_size = len(d['hypos'])
-    features.append((csr_matrix(gen_scores)))
-    features.append((csr_matrix(gram_scores)))
-
-    if args.bag_of_words:
-        if args.train:
-            cv = CountVectorizer()
-            bag_of_words = cv.fit_transform(corpus)
-            joblib.dump(cv, 'cv_' + args.clf_name)
-        elif args.eval:
-            cv = joblib.load('cv_' + args.clf_name)
-            bag_of_words = cv.transform(corpus)
-        features.append(bag_of_words)
-
-    if args.ppl_file is not None:
-        ppl_scores = []
-        with open(args.ppl_file) as pplf:
-            for line in pplf:
-                ppl_scores.append([float(line.split('\t')[2])])
-        features.append(ppl_scores)
-
-    X = hstack(features)
+    # TODO: treatment of data is not elegant
+    X, batch_size, gen_scores, corpus, sources = feature_extractor(args)
     y = [0]*len(gen_scores)
     for i in range(len(y)):
         if i % batch_size == 0:
             y[i] = 1
+
     if args.train:
         clf = LogisticRegression()
         print('start to learn')
@@ -133,9 +57,14 @@ def main(args):
                 if index not in indice:
                     indice.append(index)
             return indice
-        with open(f'{args.tsv_file_name}.tsv', 'w') as wf, open(f'{args.tsv_file_name}_id.tsv', 'w') as idf:
-            print('設問ID(半角英数字20文字以内)\tチェック設問有無(0:無 1:有)\tチェック設問の解答(F04用)\t'
-                  'F01:ラベル\tF02:ラベル\tF03:ラベル\tF04:チェックボックス\tF05:ラベル', file=wf)
+
+        if args.format == 'default':
+            header = 'id\tref_loc\tbest_loc\t記事\t見出し1\t見出し2\t見出し3\t見出し4\t見出し5\t見出し6'
+        elif args.format == 'yahoo':
+            header = '設問ID(半角英数字20文字以内)\tチェック設問有無(0:無 1:有)\tチェック設問の解答(F04用)\t' \
+                     'F01:ラベル\tF02:ラベル\tF03:ラベル\tF04:チェックボックス\tF05:ラベル'
+        with open(args.tsv_file_name, 'w') as wf, open(f'location_{args.tsv_file_name}', 'w') as idf:
+            print(header, file=wf)
             print('question_id\tref_id\tbest_id', file=idf)
             for i, (snt_b, probas, src) in enumerate(zip(corpus_batch_itr, probas_batch_itr, sources)):
                 reference = snt_b[0]
@@ -153,22 +82,26 @@ def main(args):
                     ixs = indice_generator(probas[2:])
                     picked = snt_b[ixs]
                 headlines = list(picked)
-                ref_id, best_id = random.sample(range(args.choice_num), k=2)
-                if ref_id < best_id:
-                    headlines.insert(ref_id, reference)
-                    headlines.insert(best_id, best)
+                ref_loc, best_loc = random.sample(range(args.choice_num), k=2)
+                if ref_loc < best_loc:
+                    headlines.insert(ref_loc, reference)
+                    headlines.insert(best_loc, best)
                 else:
-                    headlines.insert(best_id, best)
-                    headlines.insert(ref_id, reference)
-                joined_headlines = "@".join(headlines) + '@該当なし'
-                print(f'{i}\t0\t\t記事の内容から逸脱していない見出しを全てチェックしてください。\t'
-                      f'記事\t{src}\t{joined_headlines}\t記事の内容から逸脱していない見出しを全てチェックしてください。', file=wf)
-                print(f'{i}\t{ref_id}\t{best_id}', file=idf)
+                    headlines.insert(best_loc, best)
+                    headlines.insert(ref_loc, reference)
+                if args.format == 'default':
+                    joined_headlines = '\t'.join(headlines)
+                    print(f'{i}\t{ref_loc}\t{best_loc}\t{src}\t{joined_headlines}', file=wf)
+                elif args.format == 'yahoo':
+                    joined_headlines = "@".join(headlines) + '@該当なし'
+                    print(f'{i}\t0\t\t記事の内容から逸脱していない見出しを全てチェックしてください。\t記事\t{src}\t'
+                          f'{joined_headlines}\t記事の内容から逸脱していない見出しを全てチェックしてください。', file=wf)
+                print(f'{i}\t{ref_loc}\t{best_loc}', file=idf)
                 if args.verbose:
                     print(f'source: {src}')
-                    print(f'ref id: {ref_id}, best id: {best_id}')
+                    print(f'ref loc: {ref_loc}, best loc: {best_loc}')
                     print(*headlines, sep='\n')
-                    print('*************************************************************************************')
+                    print('*********************')
 
 
 if __name__ == "__main__":
