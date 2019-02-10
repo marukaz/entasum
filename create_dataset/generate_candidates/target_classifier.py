@@ -19,13 +19,13 @@ def main(args):
         if i % batch_size == 0:
             y[i] = 1
 
-    if args.train:
+    if args.mode == 'train':
         clf = LogisticRegression()
         print('start to learn')
         clf.fit(X, y)
         print(clf.score(X, y))
         joblib.dump(clf, args.clf_name)
-    elif args.eval:
+    elif args.mode == 'eval':
         clf = joblib.load(args.clf_name)
         probas = clf.predict_proba(X)
         corpus_batch_itr = zip(*[iter(corpus)] * batch_size)
@@ -40,7 +40,7 @@ def main(args):
                 else:
                     print(f'{id_}:\t{snt}\t{proba}')
             print('*************************************************************************************')
-    elif args.sample:
+    elif args.mode == 'sample':
         assert batch_size > args.choice_num
         np.random.seed(123)
         random.seed(123)
@@ -114,18 +114,13 @@ if __name__ == "__main__":
     parser.add_argument('--choice-num', type=int, default=6)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
     parser.add_argument('--verbose', action='store_true')
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("-t", "--train", action="store_true")
-    group.add_argument("-e", "--eval", action="store_true")
-    group.add_argument("-s", "--sample", action="store_true")
-    group.add_argument("-r", "--random", action="store_true")
-    group.add_argument("-p", "--param", action="store_true")
+    parser.add_argument('--mode', choices=['train', 'eval', 'sample', 'random', 'param'])
     args = parser.parse_args()
 
-    if args.param:
+    if args.mode == 'param':
         clf = joblib.load(args.clf_name)
         print(clf.coef_)
-    elif args.random:
+    elif args.mode == 'random':
         with open(args.json_file) as jsonf:
             for line in tqdm(jsonf):
                 try:
