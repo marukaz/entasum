@@ -14,32 +14,41 @@ from tqdm import tqdm
 
 
 def ngram_score(source, sentences):
+    """
+    calculate scores of ngrams and normalized ngrams for each sentence against the source.
+    :param source: source text such as articles
+    :param sentences: list of texts such as headlines
+    :return: scores of unigram, bigram, trigram and the same ngrams normalized by length
+    """
 
     def _score(src, snts, n):
         src_gram = list(ngrams(src, n))
         snt_grams = [ngrams(snt, n) for snt in snts]
-        for snt_gram in snt_grams:
-            yield len([True for g in snt_gram if g in src_gram])
-    uni_scores = list(_score(source, sentences, 1))
-    bi_scores = list(_score(source, sentences, 2))
-    tri_scores = list(_score(source, sentences, 3))
-    uni_scores_div = [a/len(b) for a, b in zip(uni_scores, sentences)]
-    bi_scores_div = [a/len(b) for a, b in zip(bi_scores, sentences)]
-    tri_scores_div = [a/len(b) for a, b in zip(tri_scores, sentences)]
-    return list(zip(uni_scores, bi_scores, tri_scores, uni_scores_div, bi_scores_div, tri_scores_div))
+        return [len([True for g in snt_gram if g in src_gram]) for snt_gram in snt_grams]
+    uni_scores = _score(source, sentences, 1)
+    bi_scores = _score(source, sentences, 2)
+    tri_scores = _score(source, sentences, 3)
+    uni_scores_norm = [a/len(b) for a, b in zip(uni_scores, sentences)]
+    bi_scores_norm = [a/len(b) for a, b in zip(bi_scores, sentences)]
+    tri_scores_norm = [a/len(b) for a, b in zip(tri_scores, sentences)]
+    return list(zip(uni_scores, bi_scores, tri_scores, uni_scores_norm, bi_scores_norm, tri_scores_norm))
 
 
-def snt2rawtext(s):
+def snt2rawtext(s, replace_underscore=True):
     """
     convert Japanese sentence tokenized by sentencepiece to the raw text.
-    this function also replace underscores to spaces. This is for my JNC data.
+    this function also replace underscores to spaces. This is for JNC and JAMUL corpus.
 
     :param s: Japanese sentence tokenized by sentencepiece
+    :param replace_underscore: replace underscores to spaces if the flag is True
     :return: raw text
     """
+
     s = s.replace(' ', '')
-    s = s[1:]
-    return s.replace('_', '　')
+    raw_text = s[1:]
+    if replace_underscore:
+        raw_text = raw_text.replace('_', '　')
+    return raw_text
 
 
 def main(args):
@@ -167,6 +176,7 @@ if __name__ == "__main__":
     parser.add_argument('json_file')
     parser.add_argument('ppl_file', nargs='?', default=None)
     parser.add_argument('-n', '--clf-name', default='model/clf.pkl')
+    parser.add_argument('--format', choices=['default', 'yahoo'], default='default')
     parser.add_argument('--tsv-file-name', default='data/yahoo_template81')
     parser.add_argument('--choice-num', type=int, default=6)
     parser.add_argument('-bow', '--bag-of-words', action='store_true')
