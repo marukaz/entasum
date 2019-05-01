@@ -26,7 +26,7 @@
             "pretrained_file": "/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/entity_vector.model.txt",
             "projection_dim": 200,
             "embedding_dim": 200,
-            "trainable": false
+            "trainable": true
         }
       }
     },

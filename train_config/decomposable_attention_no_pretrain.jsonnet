@@ -13,7 +13,7 @@
       "tokens": {
         "type": "single_id",
       }
-    },
+    }
   },
   "train_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format_train.jsonl",
   "validation_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format_test.jsonl",
@@ -23,10 +23,9 @@
       "token_embedders": {
         "tokens": {
             "type": "embedding",
-            "pretrained_file": "/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/entity_vector.model.txt",
             "projection_dim": 200,
-            "embedding_dim": 200,
-            "trainable": false
+            "embedding_dim": 300,
+            "trainable": true
         }
       }
     },
