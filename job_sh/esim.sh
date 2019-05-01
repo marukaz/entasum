@@ -2,12 +2,12 @@
 ##n current working directory
 #$ -cwd
 #$ -l f_node=1
-#$ -l h_rt=24:00:00
+#$ -l h_rt=12:00:00
 #$ -N esim
 #$ -m abe
 #$ -M kopamaru@gmail.com
-#$ -o o.esim_part1
-#$ -e e.esim_part1
+#$ -o o.esim
+#$ -e e.esim
 
 ## Initialize module command (don't remove)
 . /etc/profile.d/modules.sh
@@ -17,4 +17,4 @@ module load cudnn/7.3
 
 source ~/allennlp/venv/bin/activate
 
-allennlp train -f ~/entasum/train_config/esim.jsonnet --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/esim_dbs31_1-25000_part1
+allennlp train -f ~/entasum/train_config/esim.jsonnet --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/esim_dbs31_12000

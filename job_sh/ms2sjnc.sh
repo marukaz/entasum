@@ -3,11 +3,11 @@
 #$ -cwd
 #$ -l f_node=1
 #$ -l h_rt=24:00:00
-#$ -N ss2sjnc
+#$ -N ms2sjnc
 #$ -m abe
 #$ -M kopamaru@gmail.com
-#$ -o out.ss2sjnc
-#$ -e err.ss2sjnc
+#$ -o o.ms2sjnc
+#$ -e e.ms2sjnc
 
 ## Initialize module command (don't remove)
 . /etc/profile.d/modules.sh
