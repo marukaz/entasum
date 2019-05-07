@@ -13,8 +13,8 @@
             }
         }
     },
-  "train_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format_train.jsonl",
-  "validation_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format_test.jsonl",
+  "train_data_path": "/home/6/18M31289/home/entasum/data/dbs31_1-25000_part1_01140725_snli_format.jsonl",
+  "validation_data_path": "/home/6/18M31289/home/entasum/data/jamul_lead3_label.jsonl",
     "model": {
         "type": "esim",
         "dropout": 0.5,
@@ -24,7 +24,7 @@
                     "type": "embedding",
                     "pretrained_file": "/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/entity_vector.model.txt",
                     "embedding_dim": 200,
-                    "trainable": true
+                    "trainable": false
                 }
             }
         },
@@ -88,7 +88,7 @@
         "num_serialized_models_to_keep": 2,
         "num_epochs": 75,
         "grad_norm": 10.0,
-        "patience": 10,
+        "patience": 20,
         "cuda_device": 0,
         "learning_rate_scheduler": {
             "type": "reduce_on_plateau",

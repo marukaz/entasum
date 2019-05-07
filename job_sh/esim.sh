@@ -17,4 +17,4 @@ module load cudnn/7.3
 
 source ~/allennlp/venv/bin/activate
 
-allennlp train -f ~/entasum/train_config/esim.jsonnet --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/esim_dbs31_12000
+allennlp train -f ~/entasum/train_config/esim.jsonnet --serialization-dir /gs/hs0/tga-nlp-titech/matsumaru/entasum/model/esim_combine_jnc_and_jamul
