@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/home/6/18M31289/allennlp/venv/bin/allennlp", line 11, in <module>
+    sys.exit(run())
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in run
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 101, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 103, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 135, in train_model_from_file
+    params = Params.from_file(parameter_filename, overrides)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/params.py", line 439, in from_file
+    params_file = cached_path(params_file)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/file_utils.py", line 104, in cached_path
+    raise FileNotFoundError("file {} not found".format(url_or_filename))
+FileNotFoundError: file /home/6/18M31289/entasum/simple_seq2seq_jnc.json not found
+2019-03-23 17:04:52,919 - INFO - allennlp.common.params - random_seed = 13370
+2019-03-23 17:04:52,919 - INFO - allennlp.common.params - numpy_seed = 1337
+2019-03-23 17:04:52,919 - INFO - allennlp.common.params - pytorch_seed = 133
+2019-03-23 17:04:52,963 - INFO - allennlp.common.checks - Pytorch version: 0.4.1
+2019-03-23 17:04:53,011 - INFO - allennlp.common.params - evaluate_on_test = False
+2019-03-23 17:04:53,012 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'source_tokenizer': {'type': 'word', 'word_splitter': {'type': 'just_spaces'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}, 'type': 'seq2seq'} and extras {}
+2019-03-23 17:04:53,012 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2019-03-23 17:04:53,012 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {'source_token_indexers': {'tokens': {'namespace': 'source_tokens', 'type': 'single_id'}}, 'source_tokenizer': {'type': 'word', 'word_splitter': {'type': 'just_spaces'}}, 'target_token_indexers': {'tokens': {'namespace': 'target_tokens'}}} and extras {}
+2019-03-23 17:04:53,012 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.tokenizer.Tokenizer'> from params {'type': 'word', 'word_splitter': {'type': 'just_spaces'}} and extras {}
+2019-03-23 17:04:53,012 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.type = word
+2019-03-23 17:04:53,013 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_tokenizer.WordTokenizer'> from params {'word_splitter': {'type': 'just_spaces'}} and extras {}
+2019-03-23 17:04:53,013 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_splitter.WordSplitter'> from params {'type': 'just_spaces'} and extras {}
+2019-03-23 17:04:53,013 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.word_splitter.type = just_spaces
+2019-03-23 17:04:53,013 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.tokenizers.word_splitter.JustSpacesWordSplitter'> from params {} and extras {}
+2019-03-23 17:04:53,013 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.start_tokens = None
+2019-03-23 17:04:53,013 - INFO - allennlp.common.params - dataset_reader.source_tokenizer.end_tokens = None
+2019-03-23 17:04:53,014 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'source_tokens', 'type': 'single_id'} and extras {}
+2019-03-23 17:04:53,014 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.type = single_id
+2019-03-23 17:04:53,014 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'source_tokens'} and extras {}
+2019-03-23 17:04:53,014 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.namespace = source_tokens
+2019-03-23 17:04:53,014 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.lowercase_tokens = False
+2019-03-23 17:04:53,014 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.start_tokens = None
+2019-03-23 17:04:53,014 - INFO - allennlp.common.params - dataset_reader.source_token_indexers.tokens.end_tokens = None
+2019-03-23 17:04:53,015 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.token_indexer.TokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.type = single_id
+2019-03-23 17:04:53,015 - INFO - allennlp.common.from_params - instantiating class allennlp.data.token_indexers.single_id_token_indexer.SingleIdTokenIndexer from params {'namespace': 'target_tokens'} and extras {}
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.namespace = target_tokens
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.lowercase_tokens = False
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.start_tokens = None
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.target_token_indexers.tokens.end_tokens = None
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2019-03-23 17:04:53,015 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2019-03-23 17:04:53,016 - INFO - allennlp.common.params - validation_dataset_reader = None
+2019-03-23 17:04:53,016 - INFO - allennlp.common.params - train_data_path = /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv
+2019-03-23 17:04:53,016 - INFO - allennlp.training.util - Reading training data from /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv
+0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/home/6/18M31289/allennlp/venv/bin/allennlp", line 11, in <module>
+    sys.exit(run())
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/run.py", line 18, in run
+    main(prog="allennlp")
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 101, in main
+    args.func(args)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 103, in train_model_from_args
+    args.force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 136, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/commands/train.py", line 184, in train_model
+    pieces = TrainerPieces.from_params(params, serialization_dir, recover)  # pylint: disable=no-member
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/training/trainer.py", line 739, in from_params
+    all_datasets = training_util.datasets_from_params(params)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/training/util.py", line 139, in datasets_from_params
+    train_data = dataset_reader.read(train_data_path)
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/dataset_reader.py", line 73, in read
+    instances = [instance for instance in Tqdm.tqdm(instances)]
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/dataset_reader.py", line 73, in <listcomp>
+    instances = [instance for instance in Tqdm.tqdm(instances)]
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/tqdm/_tqdm.py", line 979, in __iter__
+    for obj in iterable:
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/data/dataset_readers/seq2seq.py", line 65, in _read
+    with open(cached_path(file_path), "r") as data_file:
+  File "/home/6/18M31289/allennlp/venv/lib/python3.6/site-packages/allennlp/common/file_utils.py", line 104, in cached_path
+    raise FileNotFoundError("file {} not found".format(url_or_filename))
+FileNotFoundError: file /home/6/18M31289/groupdisk/matsumaru/data/jnc/jnc_train_3snt_spm.tsv not found
+
