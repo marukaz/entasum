@@ -15,7 +15,7 @@ def main(args):
         prob_position = 1 if args.contradiction_first else 0
         for data, prob in tqdm(zip(df, pf)):
             if prob_format == 'tsv':
-                entailment_prob = float(prob.split('¥t')[prob_position])
+                entailment_prob = float(prob.split('\t')[prob_position])
             elif prob_format == 'json' or prob_format == 'jsonl':
                 entailment_prob = json.loads(prob)['label_probs'][prob_position]
             else:
