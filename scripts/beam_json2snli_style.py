@@ -15,14 +15,18 @@ def main(args):
             except json.JSONDecodeError as e:
                 print(e, line)
             for hypo in d['hypos']:
-                snli_d = {'s1_id': d['id'], 'sentence1': d['source'], 'sentence2': hypo['text']}
-                print(json.dumps(snli_d, ensure_ascii=False), file=output_file)
+                if args.output_format == 'esim':
+                    snli_d = {'s1_id': d['id'], 'sentence1': d['source'], 'sentence2': hypo['text']}
+                    print(json.dumps(snli_d, ensure_ascii=False), file=output_file)
+                elif args.output_format == 'bert':
+                    print(f"{d['id']}\t{d['source']}\t{hypo['text']}", file=output_file)
         output_file.close()
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('input_file', type=str, help='path to input file')
+    parser.add_argument('--output-format', type=str, choices=['bert', 'esim'], default='bert', help='format of output')
     parser.add_argument('--output-file', type=str, help='path to output file')
     args = parser.parse_args()
     main(args)
