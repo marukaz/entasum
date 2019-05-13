@@ -14,12 +14,19 @@ def main(args):
                 d = json.loads(line)
             except json.JSONDecodeError as e:
                 print(e, line)
+            if args.output_format == 'bert':
+                snt1 = ''.join(d['source'].split(' '))
+                if snt1.startswith('▁'):
+                    snt1 = snt1[1:]
             for hypo in d['hypos']:
                 if args.output_format == 'esim':
                     snli_d = {'s1_id': d['id'], 'sentence1': d['source'], 'sentence2': hypo['text']}
                     print(json.dumps(snli_d, ensure_ascii=False), file=output_file)
                 elif args.output_format == 'bert':
-                    print(f"{d['id']}\t{d['source']}\t{hypo['text']}", file=output_file)
+                    snt2 = ''.join(hypo['text'].split(' '))
+                    if snt2.startswith('▁'):
+                        snt2 = snt2[1:]
+                    print(f"{d['id']}\t{snt1}\t{snt2}", file=output_file)
         output_file.close()
 
 
