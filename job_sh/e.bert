@@ -1,0 +1,1795 @@
+nccl/2.4.2(5):ERROR:151: Module 'nccl/2.4.2' depends on one of the module(s) 'cuda/9.2.148 cuda/9.1.85 cuda/9.0.176 cuda/8.0.61 cuda/8.0.44 cuda/10.0.130'
+nccl/2.4.2(5):ERROR:102: Tcl command execution failed: prereq cuda
+
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x2aab8af678c8>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_model_dir': 'model/anli__shuf_model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x2aab86316b00>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=8, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None), '_cluster': None}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+WARNING:tensorflow:eval_on_tpu ignored because use_tpu is False.
+INFO:tensorflow:Writing example 0 of 45026
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-10471
+INFO:tensorflow:tokens: [CLS] ▁14 日午後 1 時 10 分 ごろ 、 益田 市 本町 の 県道 で 、 土 田 発 jr 益田 駅 行き の 石見 交通 の 路線バス と 、 同市 の男性 会社 員 ( 39 ) 運転 の 軽 保 冷 車が 接触 した 。 け が 人 はなかった 。 路線バス は 現場で 運行 を 取りやめ 、 乗客 5 人は 16 分 遅れ で 代替 バス に 乗り換え た 。 [SEP] ▁ 益田 で 路線バス と 軽 保 冷 車が 接触 [SEP]
+INFO:tensorflow:input_ids: 4 4911 14121 24 180 47 152 6958 7 25227 69 9042 10 4402 19 7 811 165 605 934 25227 122 1918 10 24947 986 10 8848 20 7 11661 11085 584 797 15 1590 14 1137 10 1569 985 3274 11092 6676 29 8 1068 12 63 5534 8 8848 11 20888 1634 18 24527 7 5516 41 1445 130 152 3835 19 6486 415 17 12568 40 8 5 9 25227 19 8848 20 1569 985 3274 11092 6676 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: entailment (id = 1)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-9104
+INFO:tensorflow:tokens: [CLS] ▁ 直 方 市の 筑豊 高校の 生徒 が 製作した ドレス の ファッション ショー が 8 日 、 同市 の イオンモール 直 方 であった 。 純 白 の ウエ ディング ドレス や 色 鮮やかな カクテル ドレス に 、 買い物 客 らが 足 を止め て 見 入 っていた 。 ファッション ショー には 、 同校 生活 デザイン 科の 2 、 3 年生 35 人が 出演 。 [SEP] ▁ 高校生 が ドレス 自作 、 あ こ がれ のモデル に ▁ 直 方 で ファッション ショー [SEP]
+INFO:tensorflow:input_ids: 4 9 442 478 1033 30620 12599 1941 12 10919 16576 10 4791 1827 12 50 33 7 11661 10 27284 442 478 78 8 2235 422 10 16174 3982 16576 26 502 27901 24058 16576 17 7 24210 1348 2490 744 14341 58 310 682 921 8 4791 1827 42 7 10276 711 953 6608 25 7 31 3733 1014 732 1329 8 5 9 7171 12 16576 12404 7 703 315 16680 11216 17 9 442 478 19 4791 1827 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-3248
+INFO:tensorflow:tokens: [CLS] ▁第 45 回 衆 院 選 が 18 日 、 公示 される 。 7 月 21 日の 解散 から 8 月 30 日の 投 開 票 日まで 40 日 と 、 過去 最長 の 期間 を置く ことになった 今回の 総選挙 。 い よい よ 戦い が 「 本番 」 を迎える 。 [SEP] ▁ 夏 へ 準備 万 端 ▁ きょう 公示 [SEP]
+INFO:tensorflow:input_ids: 4 581 1085 107 3552 493 1603 12 143 33 7 16710 98 8 46 22 253 454 2383 28 50 22 141 454 3385 1138 2983 960 438 33 20 7 2756 12101 10 1496 8736 2268 16058 10368 8 128 3628 842 2648 12 23 23075 21 7500 8 5 9 1080 90 3075 321 1718 9 3137 16710 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-50361
+INFO:tensorflow:tokens: [CLS] ▁ 青森 市 浪 岡 の西 山 公園内 スキー場 で 2009 年 12 月 、 友人 と 3 人で 大型 雪 捨て 用具 に乗り 滑走 、 リフト の一種である ロープ トー の 支柱 に ぶつ かり 左 足 に大 け が をした 市内の 当時 小学 5 年の 女児 と 母親 が 、 スキー場 の設置 管理者 の 市 を相手に 約 300 万円 の 損害賠償 を求めた 民事訴訟 の判決 が 28 日 、 青森 地裁 弘前 支部 であった 。 野 々 垣 隆 樹 裁判官 は 「 自 損 事故で 市 に落ち 度 はない 」 と 、 原告 の 訴え を 棄却 した 。 原告 側は ぶつ かった 支柱 に だけ 衝撃 を 和 ら げる マット が 巻 かれ ていなかった の は 市の 落ち 度 など と指摘し た 。 [SEP] ▁ スキー リフト 事故 、 原告 の 訴え を 棄却 ▁ 地裁 弘前 支部 [SEP]
+INFO:tensorflow:input_ids: 4 9 8021 69 3967 1119 9949 84 19573 17088 19 1471 16 66 22 7 3711 20 31 3777 1748 1551 6983 27630 4641 28146 7 13501 10374 8757 1704 10 28108 17 11045 4418 801 744 13724 1068 12 3239 5714 412 11111 41 223 23708 20 4180 12 7 17088 7350 14881 10 69 11820 198 1512 1323 10 19780 7131 28240 18993 12 323 33 7 8021 16540 17737 4498 78 8 248 709 7741 1449 1237 10847 11 23 957 7943 16918 69 16264 368 1612 21 20 7 21332 10 8254 18 20693 29 8 21332 3834 11045 1713 28108 17 926 5960 18 330 154 17948 11120 12 535 4243 5171 10 11 1033 3593 368 45 22303 40 8 5 9 1689 13501 1350 7 21332 10 8254 18 20693 9 16540 17737 4498 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: entailment (id = 1)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: train-35181
+INFO:tensorflow:tokens: [CLS] ▁16 日午後 1 時 15 分 ごろ 、 荒川 区 南 千住 2 丁目 の 「 沢 井 ビル 」 3 階の クリーニング 店 経営 沢 井 克 子 さん ( 71 ) 方 から 出 火 、 鉄筋コンクリート 4 階建て の 3 階 部分 約 3 平方メートル が 焼け た 。 沢 井 さん 方の 居 間の 床 に 仰 向け で 倒れ ていた 男性 が 上半身 に や けど を するなど し 、 まもなく 死亡した 。 南 千住 署 は 、 亡くなった の は 克 子 さん の長男 竜 史 さん ( 47 ) と みて 身 元 を確認する とともに 、 出 火 原因 を 調べ ている 。 [SEP] ▁ ビル 火災 で 71 歳 女性 死亡 ▁ 荒川 区 [SEP]
+INFO:tensorflow:input_ids: 4 2289 14121 24 180 118 152 6958 7 10767 302 191 25201 25 1967 10 23 768 575 697 21 31 15682 30419 568 1089 768 575 7539 129 774 15 6105 14 478 28 353 876 7 22530 37 9073 10 31 1267 1072 198 31 16987 12 16591 40 8 768 575 774 7991 1197 1553 2867 17 12787 1331 19 9487 124 1219 12 29766 17 26 13382 18 1758 32 7 7447 4975 8 191 25201 6352 11 7 5958 10 11 7539 129 774 8113 1791 579 774 15 1804 14 20 16758 838 156 18992 354 7 353 876 3275 18 6625 68 8 5 9 697 4856 19 6105 559 577 3285 9 10767 302 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:Writing example 10000 of 45026
+INFO:tensorflow:Writing example 20000 of 45026
+INFO:tensorflow:Writing example 30000 of 45026
+INFO:tensorflow:Writing example 40000 of 45026
+INFO:tensorflow:***** Running training *****
+INFO:tensorflow:  Num examples = 45026
+INFO:tensorflow:  Batch size = 8
+INFO:tensorflow:  Num steps = 56282
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From src/run_classifier.py:465: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+WARNING:tensorflow:From src/run_classifier.py:445: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Running train on CPU
+INFO:tensorflow:*** Features ***
+INFO:tensorflow:  name = input_ids, shape = (8, 512)
+INFO:tensorflow:  name = input_mask, shape = (8, 512)
+INFO:tensorflow:  name = is_real_example, shape = (8,)
+INFO:tensorflow:  name = label_ids, shape = (8,)
+INFO:tensorflow:  name = segment_ids, shape = (8, 512)
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/src/../bert/modeling.py:358: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/src/../bert/modeling.py:671: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+INFO:tensorflow:**** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (32000, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = output_weights:0, shape = (2, 768)
+INFO:tensorflow:  name = output_bias:0, shape = (2,)
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/lib/python3.6/site-packages/tensorflow/python/training/learning_rate_decay_v2.py:321: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+2019-05-09 21:23:31.520271: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-09 21:23:33.058456: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x73853b0 executing computations on platform CUDA. Devices:
+2019-05-09 21:23:33.058968: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla P100-SXM2-16GB, Compute Capability 6.0
+2019-05-09 21:23:33.058979: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla P100-SXM2-16GB, Compute Capability 6.0
+2019-05-09 21:23:33.058984: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): Tesla P100-SXM2-16GB, Compute Capability 6.0
+2019-05-09 21:23:33.058989: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): Tesla P100-SXM2-16GB, Compute Capability 6.0
+2019-05-09 21:23:33.293910: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399965000 Hz
+2019-05-09 21:23:33.297712: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0xad4b700 executing computations on platform Host. Devices:
+2019-05-09 21:23:33.297735: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-09 21:23:33.298194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla P100-SXM2-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.4805
+pciBusID: 0000:06:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2019-05-09 21:23:33.298486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla P100-SXM2-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.4805
+pciBusID: 0000:08:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2019-05-09 21:23:33.298775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: Tesla P100-SXM2-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.4805
+pciBusID: 0000:85:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2019-05-09 21:23:33.299054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: Tesla P100-SXM2-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.4805
+pciBusID: 0000:87:00.0
+totalMemory: 15.90GiB freeMemory: 15.61GiB
+2019-05-09 21:23:33.299109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3
+2019-05-09 21:23:33.303323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-09 21:23:33.303342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 
+2019-05-09 21:23:33.303350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y 
+2019-05-09 21:23:33.303355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y 
+2019-05-09 21:23:33.303360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y 
+2019-05-09 21:23:33.303364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N 
+2019-05-09 21:23:33.304519: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15190 MB memory) -> physical GPU (device: 0, name: Tesla P100-SXM2-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2019-05-09 21:23:33.305998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15190 MB memory) -> physical GPU (device: 1, name: Tesla P100-SXM2-16GB, pci bus id: 0000:08:00.0, compute capability: 6.0)
+2019-05-09 21:23:33.306668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15190 MB memory) -> physical GPU (device: 2, name: Tesla P100-SXM2-16GB, pci bus id: 0000:85:00.0, compute capability: 6.0)
+2019-05-09 21:23:33.306921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15190 MB memory) -> physical GPU (device: 3, name: Tesla P100-SXM2-16GB, pci bus id: 0000:87:00.0, compute capability: 6.0)
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into model/anli__shuf_model/model.ckpt.
+2019-05-09 21:23:57.233454: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+INFO:tensorflow:global_step/sec: 1.73893
+INFO:tensorflow:examples/sec: 13.9114
+INFO:tensorflow:global_step/sec: 1.84573
+INFO:tensorflow:examples/sec: 14.7659
+INFO:tensorflow:global_step/sec: 1.84561
+INFO:tensorflow:examples/sec: 14.7649
+INFO:tensorflow:global_step/sec: 1.84552
+INFO:tensorflow:examples/sec: 14.7641
+INFO:tensorflow:global_step/sec: 1.84584
+INFO:tensorflow:examples/sec: 14.7667
+INFO:tensorflow:global_step/sec: 1.84512
+INFO:tensorflow:examples/sec: 14.761
+INFO:tensorflow:global_step/sec: 1.84562
+INFO:tensorflow:examples/sec: 14.7649
+INFO:tensorflow:global_step/sec: 1.84477
+INFO:tensorflow:examples/sec: 14.7582
+INFO:tensorflow:global_step/sec: 1.84415
+INFO:tensorflow:examples/sec: 14.7532
+INFO:tensorflow:Saving checkpoints for 1000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75589
+INFO:tensorflow:examples/sec: 14.0471
+INFO:tensorflow:global_step/sec: 1.84425
+INFO:tensorflow:examples/sec: 14.754
+INFO:tensorflow:global_step/sec: 1.84346
+INFO:tensorflow:examples/sec: 14.7477
+INFO:tensorflow:global_step/sec: 1.84586
+INFO:tensorflow:examples/sec: 14.7669
+INFO:tensorflow:global_step/sec: 1.84628
+INFO:tensorflow:examples/sec: 14.7702
+INFO:tensorflow:global_step/sec: 1.84569
+INFO:tensorflow:examples/sec: 14.7655
+INFO:tensorflow:global_step/sec: 1.84477
+INFO:tensorflow:examples/sec: 14.7581
+INFO:tensorflow:global_step/sec: 1.84523
+INFO:tensorflow:examples/sec: 14.7619
+INFO:tensorflow:global_step/sec: 1.84448
+INFO:tensorflow:examples/sec: 14.7559
+INFO:tensorflow:global_step/sec: 1.8453
+INFO:tensorflow:examples/sec: 14.7624
+INFO:tensorflow:Saving checkpoints for 2000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75993
+INFO:tensorflow:examples/sec: 14.0794
+INFO:tensorflow:global_step/sec: 1.84729
+INFO:tensorflow:examples/sec: 14.7783
+INFO:tensorflow:global_step/sec: 1.84643
+INFO:tensorflow:examples/sec: 14.7715
+INFO:tensorflow:global_step/sec: 1.84612
+INFO:tensorflow:examples/sec: 14.769
+INFO:tensorflow:global_step/sec: 1.84666
+INFO:tensorflow:examples/sec: 14.7732
+INFO:tensorflow:global_step/sec: 1.84681
+INFO:tensorflow:examples/sec: 14.7745
+INFO:tensorflow:global_step/sec: 1.84689
+INFO:tensorflow:examples/sec: 14.7751
+INFO:tensorflow:global_step/sec: 1.84757
+INFO:tensorflow:examples/sec: 14.7806
+INFO:tensorflow:global_step/sec: 1.84736
+INFO:tensorflow:examples/sec: 14.7789
+INFO:tensorflow:global_step/sec: 1.84804
+INFO:tensorflow:examples/sec: 14.7844
+INFO:tensorflow:Saving checkpoints for 3000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76187
+INFO:tensorflow:examples/sec: 14.0949
+INFO:tensorflow:global_step/sec: 1.84643
+INFO:tensorflow:examples/sec: 14.7714
+INFO:tensorflow:global_step/sec: 1.8471
+INFO:tensorflow:examples/sec: 14.7768
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84842
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84768
+INFO:tensorflow:examples/sec: 14.7814
+INFO:tensorflow:global_step/sec: 1.84762
+INFO:tensorflow:examples/sec: 14.781
+INFO:tensorflow:global_step/sec: 1.84728
+INFO:tensorflow:examples/sec: 14.7782
+INFO:tensorflow:global_step/sec: 1.84674
+INFO:tensorflow:examples/sec: 14.774
+INFO:tensorflow:global_step/sec: 1.84698
+INFO:tensorflow:examples/sec: 14.7758
+INFO:tensorflow:Saving checkpoints for 4000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75547
+INFO:tensorflow:examples/sec: 14.0438
+INFO:tensorflow:global_step/sec: 1.84689
+INFO:tensorflow:examples/sec: 14.7751
+INFO:tensorflow:global_step/sec: 1.8471
+INFO:tensorflow:examples/sec: 14.7768
+INFO:tensorflow:global_step/sec: 1.8473
+INFO:tensorflow:examples/sec: 14.7784
+INFO:tensorflow:global_step/sec: 1.84777
+INFO:tensorflow:examples/sec: 14.7822
+INFO:tensorflow:global_step/sec: 1.84834
+INFO:tensorflow:examples/sec: 14.7867
+INFO:tensorflow:global_step/sec: 1.84809
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84766
+INFO:tensorflow:examples/sec: 14.7813
+INFO:tensorflow:global_step/sec: 1.84842
+INFO:tensorflow:examples/sec: 14.7874
+INFO:tensorflow:global_step/sec: 1.84771
+INFO:tensorflow:examples/sec: 14.7817
+INFO:tensorflow:Saving checkpoints for 5000 into model/anli__shuf_model/model.ckpt.
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:966: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:global_step/sec: 1.7617
+INFO:tensorflow:examples/sec: 14.0936
+INFO:tensorflow:global_step/sec: 1.8472
+INFO:tensorflow:examples/sec: 14.7776
+INFO:tensorflow:global_step/sec: 1.8469
+INFO:tensorflow:examples/sec: 14.7752
+INFO:tensorflow:global_step/sec: 1.84775
+INFO:tensorflow:examples/sec: 14.782
+INFO:tensorflow:global_step/sec: 1.84777
+INFO:tensorflow:examples/sec: 14.7821
+INFO:tensorflow:global_step/sec: 1.8478
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:global_step/sec: 1.84798
+INFO:tensorflow:examples/sec: 14.7838
+INFO:tensorflow:global_step/sec: 1.8487
+INFO:tensorflow:examples/sec: 14.7896
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:global_step/sec: 1.84786
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:Saving checkpoints for 6000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76045
+INFO:tensorflow:examples/sec: 14.0836
+INFO:tensorflow:global_step/sec: 1.84728
+INFO:tensorflow:examples/sec: 14.7782
+INFO:tensorflow:global_step/sec: 1.84779
+INFO:tensorflow:examples/sec: 14.7823
+INFO:tensorflow:global_step/sec: 1.84799
+INFO:tensorflow:examples/sec: 14.7839
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.84889
+INFO:tensorflow:examples/sec: 14.7911
+INFO:tensorflow:global_step/sec: 1.84776
+INFO:tensorflow:examples/sec: 14.7821
+INFO:tensorflow:global_step/sec: 1.84815
+INFO:tensorflow:examples/sec: 14.7852
+INFO:tensorflow:global_step/sec: 1.84835
+INFO:tensorflow:examples/sec: 14.7868
+INFO:tensorflow:global_step/sec: 1.84814
+INFO:tensorflow:examples/sec: 14.7851
+INFO:tensorflow:Saving checkpoints for 7000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.67045
+INFO:tensorflow:examples/sec: 13.3636
+INFO:tensorflow:global_step/sec: 1.84829
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.8345
+INFO:tensorflow:examples/sec: 14.676
+INFO:tensorflow:global_step/sec: 1.84824
+INFO:tensorflow:examples/sec: 14.7859
+INFO:tensorflow:global_step/sec: 1.84772
+INFO:tensorflow:examples/sec: 14.7818
+INFO:tensorflow:global_step/sec: 1.84853
+INFO:tensorflow:examples/sec: 14.7882
+INFO:tensorflow:global_step/sec: 1.84813
+INFO:tensorflow:examples/sec: 14.785
+INFO:tensorflow:global_step/sec: 1.84851
+INFO:tensorflow:examples/sec: 14.7881
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:Saving checkpoints for 8000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.63038
+INFO:tensorflow:examples/sec: 13.0431
+INFO:tensorflow:global_step/sec: 1.8433
+INFO:tensorflow:examples/sec: 14.7464
+INFO:tensorflow:global_step/sec: 1.84756
+INFO:tensorflow:examples/sec: 14.7804
+INFO:tensorflow:global_step/sec: 1.8471
+INFO:tensorflow:examples/sec: 14.7768
+INFO:tensorflow:global_step/sec: 1.84713
+INFO:tensorflow:examples/sec: 14.7771
+INFO:tensorflow:global_step/sec: 1.84795
+INFO:tensorflow:examples/sec: 14.7836
+INFO:tensorflow:global_step/sec: 1.84842
+INFO:tensorflow:examples/sec: 14.7874
+INFO:tensorflow:global_step/sec: 1.84837
+INFO:tensorflow:examples/sec: 14.787
+INFO:tensorflow:global_step/sec: 1.84744
+INFO:tensorflow:examples/sec: 14.7795
+INFO:tensorflow:global_step/sec: 1.84748
+INFO:tensorflow:examples/sec: 14.7798
+INFO:tensorflow:Saving checkpoints for 9000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.64121
+INFO:tensorflow:examples/sec: 13.1297
+INFO:tensorflow:global_step/sec: 1.84764
+INFO:tensorflow:examples/sec: 14.7811
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84721
+INFO:tensorflow:examples/sec: 14.7777
+INFO:tensorflow:global_step/sec: 1.84731
+INFO:tensorflow:examples/sec: 14.7785
+INFO:tensorflow:global_step/sec: 1.84761
+INFO:tensorflow:examples/sec: 14.7809
+INFO:tensorflow:global_step/sec: 1.84786
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:global_step/sec: 1.84799
+INFO:tensorflow:examples/sec: 14.7839
+INFO:tensorflow:global_step/sec: 1.84706
+INFO:tensorflow:examples/sec: 14.7765
+INFO:tensorflow:global_step/sec: 1.84719
+INFO:tensorflow:examples/sec: 14.7775
+INFO:tensorflow:Saving checkpoints for 10000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.69316
+INFO:tensorflow:examples/sec: 13.5453
+INFO:tensorflow:global_step/sec: 1.83715
+INFO:tensorflow:examples/sec: 14.6972
+INFO:tensorflow:global_step/sec: 1.84831
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.84826
+INFO:tensorflow:examples/sec: 14.7861
+INFO:tensorflow:global_step/sec: 1.84828
+INFO:tensorflow:examples/sec: 14.7862
+INFO:tensorflow:global_step/sec: 1.84835
+INFO:tensorflow:examples/sec: 14.7868
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.84829
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:global_step/sec: 1.84804
+INFO:tensorflow:examples/sec: 14.7843
+INFO:tensorflow:global_step/sec: 1.84789
+INFO:tensorflow:examples/sec: 14.7831
+INFO:tensorflow:Saving checkpoints for 11000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.61512
+INFO:tensorflow:examples/sec: 12.921
+INFO:tensorflow:global_step/sec: 1.84572
+INFO:tensorflow:examples/sec: 14.7657
+INFO:tensorflow:global_step/sec: 1.84717
+INFO:tensorflow:examples/sec: 14.7774
+INFO:tensorflow:global_step/sec: 1.84792
+INFO:tensorflow:examples/sec: 14.7833
+INFO:tensorflow:global_step/sec: 1.84838
+INFO:tensorflow:examples/sec: 14.787
+INFO:tensorflow:global_step/sec: 1.84814
+INFO:tensorflow:examples/sec: 14.7851
+INFO:tensorflow:global_step/sec: 1.84803
+INFO:tensorflow:examples/sec: 14.7842
+INFO:tensorflow:global_step/sec: 1.84738
+INFO:tensorflow:examples/sec: 14.7791
+INFO:tensorflow:global_step/sec: 1.84775
+INFO:tensorflow:examples/sec: 14.782
+INFO:tensorflow:global_step/sec: 1.84791
+INFO:tensorflow:examples/sec: 14.7833
+INFO:tensorflow:Saving checkpoints for 12000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.72237
+INFO:tensorflow:examples/sec: 13.779
+INFO:tensorflow:global_step/sec: 1.84777
+INFO:tensorflow:examples/sec: 14.7822
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84737
+INFO:tensorflow:examples/sec: 14.7789
+INFO:tensorflow:global_step/sec: 1.8477
+INFO:tensorflow:examples/sec: 14.7816
+INFO:tensorflow:global_step/sec: 1.84721
+INFO:tensorflow:examples/sec: 14.7777
+INFO:tensorflow:global_step/sec: 1.84715
+INFO:tensorflow:examples/sec: 14.7772
+INFO:tensorflow:global_step/sec: 1.84745
+INFO:tensorflow:examples/sec: 14.7796
+INFO:tensorflow:global_step/sec: 1.84801
+INFO:tensorflow:examples/sec: 14.7841
+INFO:tensorflow:global_step/sec: 1.84823
+INFO:tensorflow:examples/sec: 14.7858
+INFO:tensorflow:Saving checkpoints for 13000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.73815
+INFO:tensorflow:examples/sec: 13.9052
+INFO:tensorflow:global_step/sec: 1.84697
+INFO:tensorflow:examples/sec: 14.7757
+INFO:tensorflow:global_step/sec: 1.84819
+INFO:tensorflow:examples/sec: 14.7855
+INFO:tensorflow:global_step/sec: 1.84814
+INFO:tensorflow:examples/sec: 14.7851
+INFO:tensorflow:global_step/sec: 1.84733
+INFO:tensorflow:examples/sec: 14.7787
+INFO:tensorflow:global_step/sec: 1.84787
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:global_step/sec: 1.84695
+INFO:tensorflow:examples/sec: 14.7756
+INFO:tensorflow:global_step/sec: 1.84792
+INFO:tensorflow:examples/sec: 14.7834
+INFO:tensorflow:global_step/sec: 1.84821
+INFO:tensorflow:examples/sec: 14.7857
+INFO:tensorflow:global_step/sec: 1.848
+INFO:tensorflow:examples/sec: 14.784
+INFO:tensorflow:Saving checkpoints for 14000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75444
+INFO:tensorflow:examples/sec: 14.0356
+INFO:tensorflow:global_step/sec: 1.8484
+INFO:tensorflow:examples/sec: 14.7872
+INFO:tensorflow:global_step/sec: 1.84796
+INFO:tensorflow:examples/sec: 14.7837
+INFO:tensorflow:global_step/sec: 1.84783
+INFO:tensorflow:examples/sec: 14.7826
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7853
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84879
+INFO:tensorflow:examples/sec: 14.7903
+INFO:tensorflow:global_step/sec: 1.84881
+INFO:tensorflow:examples/sec: 14.7905
+INFO:tensorflow:global_step/sec: 1.84815
+INFO:tensorflow:examples/sec: 14.7852
+INFO:tensorflow:global_step/sec: 1.84837
+INFO:tensorflow:examples/sec: 14.787
+INFO:tensorflow:Saving checkpoints for 15000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76297
+INFO:tensorflow:examples/sec: 14.1037
+INFO:tensorflow:global_step/sec: 1.84862
+INFO:tensorflow:examples/sec: 14.789
+INFO:tensorflow:global_step/sec: 1.84848
+INFO:tensorflow:examples/sec: 14.7879
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84849
+INFO:tensorflow:examples/sec: 14.7879
+INFO:tensorflow:global_step/sec: 1.84805
+INFO:tensorflow:examples/sec: 14.7844
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:Saving checkpoints for 16000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.7289
+INFO:tensorflow:examples/sec: 13.8312
+INFO:tensorflow:global_step/sec: 1.84733
+INFO:tensorflow:examples/sec: 14.7787
+INFO:tensorflow:global_step/sec: 1.84778
+INFO:tensorflow:examples/sec: 14.7822
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7854
+INFO:tensorflow:global_step/sec: 1.84811
+INFO:tensorflow:examples/sec: 14.7849
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84747
+INFO:tensorflow:examples/sec: 14.7798
+INFO:tensorflow:global_step/sec: 1.84789
+INFO:tensorflow:examples/sec: 14.7831
+INFO:tensorflow:global_step/sec: 1.84772
+INFO:tensorflow:examples/sec: 14.7818
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:Saving checkpoints for 17000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.73362
+INFO:tensorflow:examples/sec: 13.869
+INFO:tensorflow:global_step/sec: 1.84729
+INFO:tensorflow:examples/sec: 14.7783
+INFO:tensorflow:global_step/sec: 1.84789
+INFO:tensorflow:examples/sec: 14.7831
+INFO:tensorflow:global_step/sec: 1.84806
+INFO:tensorflow:examples/sec: 14.7845
+INFO:tensorflow:global_step/sec: 1.84805
+INFO:tensorflow:examples/sec: 14.7844
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7846
+INFO:tensorflow:global_step/sec: 1.84791
+INFO:tensorflow:examples/sec: 14.7833
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.84819
+INFO:tensorflow:examples/sec: 14.7855
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:Saving checkpoints for 18000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75974
+INFO:tensorflow:examples/sec: 14.0779
+INFO:tensorflow:global_step/sec: 1.84865
+INFO:tensorflow:examples/sec: 14.7892
+INFO:tensorflow:global_step/sec: 1.84904
+INFO:tensorflow:examples/sec: 14.7924
+INFO:tensorflow:global_step/sec: 1.84867
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84866
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84871
+INFO:tensorflow:examples/sec: 14.7897
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:global_step/sec: 1.84844
+INFO:tensorflow:examples/sec: 14.7875
+INFO:tensorflow:global_step/sec: 1.84874
+INFO:tensorflow:examples/sec: 14.7899
+INFO:tensorflow:global_step/sec: 1.84834
+INFO:tensorflow:examples/sec: 14.7867
+INFO:tensorflow:Saving checkpoints for 19000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74616
+INFO:tensorflow:examples/sec: 13.9693
+INFO:tensorflow:global_step/sec: 1.84801
+INFO:tensorflow:examples/sec: 14.7841
+INFO:tensorflow:global_step/sec: 1.8487
+INFO:tensorflow:examples/sec: 14.7896
+INFO:tensorflow:global_step/sec: 1.84797
+INFO:tensorflow:examples/sec: 14.7838
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84885
+INFO:tensorflow:examples/sec: 14.7908
+INFO:tensorflow:global_step/sec: 1.84867
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.84873
+INFO:tensorflow:examples/sec: 14.7898
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:Saving checkpoints for 20000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75086
+INFO:tensorflow:examples/sec: 14.0069
+INFO:tensorflow:global_step/sec: 1.84883
+INFO:tensorflow:examples/sec: 14.7906
+INFO:tensorflow:global_step/sec: 1.849
+INFO:tensorflow:examples/sec: 14.792
+INFO:tensorflow:global_step/sec: 1.84877
+INFO:tensorflow:examples/sec: 14.7902
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84807
+INFO:tensorflow:examples/sec: 14.7846
+INFO:tensorflow:global_step/sec: 1.8478
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:global_step/sec: 1.84696
+INFO:tensorflow:examples/sec: 14.7757
+INFO:tensorflow:Saving checkpoints for 21000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74777
+INFO:tensorflow:examples/sec: 13.9821
+INFO:tensorflow:global_step/sec: 1.84742
+INFO:tensorflow:examples/sec: 14.7793
+INFO:tensorflow:global_step/sec: 1.84843
+INFO:tensorflow:examples/sec: 14.7874
+INFO:tensorflow:global_step/sec: 1.84816
+INFO:tensorflow:examples/sec: 14.7852
+INFO:tensorflow:global_step/sec: 1.84747
+INFO:tensorflow:examples/sec: 14.7797
+INFO:tensorflow:global_step/sec: 1.84783
+INFO:tensorflow:examples/sec: 14.7826
+INFO:tensorflow:global_step/sec: 1.84758
+INFO:tensorflow:examples/sec: 14.7806
+INFO:tensorflow:global_step/sec: 1.84848
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:global_step/sec: 1.84873
+INFO:tensorflow:examples/sec: 14.7898
+INFO:tensorflow:global_step/sec: 1.84862
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:Saving checkpoints for 22000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.7484
+INFO:tensorflow:examples/sec: 13.9872
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84844
+INFO:tensorflow:examples/sec: 14.7875
+INFO:tensorflow:global_step/sec: 1.84858
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.84873
+INFO:tensorflow:examples/sec: 14.7898
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:global_step/sec: 1.84877
+INFO:tensorflow:examples/sec: 14.7902
+INFO:tensorflow:Saving checkpoints for 23000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.65516
+INFO:tensorflow:examples/sec: 13.2413
+INFO:tensorflow:global_step/sec: 1.84855
+INFO:tensorflow:examples/sec: 14.7884
+INFO:tensorflow:global_step/sec: 1.8487
+INFO:tensorflow:examples/sec: 14.7896
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.84866
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7883
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84859
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84813
+INFO:tensorflow:examples/sec: 14.785
+INFO:tensorflow:Saving checkpoints for 24000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.7161
+INFO:tensorflow:examples/sec: 13.7288
+INFO:tensorflow:global_step/sec: 1.84804
+INFO:tensorflow:examples/sec: 14.7843
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84801
+INFO:tensorflow:examples/sec: 14.7841
+INFO:tensorflow:global_step/sec: 1.84794
+INFO:tensorflow:examples/sec: 14.7835
+INFO:tensorflow:global_step/sec: 1.84826
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.84819
+INFO:tensorflow:examples/sec: 14.7855
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.8475
+INFO:tensorflow:examples/sec: 14.78
+INFO:tensorflow:global_step/sec: 1.84802
+INFO:tensorflow:examples/sec: 14.7842
+INFO:tensorflow:Saving checkpoints for 25000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.71444
+INFO:tensorflow:examples/sec: 13.7155
+INFO:tensorflow:global_step/sec: 1.84836
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84807
+INFO:tensorflow:examples/sec: 14.7845
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84863
+INFO:tensorflow:examples/sec: 14.7891
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84869
+INFO:tensorflow:examples/sec: 14.7896
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7883
+INFO:tensorflow:Saving checkpoints for 26000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.72492
+INFO:tensorflow:examples/sec: 13.7993
+INFO:tensorflow:global_step/sec: 1.84826
+INFO:tensorflow:examples/sec: 14.7861
+INFO:tensorflow:global_step/sec: 1.84836
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84818
+INFO:tensorflow:examples/sec: 14.7854
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84855
+INFO:tensorflow:examples/sec: 14.7884
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:Saving checkpoints for 27000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74892
+INFO:tensorflow:examples/sec: 13.9914
+INFO:tensorflow:global_step/sec: 1.84762
+INFO:tensorflow:examples/sec: 14.781
+INFO:tensorflow:global_step/sec: 1.84861
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.84813
+INFO:tensorflow:examples/sec: 14.785
+INFO:tensorflow:global_step/sec: 1.84835
+INFO:tensorflow:examples/sec: 14.7868
+INFO:tensorflow:global_step/sec: 1.84839
+INFO:tensorflow:examples/sec: 14.7871
+INFO:tensorflow:global_step/sec: 1.84858
+INFO:tensorflow:examples/sec: 14.7887
+INFO:tensorflow:global_step/sec: 1.84826
+INFO:tensorflow:examples/sec: 14.7861
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84806
+INFO:tensorflow:examples/sec: 14.7845
+INFO:tensorflow:Saving checkpoints for 28000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75844
+INFO:tensorflow:examples/sec: 14.0675
+INFO:tensorflow:global_step/sec: 1.84757
+INFO:tensorflow:examples/sec: 14.7806
+INFO:tensorflow:global_step/sec: 1.84855
+INFO:tensorflow:examples/sec: 14.7884
+INFO:tensorflow:global_step/sec: 1.84865
+INFO:tensorflow:examples/sec: 14.7892
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84859
+INFO:tensorflow:examples/sec: 14.7887
+INFO:tensorflow:global_step/sec: 1.8489
+INFO:tensorflow:examples/sec: 14.7912
+INFO:tensorflow:global_step/sec: 1.84887
+INFO:tensorflow:examples/sec: 14.791
+INFO:tensorflow:global_step/sec: 1.84824
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.84887
+INFO:tensorflow:examples/sec: 14.7909
+INFO:tensorflow:Saving checkpoints for 29000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74511
+INFO:tensorflow:examples/sec: 13.9609
+INFO:tensorflow:global_step/sec: 1.84866
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84837
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7853
+INFO:tensorflow:global_step/sec: 1.84813
+INFO:tensorflow:examples/sec: 14.785
+INFO:tensorflow:global_step/sec: 1.84807
+INFO:tensorflow:examples/sec: 14.7845
+INFO:tensorflow:global_step/sec: 1.84778
+INFO:tensorflow:examples/sec: 14.7822
+INFO:tensorflow:global_step/sec: 1.84809
+INFO:tensorflow:examples/sec: 14.7848
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:Saving checkpoints for 30000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76004
+INFO:tensorflow:examples/sec: 14.0803
+INFO:tensorflow:global_step/sec: 1.84831
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.84851
+INFO:tensorflow:examples/sec: 14.7881
+INFO:tensorflow:global_step/sec: 1.84844
+INFO:tensorflow:examples/sec: 14.7875
+INFO:tensorflow:global_step/sec: 1.84883
+INFO:tensorflow:examples/sec: 14.7906
+INFO:tensorflow:global_step/sec: 1.84892
+INFO:tensorflow:examples/sec: 14.7914
+INFO:tensorflow:global_step/sec: 1.83525
+INFO:tensorflow:examples/sec: 14.682
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84887
+INFO:tensorflow:examples/sec: 14.791
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:Saving checkpoints for 31000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76086
+INFO:tensorflow:examples/sec: 14.0869
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84772
+INFO:tensorflow:examples/sec: 14.7817
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7846
+INFO:tensorflow:global_step/sec: 1.84871
+INFO:tensorflow:examples/sec: 14.7897
+INFO:tensorflow:global_step/sec: 1.84848
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7854
+INFO:tensorflow:global_step/sec: 1.84831
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84807
+INFO:tensorflow:examples/sec: 14.7845
+INFO:tensorflow:Saving checkpoints for 32000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.7622
+INFO:tensorflow:examples/sec: 14.0976
+INFO:tensorflow:global_step/sec: 1.8482
+INFO:tensorflow:examples/sec: 14.7856
+INFO:tensorflow:global_step/sec: 1.84846
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84814
+INFO:tensorflow:examples/sec: 14.7851
+INFO:tensorflow:global_step/sec: 1.84782
+INFO:tensorflow:examples/sec: 14.7825
+INFO:tensorflow:global_step/sec: 1.84828
+INFO:tensorflow:examples/sec: 14.7862
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7853
+INFO:tensorflow:global_step/sec: 1.84858
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.84875
+INFO:tensorflow:examples/sec: 14.79
+INFO:tensorflow:global_step/sec: 1.84866
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:Saving checkpoints for 33000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76202
+INFO:tensorflow:examples/sec: 14.0962
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7846
+INFO:tensorflow:global_step/sec: 1.84708
+INFO:tensorflow:examples/sec: 14.7767
+INFO:tensorflow:global_step/sec: 1.8478
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:global_step/sec: 1.84795
+INFO:tensorflow:examples/sec: 14.7836
+INFO:tensorflow:global_step/sec: 1.84751
+INFO:tensorflow:examples/sec: 14.7801
+INFO:tensorflow:global_step/sec: 1.84829
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:global_step/sec: 1.84802
+INFO:tensorflow:examples/sec: 14.7841
+INFO:tensorflow:global_step/sec: 1.84809
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:Saving checkpoints for 34000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76297
+INFO:tensorflow:examples/sec: 14.1038
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.84761
+INFO:tensorflow:examples/sec: 14.7809
+INFO:tensorflow:global_step/sec: 1.84818
+INFO:tensorflow:examples/sec: 14.7854
+INFO:tensorflow:global_step/sec: 1.84791
+INFO:tensorflow:examples/sec: 14.7833
+INFO:tensorflow:global_step/sec: 1.84802
+INFO:tensorflow:examples/sec: 14.7842
+INFO:tensorflow:global_step/sec: 1.84799
+INFO:tensorflow:examples/sec: 14.7839
+INFO:tensorflow:global_step/sec: 1.84786
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:global_step/sec: 1.84809
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84797
+INFO:tensorflow:examples/sec: 14.7838
+INFO:tensorflow:Saving checkpoints for 35000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74868
+INFO:tensorflow:examples/sec: 13.9894
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:global_step/sec: 1.84836
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84842
+INFO:tensorflow:examples/sec: 14.7874
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.8487
+INFO:tensorflow:examples/sec: 14.7896
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7883
+INFO:tensorflow:global_step/sec: 1.84274
+INFO:tensorflow:examples/sec: 14.7419
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7884
+INFO:tensorflow:Saving checkpoints for 36000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74355
+INFO:tensorflow:examples/sec: 13.9484
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:global_step/sec: 1.84822
+INFO:tensorflow:examples/sec: 14.7857
+INFO:tensorflow:global_step/sec: 1.84824
+INFO:tensorflow:examples/sec: 14.7859
+INFO:tensorflow:global_step/sec: 1.8482
+INFO:tensorflow:examples/sec: 14.7856
+INFO:tensorflow:global_step/sec: 1.84819
+INFO:tensorflow:examples/sec: 14.7856
+INFO:tensorflow:global_step/sec: 1.84872
+INFO:tensorflow:examples/sec: 14.7898
+INFO:tensorflow:global_step/sec: 1.84852
+INFO:tensorflow:examples/sec: 14.7882
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:Saving checkpoints for 37000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75714
+INFO:tensorflow:examples/sec: 14.0571
+INFO:tensorflow:global_step/sec: 1.84878
+INFO:tensorflow:examples/sec: 14.7902
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.84904
+INFO:tensorflow:examples/sec: 14.7923
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.79
+INFO:tensorflow:global_step/sec: 1.84874
+INFO:tensorflow:examples/sec: 14.7899
+INFO:tensorflow:global_step/sec: 1.84862
+INFO:tensorflow:examples/sec: 14.7889
+INFO:tensorflow:global_step/sec: 1.84901
+INFO:tensorflow:examples/sec: 14.7921
+INFO:tensorflow:global_step/sec: 1.84896
+INFO:tensorflow:examples/sec: 14.7917
+INFO:tensorflow:global_step/sec: 1.84894
+INFO:tensorflow:examples/sec: 14.7915
+INFO:tensorflow:Saving checkpoints for 38000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74727
+INFO:tensorflow:examples/sec: 13.9781
+INFO:tensorflow:global_step/sec: 1.84882
+INFO:tensorflow:examples/sec: 14.7905
+INFO:tensorflow:global_step/sec: 1.84869
+INFO:tensorflow:examples/sec: 14.7895
+INFO:tensorflow:global_step/sec: 1.84895
+INFO:tensorflow:examples/sec: 14.7916
+INFO:tensorflow:global_step/sec: 1.84888
+INFO:tensorflow:examples/sec: 14.7911
+INFO:tensorflow:global_step/sec: 1.84676
+INFO:tensorflow:examples/sec: 14.7741
+INFO:tensorflow:global_step/sec: 1.84885
+INFO:tensorflow:examples/sec: 14.7908
+INFO:tensorflow:global_step/sec: 1.84881
+INFO:tensorflow:examples/sec: 14.7905
+INFO:tensorflow:global_step/sec: 1.8489
+INFO:tensorflow:examples/sec: 14.7912
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.79
+INFO:tensorflow:Saving checkpoints for 39000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76139
+INFO:tensorflow:examples/sec: 14.0911
+INFO:tensorflow:global_step/sec: 1.84871
+INFO:tensorflow:examples/sec: 14.7897
+INFO:tensorflow:global_step/sec: 1.84882
+INFO:tensorflow:examples/sec: 14.7906
+INFO:tensorflow:global_step/sec: 1.84877
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84877
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84902
+INFO:tensorflow:examples/sec: 14.7922
+INFO:tensorflow:global_step/sec: 1.84898
+INFO:tensorflow:examples/sec: 14.7918
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7867
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:Saving checkpoints for 40000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75256
+INFO:tensorflow:examples/sec: 14.0205
+INFO:tensorflow:global_step/sec: 1.84849
+INFO:tensorflow:examples/sec: 14.7879
+INFO:tensorflow:global_step/sec: 1.84879
+INFO:tensorflow:examples/sec: 14.7903
+INFO:tensorflow:global_step/sec: 1.84879
+INFO:tensorflow:examples/sec: 14.7903
+INFO:tensorflow:global_step/sec: 1.84837
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84858
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.8489
+INFO:tensorflow:examples/sec: 14.7912
+INFO:tensorflow:global_step/sec: 1.84853
+INFO:tensorflow:examples/sec: 14.7882
+INFO:tensorflow:global_step/sec: 1.84811
+INFO:tensorflow:examples/sec: 14.7849
+INFO:tensorflow:global_step/sec: 1.84805
+INFO:tensorflow:examples/sec: 14.7844
+INFO:tensorflow:Saving checkpoints for 41000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.73364
+INFO:tensorflow:examples/sec: 13.8692
+INFO:tensorflow:global_step/sec: 1.84249
+INFO:tensorflow:examples/sec: 14.7399
+INFO:tensorflow:global_step/sec: 1.84744
+INFO:tensorflow:examples/sec: 14.7795
+INFO:tensorflow:global_step/sec: 1.8472
+INFO:tensorflow:examples/sec: 14.7776
+INFO:tensorflow:global_step/sec: 1.84812
+INFO:tensorflow:examples/sec: 14.7849
+INFO:tensorflow:global_step/sec: 1.84778
+INFO:tensorflow:examples/sec: 14.7822
+INFO:tensorflow:global_step/sec: 1.84798
+INFO:tensorflow:examples/sec: 14.7838
+INFO:tensorflow:global_step/sec: 1.84769
+INFO:tensorflow:examples/sec: 14.7815
+INFO:tensorflow:global_step/sec: 1.84736
+INFO:tensorflow:examples/sec: 14.7788
+INFO:tensorflow:global_step/sec: 1.8478
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:Saving checkpoints for 42000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.71502
+INFO:tensorflow:examples/sec: 13.7202
+INFO:tensorflow:global_step/sec: 1.84764
+INFO:tensorflow:examples/sec: 14.7811
+INFO:tensorflow:global_step/sec: 1.84827
+INFO:tensorflow:examples/sec: 14.7862
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.84863
+INFO:tensorflow:examples/sec: 14.789
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84818
+INFO:tensorflow:examples/sec: 14.7854
+INFO:tensorflow:global_step/sec: 1.84828
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7883
+INFO:tensorflow:global_step/sec: 1.84841
+INFO:tensorflow:examples/sec: 14.7873
+INFO:tensorflow:Saving checkpoints for 43000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76221
+INFO:tensorflow:examples/sec: 14.0977
+INFO:tensorflow:global_step/sec: 1.84756
+INFO:tensorflow:examples/sec: 14.7805
+INFO:tensorflow:global_step/sec: 1.84684
+INFO:tensorflow:examples/sec: 14.7747
+INFO:tensorflow:global_step/sec: 1.8478
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:global_step/sec: 1.8471
+INFO:tensorflow:examples/sec: 14.7768
+INFO:tensorflow:global_step/sec: 1.84617
+INFO:tensorflow:examples/sec: 14.7693
+INFO:tensorflow:global_step/sec: 1.84796
+INFO:tensorflow:examples/sec: 14.7837
+INFO:tensorflow:global_step/sec: 1.84744
+INFO:tensorflow:examples/sec: 14.7795
+INFO:tensorflow:global_step/sec: 1.84791
+INFO:tensorflow:examples/sec: 14.7832
+INFO:tensorflow:global_step/sec: 1.84757
+INFO:tensorflow:examples/sec: 14.7805
+INFO:tensorflow:Saving checkpoints for 44000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76289
+INFO:tensorflow:examples/sec: 14.1031
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7877
+INFO:tensorflow:global_step/sec: 1.84815
+INFO:tensorflow:examples/sec: 14.7852
+INFO:tensorflow:global_step/sec: 1.84817
+INFO:tensorflow:examples/sec: 14.7853
+INFO:tensorflow:global_step/sec: 1.84836
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84801
+INFO:tensorflow:examples/sec: 14.7841
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84791
+INFO:tensorflow:examples/sec: 14.7832
+INFO:tensorflow:global_step/sec: 1.84819
+INFO:tensorflow:examples/sec: 14.7855
+INFO:tensorflow:global_step/sec: 1.84833
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:Saving checkpoints for 45000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.73806
+INFO:tensorflow:examples/sec: 13.9045
+INFO:tensorflow:global_step/sec: 1.84877
+INFO:tensorflow:examples/sec: 14.7902
+INFO:tensorflow:global_step/sec: 1.84889
+INFO:tensorflow:examples/sec: 14.7912
+INFO:tensorflow:global_step/sec: 1.84892
+INFO:tensorflow:examples/sec: 14.7913
+INFO:tensorflow:global_step/sec: 1.84883
+INFO:tensorflow:examples/sec: 14.7907
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84904
+INFO:tensorflow:examples/sec: 14.7924
+INFO:tensorflow:global_step/sec: 1.84896
+INFO:tensorflow:examples/sec: 14.7917
+INFO:tensorflow:Saving checkpoints for 46000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.7593
+INFO:tensorflow:examples/sec: 14.0744
+INFO:tensorflow:global_step/sec: 1.84879
+INFO:tensorflow:examples/sec: 14.7903
+INFO:tensorflow:global_step/sec: 1.84888
+INFO:tensorflow:examples/sec: 14.7911
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84895
+INFO:tensorflow:examples/sec: 14.7916
+INFO:tensorflow:global_step/sec: 1.84912
+INFO:tensorflow:examples/sec: 14.793
+INFO:tensorflow:global_step/sec: 1.84901
+INFO:tensorflow:examples/sec: 14.7921
+INFO:tensorflow:global_step/sec: 1.849
+INFO:tensorflow:examples/sec: 14.792
+INFO:tensorflow:global_step/sec: 1.8488
+INFO:tensorflow:examples/sec: 14.7904
+INFO:tensorflow:global_step/sec: 1.84888
+INFO:tensorflow:examples/sec: 14.791
+INFO:tensorflow:Saving checkpoints for 47000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.72523
+INFO:tensorflow:examples/sec: 13.8019
+INFO:tensorflow:global_step/sec: 1.84893
+INFO:tensorflow:examples/sec: 14.7915
+INFO:tensorflow:global_step/sec: 1.84869
+INFO:tensorflow:examples/sec: 14.7895
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.8489
+INFO:tensorflow:examples/sec: 14.7912
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.84866
+INFO:tensorflow:examples/sec: 14.7893
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:Saving checkpoints for 48000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76236
+INFO:tensorflow:examples/sec: 14.0988
+INFO:tensorflow:global_step/sec: 1.84864
+INFO:tensorflow:examples/sec: 14.7891
+INFO:tensorflow:global_step/sec: 1.84869
+INFO:tensorflow:examples/sec: 14.7895
+INFO:tensorflow:global_step/sec: 1.84849
+INFO:tensorflow:examples/sec: 14.7879
+INFO:tensorflow:global_step/sec: 1.84898
+INFO:tensorflow:examples/sec: 14.7919
+INFO:tensorflow:global_step/sec: 1.84883
+INFO:tensorflow:examples/sec: 14.7907
+INFO:tensorflow:global_step/sec: 1.84897
+INFO:tensorflow:examples/sec: 14.7917
+INFO:tensorflow:global_step/sec: 1.84904
+INFO:tensorflow:examples/sec: 14.7923
+INFO:tensorflow:global_step/sec: 1.84896
+INFO:tensorflow:examples/sec: 14.7917
+INFO:tensorflow:global_step/sec: 1.84878
+INFO:tensorflow:examples/sec: 14.7903
+INFO:tensorflow:Saving checkpoints for 49000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74156
+INFO:tensorflow:examples/sec: 13.9325
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84826
+INFO:tensorflow:examples/sec: 14.7861
+INFO:tensorflow:global_step/sec: 1.84876
+INFO:tensorflow:examples/sec: 14.7901
+INFO:tensorflow:global_step/sec: 1.84894
+INFO:tensorflow:examples/sec: 14.7915
+INFO:tensorflow:global_step/sec: 1.8491
+INFO:tensorflow:examples/sec: 14.7928
+INFO:tensorflow:global_step/sec: 1.84875
+INFO:tensorflow:examples/sec: 14.79
+INFO:tensorflow:global_step/sec: 1.84886
+INFO:tensorflow:examples/sec: 14.7909
+INFO:tensorflow:global_step/sec: 1.84836
+INFO:tensorflow:examples/sec: 14.7869
+INFO:tensorflow:global_step/sec: 1.84849
+INFO:tensorflow:examples/sec: 14.7879
+INFO:tensorflow:Saving checkpoints for 50000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76207
+INFO:tensorflow:examples/sec: 14.0966
+INFO:tensorflow:global_step/sec: 1.8485
+INFO:tensorflow:examples/sec: 14.788
+INFO:tensorflow:global_step/sec: 1.84855
+INFO:tensorflow:examples/sec: 14.7884
+INFO:tensorflow:global_step/sec: 1.84851
+INFO:tensorflow:examples/sec: 14.7881
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84808
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84847
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:global_step/sec: 1.84838
+INFO:tensorflow:examples/sec: 14.7871
+INFO:tensorflow:global_step/sec: 1.8483
+INFO:tensorflow:examples/sec: 14.7864
+INFO:tensorflow:global_step/sec: 1.84844
+INFO:tensorflow:examples/sec: 14.7875
+INFO:tensorflow:Saving checkpoints for 51000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76224
+INFO:tensorflow:examples/sec: 14.0979
+INFO:tensorflow:global_step/sec: 1.84857
+INFO:tensorflow:examples/sec: 14.7886
+INFO:tensorflow:global_step/sec: 1.84835
+INFO:tensorflow:examples/sec: 14.7868
+INFO:tensorflow:global_step/sec: 1.84854
+INFO:tensorflow:examples/sec: 14.7883
+INFO:tensorflow:global_step/sec: 1.84856
+INFO:tensorflow:examples/sec: 14.7885
+INFO:tensorflow:global_step/sec: 1.84864
+INFO:tensorflow:examples/sec: 14.7891
+INFO:tensorflow:global_step/sec: 1.84832
+INFO:tensorflow:examples/sec: 14.7866
+INFO:tensorflow:global_step/sec: 1.84805
+INFO:tensorflow:examples/sec: 14.7844
+INFO:tensorflow:global_step/sec: 1.84865
+INFO:tensorflow:examples/sec: 14.7892
+INFO:tensorflow:global_step/sec: 1.84811
+INFO:tensorflow:examples/sec: 14.7849
+INFO:tensorflow:Saving checkpoints for 52000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75898
+INFO:tensorflow:examples/sec: 14.0719
+INFO:tensorflow:global_step/sec: 1.84823
+INFO:tensorflow:examples/sec: 14.7858
+INFO:tensorflow:global_step/sec: 1.84839
+INFO:tensorflow:examples/sec: 14.7871
+INFO:tensorflow:global_step/sec: 1.84853
+INFO:tensorflow:examples/sec: 14.7882
+INFO:tensorflow:global_step/sec: 1.84863
+INFO:tensorflow:examples/sec: 14.789
+INFO:tensorflow:global_step/sec: 1.84831
+INFO:tensorflow:examples/sec: 14.7865
+INFO:tensorflow:global_step/sec: 1.84829
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:global_step/sec: 1.84851
+INFO:tensorflow:examples/sec: 14.7881
+INFO:tensorflow:global_step/sec: 1.8479
+INFO:tensorflow:examples/sec: 14.7832
+INFO:tensorflow:global_step/sec: 1.84845
+INFO:tensorflow:examples/sec: 14.7876
+INFO:tensorflow:Saving checkpoints for 53000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76206
+INFO:tensorflow:examples/sec: 14.0965
+INFO:tensorflow:global_step/sec: 1.84825
+INFO:tensorflow:examples/sec: 14.786
+INFO:tensorflow:global_step/sec: 1.8483
+INFO:tensorflow:examples/sec: 14.7864
+INFO:tensorflow:global_step/sec: 1.84848
+INFO:tensorflow:examples/sec: 14.7878
+INFO:tensorflow:global_step/sec: 1.84823
+INFO:tensorflow:examples/sec: 14.7858
+INFO:tensorflow:global_step/sec: 1.84793
+INFO:tensorflow:examples/sec: 14.7834
+INFO:tensorflow:global_step/sec: 1.84766
+INFO:tensorflow:examples/sec: 14.7813
+INFO:tensorflow:global_step/sec: 1.84844
+INFO:tensorflow:examples/sec: 14.7875
+INFO:tensorflow:global_step/sec: 1.8484
+INFO:tensorflow:examples/sec: 14.7872
+INFO:tensorflow:global_step/sec: 1.84828
+INFO:tensorflow:examples/sec: 14.7863
+INFO:tensorflow:Saving checkpoints for 54000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.74818
+INFO:tensorflow:examples/sec: 13.9854
+INFO:tensorflow:global_step/sec: 1.8486
+INFO:tensorflow:examples/sec: 14.7888
+INFO:tensorflow:global_step/sec: 1.84798
+INFO:tensorflow:examples/sec: 14.7838
+INFO:tensorflow:global_step/sec: 1.84786
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:global_step/sec: 1.8483
+INFO:tensorflow:examples/sec: 14.7864
+INFO:tensorflow:global_step/sec: 1.84838
+INFO:tensorflow:examples/sec: 14.787
+INFO:tensorflow:global_step/sec: 1.84814
+INFO:tensorflow:examples/sec: 14.7851
+INFO:tensorflow:global_step/sec: 1.84783
+INFO:tensorflow:examples/sec: 14.7826
+INFO:tensorflow:global_step/sec: 1.84769
+INFO:tensorflow:examples/sec: 14.7815
+INFO:tensorflow:global_step/sec: 1.8475
+INFO:tensorflow:examples/sec: 14.78
+INFO:tensorflow:Saving checkpoints for 55000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.76211
+INFO:tensorflow:examples/sec: 14.0969
+INFO:tensorflow:global_step/sec: 1.82268
+INFO:tensorflow:examples/sec: 14.5815
+INFO:tensorflow:global_step/sec: 1.84786
+INFO:tensorflow:examples/sec: 14.7829
+INFO:tensorflow:global_step/sec: 1.84762
+INFO:tensorflow:examples/sec: 14.781
+INFO:tensorflow:global_step/sec: 1.84768
+INFO:tensorflow:examples/sec: 14.7815
+INFO:tensorflow:global_step/sec: 1.8473
+INFO:tensorflow:examples/sec: 14.7784
+INFO:tensorflow:global_step/sec: 1.84742
+INFO:tensorflow:examples/sec: 14.7794
+INFO:tensorflow:global_step/sec: 1.84779
+INFO:tensorflow:examples/sec: 14.7824
+INFO:tensorflow:global_step/sec: 1.84809
+INFO:tensorflow:examples/sec: 14.7847
+INFO:tensorflow:global_step/sec: 1.84775
+INFO:tensorflow:examples/sec: 14.782
+INFO:tensorflow:Saving checkpoints for 56000 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:global_step/sec: 1.75455
+INFO:tensorflow:examples/sec: 14.0364
+INFO:tensorflow:global_step/sec: 1.84777
+INFO:tensorflow:examples/sec: 14.7821
+INFO:tensorflow:global_step/sec: 1.84785
+INFO:tensorflow:examples/sec: 14.7828
+INFO:tensorflow:Saving checkpoints for 56282 into model/anli__shuf_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 9.6708e-06.
+INFO:tensorflow:training_loop marked as finished
+INFO:tensorflow:Writing example 0 of 2999
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-21747
+INFO:tensorflow:tokens: [CLS] ▁ 政府 ・ 自民党 が 集団 的 自衛 権を 使える ように するための 閣議決定 を 急 ぐ 中 、 地域 社会 では 、 それ に反対する 動き も 強 まっている 。 苅 田町 議会 ( 定数 16 、 坂本 東 二郎 議長 ) は 19 日 、 6 月 定 例 会 の最終 本 会議で 「 集団 的 自衛 権 行使 を 容認 する 解釈 改 憲 を行わない こと を求める 意見 書 」 を 賛成 多数 で 可決 した 。 安倍晋三 首相 と 小野 寺 五 典 防衛 相 、 衆 参 両 院 議長 に 送った 。 [SEP] ▁「 解釈 改 憲 に 反対 」 意見 書を 可決 ▁ 苅 田町 議会 [SEP]
+INFO:tensorflow:input_ids: 4 9 694 13 4858 12 1381 160 22183 7774 10331 498 3499 30470 18 1862 1477 82 7 289 567 38 7 566 14108 2584 30 1359 18621 8 31058 8813 1984 15 6462 130 7 10165 173 8632 4006 14 11 227 33 7 43 22 609 718 212 8293 96 11961 23 1381 160 22183 548 10123 18 20547 35 3216 3324 4200 24427 229 3485 3291 339 21 18 8395 3041 19 11936 29 8 30607 1731 20 6629 305 595 3248 1682 754 7 3552 2970 376 493 4006 17 13279 8 5 235 3216 3324 4200 17 1756 21 3291 11823 11936 9 31058 8813 1984 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: entailment (id = 1)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-37792
+INFO:tensorflow:tokens: [CLS] ▁第 7 日 は 陸上 が始まり 、 男子 400 メートル 予選 で 金 丸 祐 三 ( 法 大 ) が 全体の トップ の 46 秒 51 で 8 日の 準決勝 に進出した 。 女子 100 メートル 予選 では 高橋 萌 木 子 ( 平成 国際 大 ) が 11 秒 58 で 8 日の 準決勝 へ 。 柔道 男子 100 キロ 超 級の 上 川 大 樹 ( 明 大 ) と同 100 キロ 級の 小林 大輔 ( 日 大 ) は 、 ともに 決勝 で敗れて 銀メダル 。 [SEP] ▁ 陸上 女子 100 高橋 、 組 1 位で 進出 ▁ ユニバーシアード ▁7 日 [SEP]
+INFO:tensorflow:input_ids: 4 581 46 33 11 4868 5812 7 1670 2138 1346 1674 19 252 564 4562 171 15 151 62 14 12 4213 1390 10 1800 1053 2930 19 50 454 7086 15621 8 712 431 1346 1674 38 3554 18473 281 129 15 190 420 62 14 12 70 1053 2191 19 50 454 7086 90 8 4034 1670 431 4659 1099 9223 113 131 62 1237 15 369 62 14 3775 431 4659 9223 3943 14225 15 33 62 14 11 7 2109 3135 25916 22371 8 5 9 4868 712 431 3554 7 633 24 5308 2363 9 27569 2239 33 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-18157
+INFO:tensorflow:tokens: [CLS] ▁三 洋 電機 は 、 従来 機 より マイク 感度 を 3 倍 向上 させた ic レコーダー 「 ザ ク ティ ▁ ic r - ps 5 11 r m 」 = 写真 = を売り 出した 。 講義 など 前方 の 音声 を く っきり 記録 できるよう 、 周囲の 音を 小さく する 改良 をした 。 店頭 想定 価格は 1 万 5 千 円 。 [SEP] ▁ 音 く っきり 録音 、 ic レコーダー ▁三 洋 電機 が 発売 [SEP]
+INFO:tensorflow:input_ids: 4 6463 1506 15118 11 7 3158 297 94 6350 22058 18 31 1892 3453 585 998 23021 23 286 104 299 9 998 317 61 1784 41 70 317 85 21 222 1583 222 18073 2282 8 8179 45 6532 10 3914 18 195 28588 659 19753 7 8291 15293 5288 35 2764 3239 8 22463 7151 16942 24 321 41 741 616 8 5 9 515 195 28588 2538 7 998 23021 6463 1506 15118 12 827 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: entailment (id = 1)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-35321
+INFO:tensorflow:tokens: [CLS] ▁ 千葉 市 動物 公園 ( 千葉 市 若葉 区 源 町 ) で 、 人間 なら 80 代 という 雌 の シマ ウマ 「 ヒ マ ワ リ 」 が 、 キリン の 親子 と 仲良く 暮らしている = 写真 。 広 々と した 「 草原 ゾーン 」 での ん び りと 動く ヒ マ ワ リ の姿 は 、 来 園 者を 和 ませ ている 。 ヒ マ ワ リ は 、 米国 ・ サンディエゴ 生まれの 24 歳で 、 国内 最高 齢 の ハート マン ヤマ シマ ウマ 。 [SEP] ▁ ち び っこ は 「 80 代 」 ▁ 千葉 市 動物 公園 の シマ ウマ 「 ヒ マ ワ リ 」 [SEP]
+INFO:tensorflow:input_ids: 4 9 2922 69 1408 920 15 2922 69 27914 302 1213 87 14 19 7 858 1598 739 261 49 8583 10 12896 14096 23 523 157 592 146 21 12 7 22660 10 10435 20 30642 26892 222 1583 8 820 7320 29 23 20203 6665 21 408 1260 1417 13788 11612 523 157 592 146 4754 11 7 1108 1611 6296 330 14379 68 8 523 157 592 146 11 7 2122 13 13281 12155 249 1889 7 1200 1268 7775 10 4769 239 7256 12896 14096 8 5 9 662 1417 10790 11 23 739 261 21 9 2922 69 1408 920 10 12896 14096 23 523 157 592 146 21 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:*** Example ***
+INFO:tensorflow:guid: dev-20596
+INFO:tensorflow:tokens: [CLS] ▁ 米沢 市 李 山 ( す も も やま ) の 田園 に アニメ映画 「 となり の ト トロ 」 に登場する 森 の主 ト トロ の姿 に似た 小さな 森 がある 。 県内 外 から 見 に来る 人 が増えた ため 、 地元 は 地域 おこ し に つ な げ ようと 「 ト トロ の森 を守る 会 」 を設立 。 pr 活動 に力を入れ 、 イベント 開催 も 計画 している 。 [SEP] ▁新 旧 ト トロ の森 、 守り たい ▁ 米沢 ・ 李 山の 田園 に 「 守る 会 」 設立 [SEP]
+INFO:tensorflow:input_ids: 4 9 19592 69 2267 84 15 263 30 30 1812 14 10 16267 17 26065 23 159 10 103 2750 21 2753 987 8617 103 2750 4754 8968 1833 987 91 8 7265 311 28 310 21898 63 19219 97 7 1868 11 289 11515 32 17 192 57 2436 5998 23 103 2750 6104 8187 212 21 5222 8 5502 331 19705 7 906 1123 30 514 54 8 5 3502 345 103 2750 6104 7 14491 1035 9 19592 13 2267 4894 16267 17 23 17827 212 21 1851 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:label: contradiction (id = 0)
+INFO:tensorflow:***** Running evaluation *****
+INFO:tensorflow:  Num examples = 2999 (2999 actual, 0 padding)
+INFO:tensorflow:  Batch size = 8
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Running eval on CPU
+INFO:tensorflow:*** Features ***
+INFO:tensorflow:  name = input_ids, shape = (?, 512)
+INFO:tensorflow:  name = input_mask, shape = (?, 512)
+INFO:tensorflow:  name = is_real_example, shape = (?,)
+INFO:tensorflow:  name = label_ids, shape = (?,)
+INFO:tensorflow:  name = segment_ids, shape = (?, 512)
+INFO:tensorflow:**** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (32000, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (768, 3072), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (3072,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (3072, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (768, 768), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (768,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = output_weights:0, shape = (2, 768)
+INFO:tensorflow:  name = output_bias:0, shape = (2,)
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/lib/python3.6/site-packages/tensorflow/python/ops/metrics_impl.py:455: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2019-05-09T20:55:00Z
+INFO:tensorflow:Graph was finalized.
+2019-05-10 05:55:01.975077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3
+2019-05-10 05:55:01.975798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-10 05:55:01.975810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 
+2019-05-10 05:55:01.976308: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y 
+2019-05-10 05:55:01.976317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y 
+2019-05-10 05:55:01.976322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y 
+2019-05-10 05:55:01.976327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N 
+2019-05-10 05:55:01.993162: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15190 MB memory) -> physical GPU (device: 0, name: Tesla P100-SXM2-16GB, pci bus id: 0000:06:00.0, compute capability: 6.0)
+2019-05-10 05:55:01.993982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15190 MB memory) -> physical GPU (device: 1, name: Tesla P100-SXM2-16GB, pci bus id: 0000:08:00.0, compute capability: 6.0)
+2019-05-10 05:55:01.994201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15190 MB memory) -> physical GPU (device: 2, name: Tesla P100-SXM2-16GB, pci bus id: 0000:85:00.0, compute capability: 6.0)
+2019-05-10 05:55:01.994366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15190 MB memory) -> physical GPU (device: 3, name: Tesla P100-SXM2-16GB, pci bus id: 0000:87:00.0, compute capability: 6.0)
+WARNING:tensorflow:From /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from model/anli__shuf_model/model.ckpt-56282
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Finished evaluation at 2019-05-09-20:56:07
+INFO:tensorflow:Saving dict for global step 56282: eval_accuracy = 0.83894634, eval_loss = 1.5692655, global_step = 56282, loss = 1.5687453
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 56282: model/anli__shuf_model/model.ckpt-56282
+INFO:tensorflow:evaluation_loop marked as finished
+INFO:tensorflow:***** Eval results *****
+INFO:tensorflow:  eval_accuracy = 0.83894634
+INFO:tensorflow:  eval_loss = 1.5692655
+INFO:tensorflow:  global_step = 56282
+INFO:tensorflow:  loss = 1.5687453
