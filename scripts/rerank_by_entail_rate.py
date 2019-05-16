@@ -40,8 +40,14 @@ def main(args):
         out_prefix = args.output_prefix or 'out'
         with open(f'{out_prefix}.reranked', 'w') as rankf, open(f'{out_prefix}.conventional', 'w') as convf:
             for _, rerank, conventional in sorted(hypos, key=lambda x: x[0]):
-                print(''.join(rerank.split(' ')[1:]), file=rankf)
-                print(''.join(conventional.split(' ')[1:]), file=convf)
+                snt_r = ''.join(rerank.split(' '))
+                if snt_r.startswith('▁'):
+                    snt_r = snt_r[1:]
+                print(snt_r, file=rankf)
+                snt_c = ''.join(conventional.split(' '))
+                if snt_c.startswith('▁'):
+                    snt_c = snt_c[1:]
+                print(snt_c, file=convf)
 
 
 if __name__ == "__main__":
