@@ -4,6 +4,8 @@ import json
 
 def main(args):
     prob_position = 1 if args.contradiction_first else 0
+    prob_format = args.entail_rate_file.split('.')[-1]
+
     with open(args.beam_file) as beamf, open(args.entail_rate_file) as enf:
         # get the beam size
         prev_id = json.loads(beamf.readline())['s1_id']
@@ -16,19 +18,25 @@ def main(args):
                 break
             prev_id = current_id
 
-        max_prob = -1
+        # TODO; ロジックを変える
         hypos = []
         for i, (beam, rate) in enumerate(zip(beamf, enf)):
-            entail_prob = json.loads(rate)['label_probs'][prob_position]
-            if entail_prob > max_prob:
+            if prob_format == 'tsc':
+                entail_prob = float(rate.split('\t')[prob_position])
+            elif prob_format == 'json' or prob_format == 'jsonl':
+                entail_prob = json.loads(rate)['label_probs'][prob_position]
+            else:
+                raise ValueError(f'file format is not supported: {args.data_file}')
+            if i % beam_size == 0:
+                best_beam_prob = entail_prob
                 beam_d = json.loads(beam)
-                rerank_best = beam_d['sentence2']
-                if max_prob == -1:
-                    conventional_best = rerank_best
-                max_prob = entail_prob
+                conventional_best = rerank_best = beam_d['sentence2']
+            else:
+                if entail_prob - 0.5 > best_beam_prob:
+                    beam_d = json.loads(beam)
+                    rerank_best = beam_d['sentence2']
             if i % beam_size == mod_num:
                 hypos.append((int(beam_d['s1_id']), rerank_best, conventional_best))
-                max_prob = -1
         out_prefix = args.output_prefix or 'out'
         with open(f'{out_prefix}.reranked', 'w') as rankf, open(f'{out_prefix}.conventional', 'w') as convf:
             for _, rerank, conventional in sorted(hypos, key=lambda x: x[0]):
