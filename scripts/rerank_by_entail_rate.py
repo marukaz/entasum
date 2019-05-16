@@ -21,7 +21,7 @@ def main(args):
         # TODO; ロジックを変える
         hypos = []
         for i, (beam, rate) in enumerate(zip(beamf, enf)):
-            if prob_format == 'tsc':
+            if prob_format == 'tsv':
                 entail_prob = float(rate.split('\t')[prob_position])
             elif prob_format == 'json' or prob_format == 'jsonl':
                 entail_prob = json.loads(rate)['label_probs'][prob_position]
