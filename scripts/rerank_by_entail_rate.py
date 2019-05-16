@@ -18,7 +18,6 @@ def main(args):
                 break
             prev_id = current_id
 
-        # TODO; ロジックを変える
         hypos = []
         for i, (beam, rate) in enumerate(zip(beamf, enf)):
             if prob_format == 'tsv':
@@ -35,6 +34,7 @@ def main(args):
                 if entail_prob - 0.5 > best_beam_prob:
                     beam_d = json.loads(beam)
                     rerank_best = beam_d['sentence2']
+                    best_beam_prob = entail_prob
             if i % beam_size == mod_num:
                 hypos.append((int(beam_d['s1_id']), rerank_best, conventional_best))
         out_prefix = args.output_prefix or 'out'
