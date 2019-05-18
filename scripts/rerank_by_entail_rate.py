@@ -34,7 +34,13 @@ def main(args):
                 if entail_prob - 0.5 > best_beam_prob:
                     beam_d = json.loads(beam)
                     rerank_best = beam_d['sentence2']
+                    if args.verbose:
+                        print(f'article: {beam_d["sentence1"]}')
+                        print(f'conventional best: {conventional_best} | {best_beam_prob}')
+                        print(f'reranked best: {rerank_best} | {entail_prob}')
+                        print()
                     best_beam_prob = entail_prob
+
             if i % beam_size == mod_num:
                 hypos.append((int(beam_d['s1_id']), rerank_best, conventional_best))
         out_prefix = args.output_prefix or 'out'
@@ -57,5 +63,6 @@ if __name__ == "__main__":
     parser.add_argument('-o', '--output-prefix', type=str, help='prefix of output file')
     parser.add_argument('-c', '--contradiction-first', action='store_true',
                         help='flag if prob format is contradiction first')
+    parser.add_argument('-v', '--verbose', action='store_true', help='print reranked data')
     args = parser.parse_args()
     main(args)
