@@ -18,4 +18,4 @@ source /gs/hs0/tga-nlp-titech/matsumaru/repos/japanese-bert/venv/bin/activate
 
 cd ~/home/repos/japanese-bert
 
-python src/run_classifier.py   --task_name=anli   --do_train=true   --do_eval=true   --data_dir=/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/ANLI_ref_test    --model_file=model/wiki-ja.model   --vocab_file=model/wiki-ja.vocab   --init_checkpoint=model/model.ckpt-1400000   --max_seq_length=512   --train_batch_size=8   --num_train_epochs=4   --output_dir=model/anli_ref_test --save_checkpoints_steps=3000
+python src/run_classifier.py   --task_name=anli   --do_train=true   --do_eval=true   --data_dir=/gs/hs0/tga-nlp-titech/matsumaru/entasum/data/ANLI_sep_rand    --model_file=model/wiki-ja.model   --vocab_file=model/wiki-ja.vocab   --init_checkpoint=model/model.ckpt-1400000   --max_seq_length=512   --train_batch_size=8   --num_train_epochs=5   --output_dir=model/ANLI_sep_rand_epoch5 --save_checkpoints_steps=3000
